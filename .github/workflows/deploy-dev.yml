@@ -1,0 +1,20 @@
+name: Deploy static website
+on:
+  push:
+    branches: [dev]
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy
+        run: |
+          npm run build
+          aws sync ./build s3://${{ secrets.S3_BUCKET_DEV }}
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEV }} --paths "/*"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
