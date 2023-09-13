@@ -1,6 +1,6 @@
 function Hola() {
     return (
-        <h1>Hola Esto es Dev</h1>
+        <h1>Hola Esto es Development 😊</h1>
     )
 }
 
