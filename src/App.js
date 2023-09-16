@@ -1,12 +1,14 @@
-import Hola from './components/Hola';
-//import logo from './logo.svg';
-import './App.css';
+import WeddingInvitation from './components/WeddingInvitation';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
-      <Hola/>
+      <WeddingInvitation/>
     </div>
+    </ThemeProvider>
   );
 }
 
