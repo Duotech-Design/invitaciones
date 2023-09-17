@@ -1,14 +1,20 @@
-import WeddingInvitation from './components/WeddingInvitation';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import WeddingInvitation from './components/invitacion/WeddingInvitation';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
 function App() {
   return (
+    <Router>
     <ThemeProvider theme={theme}>
     <div className="App">
-      <WeddingInvitation/>
+      <Routes>
+      <Route path="/" element={<h1>Para ir a la invitacion agrega /invitacion en la url</h1>} />
+      <Route path="/invitacion" element={<WeddingInvitation />} />
+      </Routes>
     </div>
     </ThemeProvider>
+    </Router>
   );
 }
 

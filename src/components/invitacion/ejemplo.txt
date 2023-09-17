@@ -1,6 +1,4 @@
-import { Typography, Paper, Button } from '@mui/material';
-
-function WeddingInvitation() {
+const WeddingInvitation = () => {
   return (
     <Paper elevation={3} style={{ padding: '20px', textAlign: 'center' }}>
       <Typography variant="h1">Andrea y Diego</Typography>
@@ -26,5 +24,3 @@ function WeddingInvitation() {
     </Paper>
   );
 }
-
-export default WeddingInvitation;
