@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+ 
   palette: {
     primary: {
       main: "#F4EBE2", // Color principal
@@ -25,20 +26,20 @@ const theme = createTheme({
     fontFamily: "Roboto", // Fuente de respaldo en caso de que las fuentes personalizadas no se carguen
     // Utiliza las fuentes personalizadas desde Google Fonts
     h1: {
-      fontFamily: "Dancing Script, cursive", // Cambia a Dancing Script
-      fontSize: "6rem",
+      fontFamily:"Cormorant, cursive", // Cambia a Dancing Script
+      fontSize: "3em",
       fontWeight: 700,
-      color: "#000000",
+      color: "#F4EBE2",
     },
     h2: {
       fontFamily: "Cormorant, cursive", // Cambia a Zeyada
-      fontSize: "4rem",
+      fontSize: "4em",
       fontWeight: 600,
       color: "#000000",
     },
     h3: {
-        fontFamily: 'Great Vibes, cursive',
-        fontSize: '3rem',
+        fontFamily: "Cinzel, cursive",
+        fontSize: '0.6em',
         fontWeight: 500,
         color: '#000000', // Color de texto negro
       },
