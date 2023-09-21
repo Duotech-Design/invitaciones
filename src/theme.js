@@ -44,6 +44,13 @@ const theme = createTheme({
         color: '#000000',
          // Color de texto negro
       },
+      h4: {
+        fontFamily: "Cinzel, cursive",
+        fontSize: `clamp(5px, 2.5vw, 2rem)`,
+        fontWeight: 500,
+        color: '#FFFFFF',
+         // Color de texto negro
+      },
     // Define otras fuentes personalizadas según sea necesario
   },
   

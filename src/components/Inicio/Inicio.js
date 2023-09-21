@@ -32,7 +32,7 @@ const styles = {
   },
   textContainer: {
     position: "absolute",
-    bottom: "75px", // Coloca el cuadro en la parte inferior
+    bottom: "10%", // Coloca el cuadro en la parte inferior
     left: "50%",
     transform: "translateX(-50%)", // Centra horizontalmente
     width: "60%",
@@ -43,20 +43,21 @@ const styles = {
     borderTopRightRadius: "50px",
     borderBottomLeftRadius: "50px",
     borderBottomRightRadius: "50px",
-
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
-   // fontSize: `clamp(5px, 5vw, 3.5rem)`,
+    // fontSize: `clamp(5px, 5vw, 3.5rem)`,
   },
 
   numbersContainer: {
     position: "absolute",
-    top: "5%", // Ajusta la posición vertical de los números
     left: "50%",
     transform: "translateX(-50%)",
     display: "flex",
-    alignItems: "center",
+    alignItems: "flex-start",
+    bottom: "3%", // Coloca el cuadro en la parte inferior
+    textColor: "#FFFFFF",
+
   },
 };
 
@@ -84,38 +85,66 @@ const Inicio = () => {
         </div>
       </Box>
 
-     {/* <div style={styles.numbersContainer}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h3">12 :</Typography>
-          <Typography variant="h3" style={{ marginLeft: "10px" }}>
-            DÍAS
-          </Typography>
-        </div>
+      <div style={styles.numbersContainer}>
         <div
-          style={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            width: "70px",
+          }}
         >
-          <Typography variant="h3">30 :</Typography>
-          <Typography variant="h3" style={{ marginLeft: "10px" }}>
-            HORAS
+          <Typography variant="h4">12 </Typography>
+
+          <Typography variant="h4" style={{ width: "100%" }}>
+            Días
           </Typography>
         </div>
+        <Typography variant="h4"> : </Typography>
         <div
-          style={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "20px",
+            flexDirection: "column",
+          }}
         >
-          <Typography variant="h3">30 :</Typography>
-          <Typography variant="h3" style={{ marginLeft: "10px" }}>
-            MINUTOS
+          <Typography variant="h4">30 </Typography>
+          <Typography variant="h4" style={{ marginLeft: "10px" }}>
+            Horas
           </Typography>
+          
         </div>
+        <Typography variant="h4"> : </Typography>
         <div
-          style={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "20px",
+            flexDirection: "column",
+          }}
         >
-          <Typography variant="h3">30 :</Typography>
-          <Typography variant="h3" style={{ marginLeft: "10px" }}>
-            SEGUNDOS
+          <Typography variant="h4">30 </Typography>
+          <Typography variant="h4" style={{ marginLeft: "10px" }}>
+            Minutos
           </Typography>
         </div>
-  </div>*/}
+        <Typography variant="h4"> : </Typography>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "20px",
+            flexDirection: "column",
+          }}
+        >
+          <Typography variant="h4">30 </Typography>
+          <Typography variant="h4" style={{ marginLeft: "10px" }}>
+            Segundos
+          </Typography>
+        </div>
+       
+      </div>
     </Container>
   );
 };
