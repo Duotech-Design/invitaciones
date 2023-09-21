@@ -1,5 +1,5 @@
 import Inicio from '../components/Inicio/Inicio';
-import { Box } from '@mui/material';
+import { Box , Typography} from '@mui/material';
 
 const styles = {
   root: {
@@ -13,7 +13,18 @@ export default function InicioInvitacion() {
     <>
       <Box sx={styles.root}>
    <Inicio/>
+   <Box sx={{ background: "#E6D4C2",
+    height: "200px",
+    width: "375px",
+    display: "flex",
+   flexDirection: "column",
+    alignItems: "center",
+    color: "white",
+    marginTop: "0",}}>
+       
       </Box>
+      </Box>
+      
     </>
   );
 }

@@ -27,21 +27,22 @@ const theme = createTheme({
     // Utiliza las fuentes personalizadas desde Google Fonts
     h1: {
       fontFamily:"Cormorant, cursive", // Cambia a Dancing Script
-      fontSize: "3em",
+      fontSize: `clamp(5px, 5vw, 2rem)`,
       fontWeight: 700,
       color: "#F4EBE2",
     },
     h2: {
       fontFamily: "Cormorant, cursive", // Cambia a Zeyada
-      fontSize: "4em",
+      fontSize: `clamp(5px, 5vw, 2rem)`,
       fontWeight: 600,
       color: "#000000",
     },
     h3: {
         fontFamily: "Cinzel, cursive",
-        fontSize: '0.6em',
+        fontSize: `clamp(5px, 2.5vw, 2rem)`,
         fontWeight: 500,
-        color: '#000000', // Color de texto negro
+        color: '#000000',
+         // Color de texto negro
       },
     // Define otras fuentes personalizadas según sea necesario
   },
