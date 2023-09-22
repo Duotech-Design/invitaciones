@@ -15,12 +15,12 @@ const styles = {
   textTop: {
     position: "absolute",
     top: "10%", // Ajusta la posición vertical del texto "ANDREA & DIEGO"
-    left: "65%",
+    left: "52%",
     transform: "translateX(-50%)",
     display: "flex",
     displayDirection: "column",
     alignItems: "center",
-    width: "100%",
+    width: "75%",
     textAlign: "center",
     justifyContet: "center",
     color: theme.palette.primary.main,
