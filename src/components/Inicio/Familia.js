@@ -12,7 +12,7 @@ export default function IncioFamilia() {
         <Box
           sx={{
             background: "#E6D4C2",
-            height: "400px",
+            height: "100px",
             width: "100%",
             display: "flex",
             flexDirection: "column",

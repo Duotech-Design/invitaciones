@@ -1,6 +1,7 @@
 import Inicio from "../components/Inicio/Inicio";
 import { Box } from "@mui/material";
 import IncioFamilia from "../components/Inicio/Familia"; 
+import Itinerario from "../components/Itinerario/Itinerario";
 
 const styles = {
   root: {
@@ -14,6 +15,7 @@ export default function InicioInvitacion() {
       <Box sx={styles.root}>
         <Inicio />
         <IncioFamilia/>
+        <Itinerario/>
       </Box>
     </>
   );
