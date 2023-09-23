@@ -1,5 +1,22 @@
 import { Container, Typography, Box } from "@mui/material";
 
+const styles = {
+  button: {
+    width: "128px",
+height: "38px",
+borderRadius: "20px",
+border: "1px solid #7D5730",
+background: "rgba(255, 255, 255, 0.00)",
+color: "#7D5730",
+textAlign: "center",
+fontFamily: "Cinzel",
+fontSize: "12px",
+fontStyle: "normal",
+fontWeight: "400px",
+lineHeight: "normal",
+  }
+}
+
 const Itinerario = () => {
   return (
     <Container
@@ -58,8 +75,7 @@ const Itinerario = () => {
           <Typography variant="h2"> Rincón de Frascati 100, </Typography>
           <Typography variant="h2"> Nueva Rinconada de los Andes. </Typography>
         </div>
-        <button style={{ borderRadius: "15%", padding: "15px" }}>
-          {" "}
+        <button style={styles.button}>
           ¿COMO LLEGAR?
         </button>
       </Box>
