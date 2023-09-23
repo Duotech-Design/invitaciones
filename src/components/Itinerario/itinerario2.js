@@ -1,7 +1,7 @@
 //import React from 'react';
 import { Container, Typography, Box } from "@mui/material";
 
-const Itinerario = () => {
+const Itinerario2 = () => {
   return (
     <Container
       sx={{
@@ -31,26 +31,22 @@ const Itinerario = () => {
           flexDirection: "column",
           justifyContent: "space-around",
           alignItems: "center",
-          height:"60%"
         }}
       >
-        <Typography variant="h2" > CEREMONIA RELIGIOSA </Typography>
-        <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-        <Typography variant="h8" sx={{ typography: "bold" }}>
-         
-          PARROQUIA MARIA MADRE 
+        <Typography variant="h2"> CEREMONIA RELIGIOSA </Typography>
+        <Typography variant="h2" sx={{ typography: "bold" }}>
+          {" "}
+          Parroquia maria madre{" "}
         </Typography>
-        <Typography variant="h8"> DE LA DIVINA GRACIA  </Typography>
-        </div>
-        <Typography variant="h8"> 18:30 hrs. </Typography>
-        <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+        <Typography variant="h2"> de la divina gracia </Typography>
+
+        <Typography variant="h2"> 18:30 hrs. </Typography>
         <Typography variant="h2"> Rincón de Frascati 100, </Typography>
         <Typography variant="h2"> Nueva Rinconada de los Andes. </Typography>
-        </div>
-        <button style={{borderRadius:"15%", padding:"15px"}}> ¿COMO LLEGAR?</button>
+        <button> ¿COMO LLEGAR?</button>
       </Box>
     </Container>
   );
 };
 
-export default Itinerario;
+export default Itinerario2;
