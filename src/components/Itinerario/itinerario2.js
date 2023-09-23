@@ -1,12 +1,10 @@
-//import React from 'react';
 import { Container, Typography, Box } from "@mui/material";
 
 const Itinerario2 = () => {
   return (
     <Container
       sx={{
-    
-        height: "388px",
+        height: "100%",
         width: "100%",
         display: "flex",
         alignItems: "center",

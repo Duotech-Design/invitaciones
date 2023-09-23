@@ -15,9 +15,9 @@ export default function InicioInvitacion() {
     <>
       <Box sx={styles.root}>
         <Inicio />
-        <IncioFamilia/>
-       <Itinerario/>
-        <Itinerario2/>
+        <IncioFamilia />
+        <Itinerario />
+        <Itinerario2 />
       </Box>
     </>
   );
