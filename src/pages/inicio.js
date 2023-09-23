@@ -10,7 +10,7 @@ const styles = {
   },
 };
 
-export default function InicioInvitacion() {
+const InicioPages = () => {
   return (
     <>
       <Box sx={styles.root}>
@@ -22,3 +22,5 @@ export default function InicioInvitacion() {
     </>
   );
 }
+
+export default InicioPages;
