@@ -1,6 +1,23 @@
 //import React from 'react';
 import { Container, Typography, Box } from "@mui/material";
 
+const styles = {
+  button: {
+    width: "128px",
+height: "38px",
+borderRadius: "20px",
+border: "1px solid #7D5730",
+background: "rgba(255, 255, 255, 0.00)",
+color: "#7D5730",
+textAlign: "center",
+fontFamily: "Cinzel",
+fontSize: "12px",
+fontStyle: "normal",
+fontWeight: "400px",
+lineHeight: "normal",
+  }
+}
+
 const Itinerario = () => {
   return (
     <Container
@@ -37,7 +54,6 @@ const Itinerario = () => {
         <Typography variant="h2" > CEREMONIA RELIGIOSA </Typography>
         <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
         <Typography variant="h8" sx={{ typography: "bold" }}>
-         
           PARROQUIA MARIA MADRE 
         </Typography>
         <Typography variant="h8"> DE LA DIVINA GRACIA  </Typography>
@@ -45,9 +61,10 @@ const Itinerario = () => {
         <Typography variant="h8"> 18:30 hrs. </Typography>
         <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
         <Typography variant="h2"> Rincón de Frascati 100, </Typography>
-        <Typography variant="h2"> Nueva Rinconada de los Andes. </Typography>
+        
+        <Typography variant="h2"> Nueva Rindonada de los Andes. </Typography>
         </div>
-        <button style={{borderRadius:"15%", padding:"15px"}}> ¿COMO LLEGAR?</button>
+        <button  style={styles.button}> ¿COMO LLEGAR?</button>
       </Box>
     </Container>
   );
