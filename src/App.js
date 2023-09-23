@@ -3,6 +3,7 @@ import WeddingInvitation from './components/invitacion/WeddingInvitation';
 import Inicio from './pages/Inicio'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
+//import InicioInvitacion from './pages/inicio';
 
 function App() {
   return (
