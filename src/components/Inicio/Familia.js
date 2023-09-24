@@ -11,11 +11,11 @@ const styles = {
     alignItems: "center",
     flexWrap: "wrap",
     maxWidth: '100%',
-    border: '1px solid black',
+    //border: '1px solid black',
   },
   column: {
     flex: 1,
-    border: '1px solid black',
+    //border: '1px solid black',
     //flexBasis: "0%",//33.3%
     //flexGrow: "99",
     display: "flex",
@@ -28,7 +28,7 @@ const styles = {
     //height: "20%",
     //width: "20%",
     //color: "#FFFFFF",
-    maxWidth: '50%',
+    maxWidth: '70%',
   },
   image2: {
     width: "100%",
