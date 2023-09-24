@@ -7,23 +7,22 @@ const styles = {
   },
   row: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",//"space-between"
     alignItems: "center",
-   flexWrap: "wrap",
+    flexWrap: "wrap",
     maxWidth: '100%',
-    //border: '1px solid black',
+    border: '1px solid black',
   },
   column: {
-    //flex: "1",
-    //border: '1px solid black',
-    flexBasis: "33%",
+    flex: 1,
+    border: '1px solid black',
+    //flexBasis: "0%",//33.3%
     //flexGrow: "99",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    minMax: "33.1%",
-    minWidth: '370px',
-
+    //minMax: "33.1%",
+    minWidth: `clamp(240px, 240px, 350px)`,
   },
   image: {
     //height: "20%",
