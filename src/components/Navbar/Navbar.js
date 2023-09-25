@@ -1,22 +1,15 @@
 //import React from 'react';
-import { NavbarStyles } from './styles'; 
-import { AppBar, Toolbar, Typography} from '@mui/material';
-
+import { NavbarStyles } from "./styles";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 
 const Navbar = () => {
- 
   return (
     <AppBar position="fixed" sx={NavbarStyles.nav}>
       <Typography variant="h10" sx={NavbarStyles.iniciales}>
         A & D
       </Typography>
-
       <Toolbar sx={NavbarStyles.toolbar}>
-        <Typography
-          variant="h9"
-          sx={NavbarStyles.content}
-        
-        >
+        <Typography variant="h9" sx={NavbarStyles.content}>
           INICIO
         </Typography>
         <Typography variant="h9" sx={NavbarStyles.content}>
@@ -37,7 +30,6 @@ const Navbar = () => {
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default Navbar;
-

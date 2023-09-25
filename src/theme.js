@@ -82,14 +82,14 @@ const theme = createTheme({
       },
       h9: {
         fontFamily: "Cinzel, cursive",
-        fontSize: `clamp(8px, 1.8vw, 2.6vw)`,
-        fontWeight: 400,
+        fontSize: `clamp(10px, 1.8vw, 2.6vw)`,
+        fontWeight: 500,
         color: "#7D5730",
          // Color de texto negro
       },
       h10: {
         fontFamily: "Cormorant", // Cambia a Zeyada
-        fontSize: `clamp(10px, 3.5vw, 4vw)`,
+        fontSize: `clamp(15px, 3.5vw, 4vw)`,
         fontWeight: 700,
         color: "#FFF4F4",
       },
