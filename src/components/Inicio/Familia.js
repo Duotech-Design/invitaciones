@@ -49,7 +49,6 @@ export default function IncioFamilia() {
         marginTop: "0",
       }}
     >
-
       <Typography variant="h5" sx={{ marginTop: "2%" }}>
         CON LA BENDICION DE DIOS Y DE
       </Typography>

@@ -18,6 +18,9 @@ const theme = createTheme({
     quinary: {
       main: "#7D572E", // Quinto color
     },
+    nav: {
+      main: "#7D5730",
+    },
     text: {
       primary: "#000000", // Color de texto principal (negro)
     },
@@ -77,9 +80,21 @@ const theme = createTheme({
         color: '#7D5730',
          // Color de texto negro
       },
+      h9: {
+        fontFamily: "Cinzel, cursive",
+        fontSize: `clamp(8px, 1.8vw, 2.6vw)`,
+        fontWeight: 400,
+        color: "#7D5730",
+         // Color de texto negro
+      },
+      h10: {
+        fontFamily: "Cormorant", // Cambia a Zeyada
+        fontSize: `clamp(10px, 3.5vw, 4vw)`,
+        fontWeight: 700,
+        color: "#FFF4F4",
+      },
     // Define otras fuentes personalizadas según sea necesario
   },
-  
 });
 
 export default theme;

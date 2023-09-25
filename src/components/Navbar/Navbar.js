@@ -1,14 +1,39 @@
 //import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { NavbarStyles } from './styles'; 
+import { AppBar, Toolbar, Typography} from '@mui/material';
+
 
 const Navbar = () => {
+ 
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">
-          Navbar Mi Boda
-        </Typography>
+    <AppBar position="fixed" sx={NavbarStyles.nav}>
+      <Typography variant="h10" sx={NavbarStyles.iniciales}>
+        A & D
+      </Typography>
+
+      <Toolbar sx={NavbarStyles.toolbar}>
+        <Typography
+          variant="h9"
+          sx={NavbarStyles.content}
         
+        >
+          INICIO
+        </Typography>
+        <Typography variant="h9" sx={NavbarStyles.content}>
+          ITINERARIO
+        </Typography>
+        <Typography variant="h9" sx={NavbarStyles.content}>
+          SUGERENCIAS
+        </Typography>
+        <Typography variant="h9" sx={NavbarStyles.content}>
+          CONFIRMACION
+        </Typography>
+        <Typography variant="h9" sx={NavbarStyles.content}>
+          GALERIA
+        </Typography>
+        <Typography variant="h9" sx={NavbarStyles.content}>
+          MESA DE REGALOS
+        </Typography>
       </Toolbar>
     </AppBar>
   );
