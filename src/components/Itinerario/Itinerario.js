@@ -3,19 +3,19 @@ import { Container, Typography, Box } from "@mui/material";
 const styles = {
   button: {
     width: "128px",
-height: "38px",
-borderRadius: "20px",
-border: "1px solid #7D5730",
-background: "rgba(255, 255, 255, 0.00)",
-color: "#7D5730",
-textAlign: "center",
-fontFamily: "Cinzel",
-fontSize: "12px",
-fontStyle: "normal",
-fontWeight: "400px",
-lineHeight: "normal",
-  }
-}
+    height: "38px",
+    borderRadius: "20px",
+    border: "1px solid #7D5730",
+    background: "rgba(255, 255, 255, 0.00)",
+    color: "#7D5730",
+    textAlign: "center",
+    fontFamily: "Cinzel",
+    fontSize: "12px",
+    fontStyle: "normal",
+    fontWeight: "400px",
+    lineHeight: "normal",
+  },
+};
 
 const Itinerario = () => {
   return (
@@ -49,13 +49,17 @@ const Itinerario = () => {
           height: "60%",
         }}
       >
-        <Typography variant="h2"> CEREMONIA RELIGIOSA </Typography>
+        <Typography variant="h2" sx={{ marginBottom: "10px" }}>
+          {" "}
+          CEREMONIA RELIGIOSA{" "}
+        </Typography>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: "10px",
           }}
         >
           <Typography variant="h8" sx={{ typography: "bold" }}>
@@ -63,21 +67,23 @@ const Itinerario = () => {
           </Typography>
           <Typography variant="h8"> DE LA DIVINA GRACIA </Typography>
         </div>
-        <Typography variant="h8"> 18:30 hrs. </Typography>
+        <Typography variant="h8" sx={{ marginBottom: "10px" }}>
+          {" "}
+          18:30 hrs.{" "}
+        </Typography>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: "10px",
           }}
         >
           <Typography variant="h2"> Rincón de Frascati 100, </Typography>
           <Typography variant="h2"> Nueva Rinconada de los Andes. </Typography>
         </div>
-        <button style={styles.button}>
-          ¿COMO LLEGAR?
-        </button>
+        <button style={styles.button}>¿COMO LLEGAR?</button>
       </Box>
     </Container>
   );

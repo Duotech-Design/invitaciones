@@ -42,27 +42,27 @@ const theme = createTheme({
     },
     
     h3: {
-        fontFamily: "Cinzel, cursive",
+        fontFamily: "Cinzel",
         fontSize: `clamp(5px, 2.5vw, 2rem)`,
-        fontWeight: 500,
-        color: '#000000',
+        fontWeight: 300,
+        color: '#6A797A',
          // Color de texto negro
       },
       h4: {
         fontFamily: "Poppins",
         //Glacial Indifference
-        fontSize: `clamp(5px, 2.5vw, 2rem)`,
-        fontWeight: 500,
+        fontSize: `clamp(4px, 2.0vw, 2rem)`,
+        fontWeight: 400,
         color: '#FFFFFF',
          // Color de texto negro
       },h5: {
         fontFamily: "Cormorant, cursive", // Cambia a Zeyada
-        fontSize: `clamp(4px, 3.5vw, 1.5rem)`,
+        fontSize: `clamp(3.5px, 3.5vw, 1.5rem)`,
         fontWeight: 600,
         color: "#FFFFFF",
       },
       h6: {
-        fontFamily: "Great vibes", // Cambia a Zeyada
+        fontFamily: "Allura, cursive", // Cambia a Zeyada
         fontSize: `clamp(10px, 3.9vw, 2rem)`,
         fontWeight: 600,
         color: "#FFFFFF",
@@ -92,6 +92,12 @@ const theme = createTheme({
         fontSize: `clamp(15px, 3.5vw, 4vw)`,
         fontWeight: 700,
         color: "#FFF4F4",
+      },
+      h11: {
+        fontFamily: "Cormorant", // Cambia a Zeyada
+        fontSize: `clamp(2.5px, 3vw, 1rem)`,
+        fontWeight: 300,
+        color: "#7D5730",
       },
     // Define otras fuentes personalizadas según sea necesario
   },
