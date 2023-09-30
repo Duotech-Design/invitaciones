@@ -2,15 +2,15 @@ import { Container, Typography, Box } from "@mui/material";
 
 const styles = {
   button: {
-    width: "128px",
-    height: "38px",
-    borderRadius: "20px",
+    width: "158px",
+    height: "45px",
+    borderRadius: "50px",
     border: "1px solid #7D5730",
     background: "rgba(255, 255, 255, 0.00)",
     color: "#7D5730",
     textAlign: "center",
     fontFamily: "Cinzel",
-    fontSize: "12px",
+    fontSize: "16px",
     fontStyle: "normal",
     fontWeight: "400px",
     lineHeight: "normal",
@@ -44,9 +44,10 @@ const Itinerario = () => {
           flex: "1",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-around",
+          gap:'32px',
+          //justifyContent: "space-around",
           alignItems: "center",
-          height: "60%",
+          height: "100%",
         }}
       >
         <Typography variant="h2" sx={{ marginBottom: "10px" }}>
