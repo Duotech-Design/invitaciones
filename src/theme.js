@@ -80,6 +80,13 @@ const theme = createTheme({
         color: '#7D5730',
          // Color de texto negro
       },
+      hora: {
+        fontFamily: "Cormorant",
+        fontSize: `clamp(18px, 3.5vw, 2.5rem)`,
+        fontWeight: 700,
+        color: '#7D5730',
+         // Color de texto negro
+      },
       h9: {
         fontFamily: "Cinzel, cursive",
         fontSize: `clamp(10px, 1.8vw, 2.6vw)`,

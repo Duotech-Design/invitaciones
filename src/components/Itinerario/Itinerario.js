@@ -2,15 +2,15 @@ import { Container, Typography, Box } from "@mui/material";
 
 const styles = {
   button: {
-    width: "128px",
-    height: "38px",
+    width: `clamp(7rem, 8.5rem, 13rem)`,
+    height: `clamp(1.8rem, 2.5rem, 3.5rem)`,
     borderRadius: "50px",
     border: "1px solid #7D5730",
     background: "rgba(255, 255, 255, 0.00)",
     color: "#7D5730",
     textAlign: "center",
     fontFamily: "Cinzel",
-    fontSize: "12px",
+    fontSize:`clamp(12px, 0.8rem, 0.9rem)`,
     fontStyle: "normal",
     fontWeight: "400px",
     lineHeight: "normal",
@@ -44,7 +44,7 @@ const Itinerario = () => {
           flex: "1",
           display: "flex",
           flexDirection: "column",
-          gap:'1rem',
+          gap:'0.6rem',
           //justifyContent: "space-around",
           alignItems: "center",
           height: "100%",
@@ -68,7 +68,7 @@ const Itinerario = () => {
           </Typography>
           <Typography variant="h8"> DE LA DIVINA GRACIA </Typography>
         </div>
-        <Typography variant="h8" sx={{ marginBottom: "10px" }}>
+        <Typography variant="hora" sx={{ marginBottom: "10px" }}>
           {" "}
           18:30 hrs.{" "}
         </Typography>
