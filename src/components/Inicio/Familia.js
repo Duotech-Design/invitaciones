@@ -28,7 +28,9 @@ const styles = {
     //height: "20%",
     //width: "20%",
     //color: "#FFFFFF",
-    maxWidth: '50%',
+    //flex: 1,
+    minWidth: `clamp(200px, 15%, 20%)`,
+    maxWidth: '20%',
   },
   image2: {
     width: "100%",
@@ -62,13 +64,13 @@ export default function IncioFamilia() {
           <Typography variant="h6">Leticia Acebo Martínez</Typography>
           <Typography variant="h6">David Hernandez Escobar</Typography>
         </div>
-        <div style={styles.column}>
+       
           <img
             src="/img/arco blanco.png"
             alt="Arco flores" // Propiedad alt para describir la imagen
             style={styles.image}
           />
-        </div>
+     
         <div style={styles.column}>
           <Typography variant="h6">Verónica Carbajal Treto </Typography>
           <Typography variant="h6">Carlos Toranzo Noriega</Typography>
