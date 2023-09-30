@@ -28,7 +28,7 @@ const styles = {
     //height: "20%",
     //width: "20%",
     //color: "#FFFFFF",
-    maxWidth: '70%',
+    maxWidth: '50%',
   },
   image2: {
     width: "100%",
