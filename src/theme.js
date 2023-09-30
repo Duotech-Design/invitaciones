@@ -63,7 +63,7 @@ const theme = createTheme({
       },
       h6: {
         fontFamily: "Allura, cursive", // Cambia a Zeyada
-        fontSize: `clamp(18px, 3.5vw, 2.5rem)`,
+        fontSize: `clamp(22px, 3.5vw, 2.5rem)`,
         fontWeight: 600,
         color: "#FFFFFF",
       },
