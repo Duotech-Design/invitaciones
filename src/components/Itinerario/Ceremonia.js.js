@@ -20,6 +20,7 @@ const styles = {
 
 const Ceremonia = () => {
   return (
+    <>
     <Container
       sx={{
         height: "100%",
@@ -28,6 +29,7 @@ const Ceremonia = () => {
         alignItems: "center",
         color: "white",
         marginTop: "0",
+        marginBottom: "15px"
       }}
     >
       <Box sx={{ flex: "1" }}>
@@ -88,6 +90,14 @@ const Ceremonia = () => {
         <button style={styles.button}>¿COMO LLEGAR?</button>
       </Box>
     </Container>
+     <Box
+        sx={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
+      >
+        <div
+          style={{ height:"15px", width: "80%" }}
+        ></div>
+      </Box>
+      </>
   );
 };
 
