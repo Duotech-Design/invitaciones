@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import Navbar from '../Navbar/Navbar';
 import Inicio from '../Inicio/Inicio';
-import Itinerario from '../Itinerario/Itinerario';
+import Itinerario from '../Itinerario/Ceremonia.js.js';
 import Sugerencias from '../Sugerencias/Sugerencias';
 import Confirmacion from '../Confirmacion/Confirmacion';
 import Galeria from '../Galeria/Galeria';

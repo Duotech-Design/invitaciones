@@ -14,10 +14,11 @@ const styles = {
     fontStyle: "normal",
     fontWeight: "400px",
     lineHeight: "normal",
+    marginBottom:"10px"
   },
 };
 
-const Itinerario = () => {
+const Ceremonia = () => {
   return (
     <Container
       sx={{
@@ -44,7 +45,7 @@ const Itinerario = () => {
           flex: "1",
           display: "flex",
           flexDirection: "column",
-          gap:'0.6rem',
+          gap:'0.2rem',
           //justifyContent: "space-around",
           alignItems: "center",
           height: "100%",
@@ -81,8 +82,8 @@ const Itinerario = () => {
             marginBottom: "10px",
           }}
         >
-          <Typography variant="h11"> RINCÓN DE FRASCATI 100, </Typography>
-          <Typography variant="h11"> NUEVA RINCONADA DE LOS ANDRES. </Typography>
+          <Typography variant="h11" sx={{ textAlign: "center" }}> RINCÓN DE FRASCATI 100, </Typography>
+          <Typography variant="h11" sx={{ marginBottom: "10px", textAlign: "center" }}> NUEVA RINCONADA DE LOS ANDRES. </Typography>
         </div>
         <button style={styles.button}>¿COMO LLEGAR?</button>
       </Box>
@@ -90,4 +91,4 @@ const Itinerario = () => {
   );
 };
 
-export default Itinerario;
+export default Ceremonia;

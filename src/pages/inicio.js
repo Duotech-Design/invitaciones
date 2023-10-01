@@ -1,8 +1,9 @@
 import Inicio from "../components/Inicio/Inicio";
 import { Box } from "@mui/material";
 import IncioFamilia from "../components/Inicio/Familia"; 
-import Itinerario from "../components/Itinerario/Itinerario";
-import Itinerario2 from "../components/Itinerario/itinerario2";
+import Ceremonia from "../components/Itinerario/Ceremonia.js.js";
+import Recepcion from "../components/Itinerario/Recepcion";
+import Galeria from "../components/Galeria/Galeria";
 
 const styles = {
   root: {
@@ -16,8 +17,9 @@ const InicioPages = () => {
       <Box sx={styles.root}>
         <Inicio />
         <IncioFamilia />
-        <Itinerario />
-        <Itinerario2 />
+        <Ceremonia />
+        <Recepcion />
+        <Galeria/>
       </Box>
     </>
   );

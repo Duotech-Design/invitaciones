@@ -89,6 +89,7 @@ export default function IncioFamilia() {
       <Typography variant="h7">
         INVITARLOS A NUESTRA BODA
       </Typography>
+      
       {/* El Box contiene a la imagen*/}
       <Box sx={{ marginTop: "5%", width: "91%", height: "100%" }}>
         <img
