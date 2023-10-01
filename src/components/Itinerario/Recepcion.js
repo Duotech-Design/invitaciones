@@ -107,7 +107,7 @@ const Recepcion = () => {
         </Box>
       </Container>
       <Box
-        sx={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
+        sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"25px" }}
       >
         <div
           style={{ borderBottom: "0.5px solid #7D5730", width: "80%" }}

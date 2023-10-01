@@ -4,6 +4,7 @@ import IncioFamilia from "../components/Inicio/Familia";
 import Ceremonia from "../components/Itinerario/Ceremonia.js.js";
 import Recepcion from "../components/Itinerario/Recepcion";
 import Galeria from "../components/Galeria/Galeria";
+import Itinerario from "../components/Itinerario/Itinerario";
 
 const styles = {
   root: {
@@ -19,7 +20,8 @@ const InicioPages = () => {
         <IncioFamilia />
         <Ceremonia />
         <Recepcion />
-        <Galeria/>
+     
+        <Itinerario/>
       </Box>
     </>
   );
