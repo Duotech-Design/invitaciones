@@ -81,8 +81,8 @@ const Itinerario = () => {
             marginBottom: "10px",
           }}
         >
-          <Typography variant="h2"> Rincón de Frascati 100, </Typography>
-          <Typography variant="h2"> Nueva Rinconada de los Andes. </Typography>
+          <Typography variant="h11"> RINCÓN DE FRASCATI 100, </Typography>
+          <Typography variant="h11"> NUEVA RINCONADA DE LOS ANDRES. </Typography>
         </div>
         <button style={styles.button}>¿COMO LLEGAR?</button>
       </Box>

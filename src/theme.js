@@ -69,8 +69,8 @@ const theme = createTheme({
       },
       h7: {
         fontFamily: "Cormorant, cursive", // Cambia a Zeyada
-        fontSize: `clamp(3px, 3vw, 1rem)`,
-        fontWeight: 500,
+        fontSize: `clamp(3.5px, 4vw, 1rem)`,
+        fontWeight: 600,
         color: "#FFFFFF",
       },
       h8: {
