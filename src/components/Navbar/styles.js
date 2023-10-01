@@ -5,6 +5,7 @@ export const NavbarStyles = {
     justifyContent: 'spaceBetween',
     alignItems: "center",
     background: "#E5D4C2",
+    height:'20%'
   },
   toolbar: {
     display: "flex",
@@ -31,6 +32,7 @@ export const NavbarStyles = {
     textAlign: "center",
     padding: "0.3rem 1rem",
     flex: "1",
+    marginLeft:'40px',
     whiteSpace: "nowrap",
     transition: "background-color 0.3s, border-radius 0.3s", // Agrega una transición para suavizar el cambio de color de fondo y los bordes en hover
     backgroundColor: "#E5D4C2", // Color de fondo normal

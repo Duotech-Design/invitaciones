@@ -57,8 +57,8 @@ const theme = createTheme({
          // Color de texto negro
       },h5: {
         fontFamily: "Cormorant, cursive", // Cambia a Zeyada
-        fontSize: `clamp(3.5px, 3.5vw, 1.5rem)`,
-        fontWeight: 600,
+        fontSize: `clamp(3.5px, 3.5vw, 2rem)`,
+        fontWeight: 400,
         color: "#FFFFFF",
       },
       h6: {
@@ -69,8 +69,8 @@ const theme = createTheme({
       },
       h7: {
         fontFamily: "Cormorant, cursive", // Cambia a Zeyada
-        fontSize: `clamp(3px, 3vw, 1rem)`,
-        fontWeight: 500,
+        fontSize: `clamp(3px, 3vw, 1.4rem)`,
+        fontWeight: 400,
         color: "#FFFFFF",
       },
       h8: {
@@ -89,7 +89,7 @@ const theme = createTheme({
       },
       h9: {
         fontFamily: "Cinzel, cursive",
-        fontSize: `clamp(10px, 1.8vw, 2.6vw)`,
+        fontSize: `clamp(10px, 1.2vw, 2vw)`,
         fontWeight: 500,
         color: "#7D5730",
          // Color de texto negro
