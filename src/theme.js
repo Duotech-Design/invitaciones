@@ -45,7 +45,7 @@ const theme = createTheme({
         fontFamily: "Cinzel",
         fontSize: `clamp(5px, 2.5vw, 2rem)`,
         fontWeight: 300,
-        color: '#6A797A',
+        color: '#7D5730',
          // Color de texto negro
       },
       h4: {

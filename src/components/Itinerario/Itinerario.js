@@ -1,58 +1,5 @@
 import { Container, Box, Typography } from "@mui/material";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-
-function ColorsTimeline() {
-  return (
-    <Timeline sx={{ width: "100%", height:"100%" }} position="alternate">
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="secondary" />
-         
-          <TimelineConnector />
-          
-        </TimelineSeparator>
-        <TimelineContent sx={{ textAlign: "center", height:"400px" }}>
-          <div sx={{display:"flex", alignItems:"baseline" , width:"100%"}}>
-        <div
-          style={{ borderBottom: "0.5px solid #7D5730", width: "30%", padding:"0px 0px 0px 0px", margin:"0px 0px 0px 0px" }}
-        ></div>
-        <Typography>
-          6:00 PM
-          </Typography>
-          </div>
-          <Typography>CEREMONIA RELIGIOSA</Typography>
-          <Typography> Parroquia maria madre</Typography>
-          <Typography>de la divina gracia</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="secondary" />
-        </TimelineSeparator>
-        <TimelineContent>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems:"center"
-          }}
-        >
-          8:00 PM
-          <Typography>RECEPCIÓN</Typography>
-          <Typography> SALÓN DE EVENTOS</Typography>
-          <Typography>TALLER 2560</Typography>
-        </Box>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
-  );
-}
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   box: {
@@ -64,15 +11,93 @@ const styles = {
     paddingRight: "0px",
   },
   box2: {
-    height: "100%",
+    height: "60%",
     width: "100%",
     backgroundColor: "#D9D9D9",
     paddingLeft: "0px",
     paddingRight: "0px",
   },
+  iglesia: {
+    //position: "relative",
+    //textAlign: "center",
+    margin: "0px 0px",
+    maxWidth: "30%",
+    maxHeight: "30%",
+  },
 };
 
+function ColorsTimeline() {
+  return (
+    <Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          //height:"100%"
+        }}
+      >
+        <img
+          src="/img/iglesia.svg"
+          alt="Imagen de inicio" // Propiedad alt para describir la imagen
+          style={styles.iglesia}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+            height: "100%",
+            gap: "10px",
+            //alignItems: "center",
+          }}
+        >
+          <Typography variant="h11">CEREMONIA RELIGIOSA</Typography>
+          <Typography>6:00 PM</Typography>
+          <Box sx={{display:"flex", flexDirection:"column"}}>
+            <Typography variant="h11"> Parroquia maria madre</Typography>
+            <Typography variant="h11">de la divina gracia</Typography>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          //height:"100%"
+        }}
+      >
+        <img
+          src="/img/copas.svg"
+          alt="Imagen de inicio" // Propiedad alt para describir la imagen
+          style={styles.iglesia}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+            height: "100%",
+            gap: "10px",
+            //alignItems: "center",
+          }}
+        >
+          <Typography variant="h11">RECEPCIÓN</Typography>
+          <Typography>9:00 PM</Typography>
+          <Box sx={{display:"flex", flexDirection:"column"}}>
+            <Typography variant="h11"> SALÓN DE EVENTOS</Typography>
+            <Typography variant="h11">TALLER 2560</Typography>
+          </Box>
+        </Box>
+      </Box>
+     
+    </Box>
+  );
+}
 const Itinerario = () => {
+  const matches = useMediaQuery('(min-width:600px)');
+  console.log(matches, "media query")
   return (
     <>
       <Container
@@ -91,9 +116,10 @@ const Itinerario = () => {
       >
         <div style={styles.box}></div>
         <Box sx={{ display: "flex" }}>
-          <Box sx={{ flex: "1" }}>
+          {matches ? <Box sx={{ flex: "1" }} >
+
             <div style={styles.box2}></div>
-          </Box>
+          </Box> : null}
           <Box
             sx={{
               flex: "1",
@@ -103,57 +129,25 @@ const Itinerario = () => {
               justifyContent: "center",
               alignItems: "center",
               height: "100%",
+              backgroundImage: "url('/img/fondo.svg')",
             }}
           >
-            <Typography variant="h2" sx={{ marginBottom: "10px" }}>
+            <Typography
+              variant="h2"
+              sx={{ marginTop: "20px", marginBottom: "10px" }}
+            >
               {" "}
               ITINERARIO{" "}
             </Typography>
-            {/* <div style={{ borderLeft: "0.5px solid #7D5730", width: "50%" }}>
-        
-            
-              <Typography variant="h8" sx={{ typography: "bold" }}>
-                SALON DE EVENTOS
-              </Typography>
-              <Typography
-                variant="h8"
-                sx={{ typography: "bold", marginBottom: "10px" }}
-              >
-                TALLER 2560
-              </Typography>
-            
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                marginBottom: "10px",
-              }}
-            >
-              <Typography variant="h8"> SOLO ADULTOS </Typography>
-              <Typography
-                variant="h11"
-                sx={{ marginBottom: "10px", textAlign: "center" }}
-              >
-                LLEVAR IDENTIFIACIÓN OFICIAL.
-              </Typography>
-            </div>
-            <Typography variant="hora" sx={{ marginBottom: "10px" }}>
-              {" "}
-              20:00 hrs.{" "}
-            </Typography>
-            <Typography
-              variant="h11"
-              sx={{ marginBottom: "10px", textAlign: "center" }}
-            >
-              {" "}
-              AV. CONSTITUCIÓN 2560, CONSTITUYENTES 2DA SECC. 78622.
-            </Typography>
-            <button style={styles.button}>¿COMO LLEGAR?</button>
-            </div>
-            */}
+           
             <ColorsTimeline />
+            <Typography
+              variant="h2"
+              sx={{ marginTop: "20px", marginBottom: "10px" }}
+            >
+              {" "}
+              A.D{" "}
+            </Typography>
           </Box>
         </Box>
       </Container>
