@@ -86,6 +86,12 @@ const theme = createTheme({
         fontWeight: 700,
         color: '#7D5730',
          // Color de texto negro
+      },horaP: {
+        fontFamily: "Cormorant",
+        fontSize: `clamp(15px, 3vw, 2rem)`,
+        fontWeight: 600,
+        color: '#7D5730',
+         // Color de texto negro
       },
       h9: {
         fontFamily: "Cinzel, cursive",
@@ -104,6 +110,12 @@ const theme = createTheme({
         fontFamily: "Cormorant", // Cambia a Zeyada
         fontSize: `clamp(2.5px, 3vw, 1.5rem)`,
         fontWeight: 300,
+        color: "#7D5730",
+      },
+      h12: {
+        fontFamily: "Zeyada", // Cambia a Zeyada
+        fontSize: `clamp(40px, 3.5vw, 4rem)`,
+        fontWeight: 600,
         color: "#7D5730",
       },
     // Define otras fuentes personalizadas según sea necesario

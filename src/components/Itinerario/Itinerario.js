@@ -4,14 +4,14 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 const styles = {
   box: {
     //color: "D9D9D9",
-    height: "200px",
+    height: "300px",
     width: "100%",
     backgroundColor: "#D9D9D9",
     paddingLeft: "0px",
     paddingRight: "0px",
   },
   box2: {
-    height: "60%",
+    height: "80%",
     width: "100%",
     backgroundColor: "#D9D9D9",
     paddingLeft: "0px",
@@ -53,7 +53,7 @@ function ColorsTimeline() {
           }}
         >
           <Typography variant="h11">CEREMONIA RELIGIOSA</Typography>
-          <Typography>6:00 PM</Typography>
+          <Typography variant="horaP">6:00 PM</Typography>
           <Box sx={{display:"flex", flexDirection:"column"}}>
             <Typography variant="h11"> Parroquia maria madre</Typography>
             <Typography variant="h11">de la divina gracia</Typography>
@@ -84,7 +84,7 @@ function ColorsTimeline() {
           }}
         >
           <Typography variant="h11">RECEPCIÓN</Typography>
-          <Typography>9:00 PM</Typography>
+          <Typography  variant="horaP">9:00 PM</Typography>
           <Box sx={{display:"flex", flexDirection:"column"}}>
             <Typography variant="h11"> SALÓN DE EVENTOS</Typography>
             <Typography variant="h11">TALLER 2560</Typography>
@@ -142,7 +142,7 @@ const Itinerario = () => {
            
             <ColorsTimeline />
             <Typography
-              variant="h2"
+              variant="h12"
               sx={{ marginTop: "20px", marginBottom: "10px" }}
             >
               {" "}

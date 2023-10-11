@@ -4,6 +4,7 @@ import IncioFamilia from "../components/Inicio/Familia";
 import Ceremonia from "../components/Itinerario/Ceremonia.js.js";
 import Recepcion from "../components/Itinerario/Recepcion";
 import Itinerario from "../components/Itinerario/Itinerario";
+import Confirmacion from "../components/Confirmacion/Confirmacion";
 
 const styles = {
   root: {
@@ -21,6 +22,7 @@ const InicioPages = () => {
         <Recepcion />
      
         <Itinerario/>
+        <Confirmacion/>
       </Box>
     </>
   );
