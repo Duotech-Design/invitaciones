@@ -16,11 +16,18 @@ const styles = {
     lineHeight: "normal",
     marginBottom:"10px", 
     color: "#7D5730",
-  },}
+  },
+box2:{
+  height: "400px",
+  width: "100%",
+  backgroundColor: "#D9D9D9",
+  paddingLeft: "0px",
+  paddingRight: "0px",
+}}
 const Confirmacion = () => {
   return (
     <Container   sx={{
-      height: "100%",
+      height: "500px",
       width: "100%",
       display: "flex",
       flexDirection: "column",
@@ -40,7 +47,7 @@ const Confirmacion = () => {
           flexDirection: "column",
           alignItems: "center",
           color: "white",
-          marginTop: "40px",
+          marginTop: "10px",
           marginBottom: "40px",
 
           borderTopLeftRadius: "15px",
@@ -68,6 +75,32 @@ const Confirmacion = () => {
         </Button>
         </Box>
         </Box>
+      </Box>
+      <Box>
+      <Box
+        sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"5px" }}
+      >
+        <div
+          style={{ borderBottom: "0.3px solid #7D5730", width: "300px" }}
+        ></div>
+        
+      </Box>
+      <Typography variant="h2"  sx={{ textAlign: "center" }}>
+          CÓDIGO DE VESTIMENTA
+        </Typography>
+        <div
+          style={{ borderBottom: "0.3px solid #7D5730", width: "300px" , marginTop:"5px"}}
+        ></div>
+          <Box
+        sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"5px" }}
+      >
+        <Typography variant="h2"  sx={{ textAlign: "center" }}>
+          FORMAL
+        </Typography>
+        
+        
+      </Box>
+       
       </Box>
     </Container>
   );
