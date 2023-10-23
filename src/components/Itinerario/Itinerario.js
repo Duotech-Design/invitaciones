@@ -1,92 +1,157 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
-  button: {
-    width: `clamp(7rem, 8.5rem, 13rem)`,
-    height: `clamp(1.8rem, 2.5rem, 3.5rem)`,
-    borderRadius: "50px",
-    border: "1px solid #7D5730",
-    background: "rgba(255, 255, 255, 0.00)",
-    color: "#7D5730",
-    textAlign: "center",
-    fontFamily: "Cinzel",
-    fontSize:`clamp(12px, 0.8rem, 0.9rem)`,
-    fontStyle: "normal",
-    fontWeight: "400px",
-    lineHeight: "normal",
+  box: {
+    //color: "D9D9D9",
+    height: "300px",
+    width: "100%",
+    backgroundColor: "#D9D9D9",
+    paddingLeft: "0px",
+    paddingRight: "0px",
+  },
+  box2: {
+    height: "80%",
+    width: "100%",
+    backgroundColor: "#D9D9D9",
+    paddingLeft: "0px",
+    paddingRight: "0px",
+  },
+  iglesia: {
+    //position: "relative",
+    //textAlign: "center",
+    margin: "0px 0px",
+    maxWidth: "30%",
+    maxHeight: "30%",
   },
 };
 
-const Itinerario = () => {
+function ColorsTimeline() {
   return (
-    <Container
-      sx={{
-        height: "100%",
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        color: "white",
-        marginTop: "0",
-      }}
-    >
-      <Box sx={{ flex: "1" }}>
+    <Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          //height:"100%"
+        }}
+      >
         <img
-          src="/img/fotoInicio.jpg"
+          src="/img/iglesia.svg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
-          style={{
-            height: "90%",
-            width: "100%",
-          }}
+          style={styles.iglesia}
         />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+            height: "100%",
+            gap: "10px",
+            //alignItems: "center",
+          }}
+        >
+          <Typography variant="h11">CEREMONIA RELIGIOSA</Typography>
+          <Typography variant="horaP">6:00 PM</Typography>
+          <Box sx={{display:"flex", flexDirection:"column"}}>
+            <Typography variant="h11"> Parroquia maria madre</Typography>
+            <Typography variant="h11">de la divina gracia</Typography>
+          </Box>
+        </Box>
       </Box>
       <Box
         sx={{
-          flex: "1",
           display: "flex",
-          flexDirection: "column",
-          gap:'0.6rem',
-          //justifyContent: "space-around",
+          justifyContent: "center",
           alignItems: "center",
-          height: "100%",
+          //height:"100%"
         }}
       >
-        <Typography variant="h2" sx={{ marginBottom: "10px" }}>
-          {" "}
-          CEREMONIA RELIGIOSA{" "}
-        </Typography>
-        <div
-          style={{
+        <img
+          src="/img/copas.svg"
+          alt="Imagen de inicio" // Propiedad alt para describir la imagen
+          style={styles.iglesia}
+        />
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: "10px",
+            justifyContent: "space-around",
+            height: "100%",
+            gap: "10px",
+            //alignItems: "center",
           }}
         >
-          <Typography variant="h8" sx={{ typography: "bold" }}>
-            PARROQUIA MARIA MADRE
-          </Typography>
-          <Typography variant="h8"> DE LA DIVINA GRACIA </Typography>
-        </div>
-        <Typography variant="hora" sx={{ marginBottom: "10px" }}>
-          {" "}
-          18:30 hrs.{" "}
-        </Typography>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <Typography variant="h2"> Rincón de Frascati 100, </Typography>
-          <Typography variant="h2"> Nueva Rinconada de los Andes. </Typography>
-        </div>
-        <button style={styles.button}>¿COMO LLEGAR?</button>
+          <Typography variant="h11">RECEPCIÓN</Typography>
+          <Typography  variant="horaP">9:00 PM</Typography>
+          <Box sx={{display:"flex", flexDirection:"column"}}>
+            <Typography variant="h11"> SALÓN DE EVENTOS</Typography>
+            <Typography variant="h11">TALLER 2560</Typography>
+          </Box>
+        </Box>
       </Box>
-    </Container>
+     
+    </Box>
+  );
+}
+const Itinerario = () => {
+  const matches = useMediaQuery('(min-width:600px)');
+  console.log(matches, "media query")
+  return (
+    <>
+      <Container
+        sx={{
+          height: "600px",
+          width: "100%",
+          display: "flex",
+          paddingLeft: "0px",
+          paddingRight: "0px",
+          flexDirection: "column",
+
+          //alignItems: "center",
+          //color: "white",
+          marginTop: "0",
+        }}
+      >
+        <div style={styles.box}></div>
+        <Box sx={{ display: "flex" }}>
+          {matches ? <Box sx={{ flex: "1" }} >
+
+            <div style={styles.box2}></div>
+          </Box> : null}
+          <Box
+            sx={{
+              flex: "1",
+              display: "flex",
+              flexDirection: "column",
+              //gap: "0.2rem",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+              backgroundImage: "url('/img/fondo.svg')",
+            }}
+          >
+            <Typography
+              variant="h2"
+              sx={{ marginTop: "20px", marginBottom: "10px" }}
+            >
+              {" "}
+              ITINERARIO{" "}
+            </Typography>
+           
+            <ColorsTimeline />
+            <Typography
+              variant="h12"
+              sx={{ marginTop: "20px", marginBottom: "10px" }}
+            >
+              {" "}
+              A.D{" "}
+            </Typography>
+          </Box>
+        </Box>
+      </Container>
+    </>
   );
 };
 

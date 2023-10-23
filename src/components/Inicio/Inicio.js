@@ -6,6 +6,7 @@ const styles = {
   container: {
     position: "relative",
     textAlign: "center",
+    margin: "0px 0px"
   },
   image: {
     maxWidth: "100%",

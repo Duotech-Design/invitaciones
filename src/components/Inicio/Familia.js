@@ -29,7 +29,7 @@ const styles = {
     //width: "20%",
     //color: "#FFFFFF",
     //flex: 1,
-    minWidth: `clamp(200px, 15%, 20%)`,
+    minWidth: `clamp(150px, 15%, 20%)`,
     maxWidth: '20%',
   },
   image2: {
@@ -86,18 +86,19 @@ export default function IncioFamilia() {
       <Typography variant="h7">
         USTEDES, Y NOS COMPLACE
       </Typography>
-      <Typography variant="h7">
+      <Typography variant="h7" sx={{marginBottom:"15px "}}>
         INVITARLOS A NUESTRA BODA
       </Typography>
       
       {/* El Box contiene a la imagen*/}
-      <Box sx={{ marginTop: "5%", width: "91%", height: "100%" }}>
+   {/*}   <Box sx={{ marginTop: "5%", width: "91%", height: "100%" }}>
         <img
           src="/img/foto2.jpg" //Foto de Fondo abajo del texto
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.image2}
         />
       </Box>
+    */}
     </Box>
   );
 }

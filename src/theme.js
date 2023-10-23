@@ -36,7 +36,7 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: "Cormorant", // Cambia a Zeyada
-      fontSize: `clamp(3px, 3.5vw, 1.5rem)`,
+      fontSize: `clamp(3px, 3.5vw, 2.5rem)`,
       fontWeight: 400,
       color: "#7D5730",
     },
@@ -45,7 +45,7 @@ const theme = createTheme({
         fontFamily: "Cinzel",
         fontSize: `clamp(5px, 2.5vw, 2rem)`,
         fontWeight: 300,
-        color: '#6A797A',
+        color: '#7D5730',
          // Color de texto negro
       },
       h4: {
@@ -86,6 +86,12 @@ const theme = createTheme({
         fontWeight: 700,
         color: '#7D5730',
          // Color de texto negro
+      },horaP: {
+        fontFamily: "Cormorant",
+        fontSize: `clamp(15px, 3vw, 2rem)`,
+        fontWeight: 600,
+        color: '#7D5730',
+         // Color de texto negro
       },
       h9: {
         fontFamily: "Cinzel, cursive",
@@ -102,8 +108,14 @@ const theme = createTheme({
       },
       h11: {
         fontFamily: "Cormorant", // Cambia a Zeyada
-        fontSize: `clamp(2.5px, 3vw, 1rem)`,
+        fontSize: `clamp(2.5px, 3vw, 1.5rem)`,
         fontWeight: 300,
+        color: "#7D5730",
+      },
+      h12: {
+        fontFamily: "Zeyada", // Cambia a Zeyada
+        fontSize: `clamp(40px, 3.5vw, 4rem)`,
+        fontWeight: 600,
         color: "#7D5730",
       },
     // Define otras fuentes personalizadas según sea necesario
