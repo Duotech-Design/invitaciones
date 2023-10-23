@@ -8,6 +8,7 @@ import Galeria from '../Galeria/Galeria';
 import MesaDeRegalos from '../MesaDeRegalos/MesaDeRegalos';
 import Footer from '../Footer/Footer';
 import IncioFamilia from '../Inicio/Familia';
+import SectionUno from '../Sections/Section';
 import { weddingInvitationStyles } from './styles'; // Importa los estilos
 
 const WeddingInvitation = () => {
@@ -21,6 +22,7 @@ const WeddingInvitation = () => {
       <Confirmacion />
       <Galeria />
       <MesaDeRegalos />
+      <SectionUno/>
       <Footer />
     </Box>
   );
