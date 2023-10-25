@@ -51,7 +51,7 @@ export default function SectionUno() {
     <div style={styles.sectionDos}>
     </div>
     <div style={styles.sectionTres}>
-        Alison
+        Zoy
     </div>
 
     </>
