@@ -59,9 +59,7 @@ const styles = {
     bottom: "5%", // Coloca el cuadro en la parte inferior
     left: "50%",
     transform: "translateX(-50%)",
-
     display: "flex",
-   
     alignItems: "flex-start",
     textColor: "#FFFFFF",
 
@@ -94,7 +92,7 @@ const Inicio = () => {
             width: "70px",
           }}
         >
-          <Typography variant="h4">12 </Typography>
+          <Typography variant="h4">23 </Typography>
 
           <Typography variant="h4" style={{ width: "100%" }}>
             Días
