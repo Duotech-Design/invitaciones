@@ -3,8 +3,9 @@ import { NavbarStyles } from "./styles";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 
 const Navbar = () => {
+  //position="fixed" para que el nabvar siga el scroll
   return (
-    <AppBar position="fixed" sx={NavbarStyles.nav}>
+    <AppBar position="static" sx={NavbarStyles.nav}>
       <Typography variant="h10" sx={NavbarStyles.iniciales}>
         A & D
       </Typography>

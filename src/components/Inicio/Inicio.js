@@ -6,7 +6,12 @@ const styles = {
   container: {
     position: "relative",
     textAlign: "center",
-    margin: "0px 0px"
+    margin: "0px 0px",
+    background: `url("/img/fotoInicio.jpg")`,
+    backgroundPosition: '50% 20%',
+    width: "100%",
+    height: "100vh",
+    backgroundAttachment: "fixed",
   },
   image: {
     maxWidth: "100%",
@@ -32,7 +37,7 @@ const styles = {
   },
   textContainer: {
     position: "absolute",
-    bottom: "10%", // Coloca el cuadro en la parte inferior
+    bottom: "15%", // Coloca el cuadro en la parte inferior
     left: "50%",
     transform: "translateX(-50%)", // Centra horizontalmente
     width: "60%",
@@ -51,11 +56,13 @@ const styles = {
 
   numbersContainer: {
     position: "absolute",
+    bottom: "5%", // Coloca el cuadro en la parte inferior
     left: "50%",
     transform: "translateX(-50%)",
+
     display: "flex",
+   
     alignItems: "flex-start",
-    bottom: "3%", // Coloca el cuadro en la parte inferior
     textColor: "#FFFFFF",
 
   },
@@ -64,16 +71,10 @@ const styles = {
 const Inicio = () => {
   return (
     <Container style={styles.container}>
-      <img
-        src="/img/fotoInicio.jpg"
-        alt="Imagen de inicio" // Propiedad alt para describir la imagen
-        style={styles.image}
-      />
-
       <Typography variant="h1" component="h3" style={styles.textTop}>
         ANDREA & DIEGO
       </Typography>
-
+      <Box>
       <Box style={styles.textContainer}>
         <div style={{ width: "50%" }}>
           <Typography variant="h3">VIERNES</Typography>
@@ -84,7 +85,6 @@ const Inicio = () => {
           <Typography variant="h3">S.L.P.</Typography>
         </div>
       </Box>
-
       <div style={styles.numbersContainer}>
         <div
           style={{
@@ -145,6 +145,7 @@ const Inicio = () => {
         </div>
        
       </div>
+      </Box>
     </Container>
   );
 };
