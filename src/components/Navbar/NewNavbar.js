@@ -13,13 +13,13 @@ const styles = {
       },
       section: {
         background: `url("/img/imagenNavbar.svg")`,
-        backgroundSize: "container",
+        backgroundSize: "cover",
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#CBB197',
         //padding: '15px',
         //backgroundPosition: '50% 50%',
-        width: '150px',
-        height: "150px",
+        width: '200px',
+        height: "180px",
         //backgroundAttachment: "fixed",
         
       }
@@ -31,7 +31,7 @@ const NewNavbar = () => {
       <>
         <Box style={{
               display: "flex",
-              //width: '100%',
+              width: '100%',
               //padding: '10px',
               justifyContent:'space-around',
               backgroundColor: "#F4EBE2",
