@@ -5,20 +5,21 @@ const styles = {
     textContainer: {
         width: "100%",
         height: "50%", // Anchura del cuadro
-        padding: "5px",
-      
+        padding: "5px",  
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
         // fontSize: `clamp(5px, 5vw, 3.5rem)`,
       },
       section: {
-        background: `url("/img/foto2.jpg")`,
-        backgroundSize: "100%",
+        background: `url("/img/imagenNavbar.svg")`,
+        backgroundSize: "container",
         backgroundRepeat: 'no-repeat',
+        backgroundColor: '#CBB197',
+        //padding: '15px',
         //backgroundPosition: '50% 50%',
-        width: '200px',
-        height: "100px",
+        width: '150px',
+        height: "150px",
         //backgroundAttachment: "fixed",
         
       }
@@ -30,8 +31,8 @@ const NewNavbar = () => {
       <>
         <Box style={{
               display: "flex",
-              width: '96%',
-              padding: '20px',
+              //width: '100%',
+              //padding: '10px',
               justifyContent:'space-around',
               backgroundColor: "#F4EBE2",
             }}>
@@ -44,8 +45,8 @@ const NewNavbar = () => {
             }}
           >
 
-            <Box style={{  textAlign: "center", padding: '20px', }}>
-              <Typography variant="h2">ANDREA & DIEGO</Typography>
+            <Box style={{  textAlign: "center", padding: '10px', }}>
+              <Typography variant="h3">ANDREA & DIEGO</Typography>
             </Box>
             <Box style={styles.textContainer}>
               <div style={{  textAlign: "center", display:'flex', flexDirection:'column',padding: '10px' }}>

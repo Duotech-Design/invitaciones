@@ -118,6 +118,13 @@ const theme = createTheme({
         fontWeight: 600,
         color: "#7D5730",
       },
+      h13: {
+        fontFamily: "Great Vibes",
+        fontSize: `clamp(5px, 2.5vw, 2rem)`,
+        fontWeight: 300,
+        color: '#7D5730',
+         // Color de texto negro
+      },
     // Define otras fuentes personalizadas según sea necesario
   },
 });
