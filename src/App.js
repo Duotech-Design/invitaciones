@@ -5,13 +5,14 @@ import theme from './theme';
 //import Inicio from './pages/inicio'
 //import InicioInvitacion from './pages/inicio';
 import Inicio from './pages/inicio';
+import NewNavbar from './components/Navbar/NewNavbar';
 function App() {
   return (
     <Router>
     <ThemeProvider theme={theme}>
     <div className="App">
       <Routes>
-      <Route path="/" element={<h1>Para ir a la invitacion agrega /invitacion en la url</h1>} />
+      <Route path="/" element={<NewNavbar/>} />
       <Route path="/invitacion" element={<WeddingInvitation />} />
       <Route path="/inicio" element={<Inicio />} />
       </Routes>
