@@ -125,6 +125,12 @@ const theme = createTheme({
         color: '#7D5730',
          // Color de texto negro
       },
+      h14:{
+        fontFamily: "Cormorant", // Cambia a Zeyada
+        fontSize:`clamp(16px, 0.8rem, 0.9rem)`,
+        fontWeight: 400,
+        color: "#7D5730",
+      }
     // Define otras fuentes personalizadas según sea necesario
   },
 });

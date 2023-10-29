@@ -5,17 +5,19 @@ export const NavbarStyles = {
     justifyContent: 'spaceBetween',
     alignItems: "center",
     background: "#E5D4C2",
-    height:'20%'
+    height:'50%'
   },
   toolbar: {
     display: "flex",
-    //flexDirection: 'column',
+  flexDirection: 'column',
     //alignItems: 'center',
+    justifyContent:"center",
+    width:"100%",
     padding: "0",
     //boxShadow: '3px 3px 5px 0px rgba(0,0,0,0.75)',
     //textAlign: 'center',
     background: "#E5D4C2",
-    flexWrap: "wrap",
+    //flexWrap: "wrap",
   },
   iniciales: {
     textAlign: "center",
@@ -30,9 +32,9 @@ export const NavbarStyles = {
   },
   content: {
     textAlign: "center",
-    padding: "0.3rem 1rem",
+    padding: "2rem 1rem",
     flex: "1",
-    marginLeft:'40px',
+    //smarginLeft:'40px',
     whiteSpace: "nowrap",
     transition: "background-color 0.3s, border-radius 0.3s", // Agrega una transición para suavizar el cambio de color de fondo y los bordes en hover
     backgroundColor: "#E5D4C2", // Color de fondo normal
