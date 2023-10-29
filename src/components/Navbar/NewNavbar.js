@@ -2,7 +2,7 @@ import { NavbarStyles } from "./styles";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
-import MenuIcon from '@mui/icons-material/Menu';
+//import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const styles = {
@@ -31,6 +31,9 @@ const NewNavbar = () => {
   const [menu, setMenu] = useState(false);
   const handdleClick = ()=> {
     setMenu(true) 
+  }
+  const handdleClickExpand = () => {
+    setMenu(false) 
   }
 console.log(menu)
   return (
@@ -96,7 +99,16 @@ console.log(menu)
           
         </div>
       </Box>
-      {menu ?  < ExpandMoreIcon/> : null}
+      {menu ?  
+        <Box style={{
+          display: "flex",
+          width: "100%",
+          //padding: '10px',
+          justifyContent: "center",
+          //backgroundColor: "#F4EBE2",
+        }}>
+          < ExpandMoreIcon onClick={handdleClickExpand} sx={NavbarStyles.expand}/>
+        </Box> : null}
       <AppBar position="static" sx={NavbarStyles.nav}>
        {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
           A & D

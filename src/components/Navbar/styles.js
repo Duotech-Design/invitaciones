@@ -2,17 +2,17 @@ export const NavbarStyles = {
   nav: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: 'spaceBetween',
+    justifyContent: "spaceBetween",
     alignItems: "center",
     background: "#E5D4C2",
-    height:'50%'
+    height: "50%",
   },
   toolbar: {
     display: "flex",
-  flexDirection: 'column',
+    flexDirection: "column",
     //alignItems: 'center',
-    justifyContent:"center",
-    width:"100%",
+    justifyContent: "center",
+    width: "100%",
     position: "relative",
     padding: "0",
     //boxShadow: '3px 3px 5px 0px rgba(0,0,0,0.75)',
@@ -20,19 +20,21 @@ export const NavbarStyles = {
     background: "#E5D4C2",
     //flexWrap: "wrap",
   },
-  closing: 
-  {
-position:"absolute",
-left: "85%", 
-top:"5%",
-fontSize:"24px"
-
+  closing: {
+    position: "absolute",
+    left: "85%",
+    top: "5%",
+    fontSize: "24px",
   },
+  expand: {
+    fontSize: "36px",
+  },
+
   iniciales: {
     textAlign: "center",
     padding: "0rem .5rem",
     flex: "1",
-    //maxWidth: '15%', 
+    //maxWidth: '15%',
     //minWidth: '10%',
     whiteSpace: "nowrap",
     borderRight: "1px solid #7D5730",
