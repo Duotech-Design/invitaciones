@@ -26,11 +26,11 @@ const styles = {
 };
 
 const NewNavbar = () => {
-  const [menu, setMenu] = useState(null);
+  const [menu, setMenu] = useState(false);
   const handdleClick = ()=> {
-    console.log("click")
+    setMenu(true) 
   }
-
+console.log(menu)
   return (
     <>
       <Box
@@ -98,8 +98,7 @@ const NewNavbar = () => {
        {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
           A & D
           </Typography>*/}
-          
-        <Toolbar sx={NavbarStyles.toolbar}>
+          {menu ? null :  <Toolbar sx={NavbarStyles.toolbar}>
         <CloseIcon onClick={handdleClick} sx={NavbarStyles.closing}/>
           <Typography variant="h2" sx={NavbarStyles.content}>
             INICIO
@@ -120,7 +119,8 @@ const NewNavbar = () => {
           <Typography variant="h2" sx={NavbarStyles.content}>
             MESA DE REGALOS
           </Typography>
-        </Toolbar>
+        </Toolbar>}
+       
       </AppBar>
     </>
   );
