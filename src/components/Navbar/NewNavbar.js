@@ -12,14 +12,14 @@ const styles = {
         // fontSize: `clamp(5px, 5vw, 3.5rem)`,
       },
       section: {
-        background: `url("/img/imagenNavbar.svg")`,
+        
         backgroundSize: "cover",
-        backgroundRepeat: 'no-repeat',
+        //backgroundRepeat: 'no-repeat',
         backgroundColor: '#CBB197',
         //padding: '15px',
         //backgroundPosition: '50% 50%',
-        width: '200px',
-        height: "180px",
+        width: '100px',
+        height: "100px",
         //backgroundAttachment: "fixed",
         
       }
@@ -55,7 +55,7 @@ const NewNavbar = () => {
               </div>
               <div
                 style={{
-                  borderLeft: "1px solid black",
+                  borderLeft: "1px solid #7D5730",
                   textAlign: "center",
                   
                   padding: '10px'
@@ -68,8 +68,16 @@ const NewNavbar = () => {
 
           </Box>
 
-          <div style={styles.section}>
-
+          <div  style={styles.section}>
+            
+<img src="/img/imagenNavbar.svg" alt="iglesia"  style={{
+              height: "90%",
+              width: "100%",
+              marginTop:"5px", 
+              marginBottom:"5px",
+              color: "white"
+             
+            }}/>
           </div>
         </Box>
 
