@@ -2,6 +2,8 @@ import { NavbarStyles } from "./styles";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
+import MenuIcon from '@mui/icons-material/Menu';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const styles = {
   textContainer: {
@@ -80,7 +82,7 @@ console.log(menu)
         </Box>
 
         <div style={styles.section}>
-          <img
+       <img
             src="/img/imagenNavbar.svg"
             alt="iglesia"
             style={{
@@ -91,9 +93,10 @@ console.log(menu)
               color: "white",
             }}
           />
+          
         </div>
       </Box>
-
+      {menu ?  < ExpandMoreIcon/> : null}
       <AppBar position="static" sx={NavbarStyles.nav}>
        {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
           A & D
