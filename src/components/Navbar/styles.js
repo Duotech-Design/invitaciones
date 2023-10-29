@@ -13,11 +13,20 @@ export const NavbarStyles = {
     //alignItems: 'center',
     justifyContent:"center",
     width:"100%",
+    position: "relative",
     padding: "0",
     //boxShadow: '3px 3px 5px 0px rgba(0,0,0,0.75)',
     //textAlign: 'center',
     background: "#E5D4C2",
     //flexWrap: "wrap",
+  },
+  closing: 
+  {
+position:"absolute",
+left: "85%", 
+top:"5%",
+fontSize:"24px"
+
   },
   iniciales: {
     textAlign: "center",

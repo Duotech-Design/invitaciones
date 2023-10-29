@@ -1,5 +1,7 @@
 import { NavbarStyles } from "./styles";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import { useState } from "react";
 
 const styles = {
   textContainer: {
@@ -24,6 +26,11 @@ const styles = {
 };
 
 const NewNavbar = () => {
+  const [menu, setMenu] = useState(null);
+  const handdleClick = ()=> {
+    console.log("click")
+  }
+
   return (
     <>
       <Box
@@ -91,9 +98,12 @@ const NewNavbar = () => {
        {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
           A & D
           </Typography>*/}
+          
         <Toolbar sx={NavbarStyles.toolbar}>
+        <CloseIcon onClick={handdleClick} sx={NavbarStyles.closing}/>
           <Typography variant="h2" sx={NavbarStyles.content}>
             INICIO
+           
           </Typography>
           <Typography variant="h2" sx={NavbarStyles.content}>
             ITINERARIO
