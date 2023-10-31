@@ -66,7 +66,7 @@ const Confirmacion = () => {
             //alignItems: "center",
           }}
         >
-        <Typography variant="hora" sx={{ textAlign: "center" }}>CONFIRMACION DE ASISTENCIA</Typography>
+        <Typography variant="horaP" sx={{ textAlign: "center" }}>CONFIRMACION DE ASISTENCIA</Typography>
 
         <Typography variant="h2" sx={{ textAlign: "center" }}>FAM. HERNANDEZ ACEBO</Typography>
         <Box sx={{ textAlign: "center" }}>
@@ -85,7 +85,7 @@ const Confirmacion = () => {
         ></div>
         
       </Box>
-      <Typography variant="h2"  sx={{ textAlign: "center" }}>
+      <Typography variant="h14"  sx={{ textAlign: "center" }}>
           CÓDIGO DE VESTIMENTA
         </Typography>
         <div
