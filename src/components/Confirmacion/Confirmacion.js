@@ -94,17 +94,17 @@ const Confirmacion = () => {
           <Box
         sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"5px" , flexDirection:"column"}}
       >
-        <Typography variant="h2"  sx={{ textAlign: "center", marginTop:"5px" }}>
+        <Typography variant="horaP"  sx={{ textAlign: "center", marginTop:"5px" }}>
           FORMAL
         </Typography>
         <div
-          style={{  width: "100%" , marginTop:"5px", display:"flex", alignItems:"flex-end", justifyContent:"center"}}
+          style={{  width: "100%" , marginTop:"15px", display:"flex", alignItems:"flex-end", justifyContent:"center"}}
         > 
 <Typography variant="h8"  sx={{ textAlign: "center" }}>
           HOMBRES: 
         </Typography>
 
-<Typography variant="h2"  sx={{ textAlign: "center", marginLeft:"5px" }}>
+<Typography variant="h3"  sx={{ textAlign: "center", marginLeft:"5px" }}>
           Traje con corbata 
         </Typography>
         </div>
@@ -115,7 +115,7 @@ const Confirmacion = () => {
           MUJERES: 
         </Typography>
 
-<Typography variant="h2"  sx={{ textAlign: "center" , marginLeft:"5px"}}>
+<Typography variant="h3"  sx={{ textAlign: "center" , marginLeft:"5px"}}>
           Vestido largo
         </Typography>
         </div>
