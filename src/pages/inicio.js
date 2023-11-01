@@ -6,6 +6,7 @@ import Recepcion from "../components/Itinerario/Recepcion";
 import Itinerario from "../components/Itinerario/Itinerario";
 import Confirmacion from "../components/Confirmacion/Confirmacion";
 import Sugerencias from "../components/Sugerencias/Sugerencias";
+import MesaDeRegalos from "../components/MesaDeRegalos/MesaDeRegalos";
 
 const styles = {
   root: {
@@ -25,6 +26,7 @@ const InicioPages = () => {
         <Itinerario/>
         <Confirmacion/>
         <Sugerencias/>
+        <MesaDeRegalos/>
       </Box>
     </>
   );
