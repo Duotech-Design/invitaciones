@@ -9,7 +9,15 @@ const styles = {
     backgroundColor: "#D9D9D9",
     paddingLeft: "0px",
     paddingRight: "0px",
-  }}
+  },
+    box2: {
+      //color: "D9D9D9",
+      height: "300px",
+      width: "400px",
+      backgroundColor: "#D9D9D9",
+      paddingLeft: "0px",
+      paddingRight: "0px",
+    },}
 
 const MesaDeRegalos = () => {
   return (
@@ -62,6 +70,29 @@ const MesaDeRegalos = () => {
       <Typography variant='h3'>
       NUM. Evento
       </Typography>
+      <div style={styles.box}></div>
+      <Typography variant='h3'>
+      Click en LOGO
+      </Typography>
+      <Typography variant='h3'>
+      NUM. Evento
+      </Typography>
+      <div sx={{marginTop:"20px" ,
+       display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",}}>
+      <Typography variant='h3'>
+      SANTANDER
+      </Typography>
+      <Typography variant='h3'>
+      ANDREA HDZ ACEBO
+      </Typography>
+      <Typography variant='h3'>
+      000000000000
+      </Typography>
+      </div>
+      <div style={styles.box2}></div>
     </Container>
   );
 }
