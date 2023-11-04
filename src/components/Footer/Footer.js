@@ -3,28 +3,37 @@ import { Container, Typography, Box } from "@mui/material";
 
 const Footer = () => {
   return (
-    <Container>
+    <Container
+      sx={{
+        backgroundColor: "#F4EBE2",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Box
         style={{
-          width: "150px",
-          height: "50px",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection:"column",
+
           //padding: '10px',
 
           backgroundColor: "#F4EBE2",
         }}
       >
         <Typography
-          variant="body2"
+          variant="h12"
           sx={{
-            width: "150px",
-            height: "50px",
+            width: "100%",
+            textAlign:"center",
+
             //padding: '10px',
 
             backgroundColor: "#F4EBE2",
           }}
         >
-          © {new Date().getFullYear()} Alison, Zoy. Todos los derechos
-          reservados.
+          A.D © {new Date().getFullYear()}
         </Typography>
       </Box>
     </Container>

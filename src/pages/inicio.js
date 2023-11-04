@@ -28,8 +28,9 @@ const InicioPages = () => {
         <Confirmacion/>
         <Sugerencias/>
         <MesaDeRegalos/>
+        <Footer/>
       </Box>
-      <Footer/>
+    
     </>
   );
 }
