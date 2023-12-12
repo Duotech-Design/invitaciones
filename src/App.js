@@ -6,6 +6,7 @@ import theme from './theme';
 //import InicioInvitacion from './pages/inicio';
 import Inicio from './pages/inicio';
 import NewNavbar from './components/Navbar/NewNavbar';
+import LogIn from './components/LogIn/WeddingInvitation';
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<NewNavbar/>} />
       <Route path="/invitacion" element={<WeddingInvitation />} />
       <Route path="/inicio" element={<Inicio />} />
+      <Route path='/logIn' element={<LogIn/>} />
       </Routes>
     </div>
     </ThemeProvider>
