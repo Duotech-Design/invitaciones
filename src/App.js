@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import WeddingInvitation from './components/invitacion/WeddingInvitation';
 import { ThemeProvider } from '@mui/material/styles';
+
 import theme from './theme';
 //import Inicio from './pages/inicio'
 //import InicioInvitacion from './pages/inicio';
 import Inicio from './pages/inicio';
 import NewNavbar from './components/Navbar/NewNavbar';
-import LogIn from './components/LogIn/WeddingInvitation';
+import LogIn from './components/LogIn/LogIn';
 function App() {
   return (
     <Router>
