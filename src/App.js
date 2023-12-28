@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import WeddingInvitation from './components/invitacion/WeddingInvitation';
 import { ThemeProvider } from '@mui/material/styles';
-import EnhancedTable from './components/Dashboard/tabla';
+import Dashboard from './components/Dashboard/dashboard';
 import theme from './theme';
 //import Inicio from './pages/inicio'
 //import InicioInvitacion from './pages/inicio';
@@ -18,7 +18,7 @@ function App() {
       <Route path="/invitacion" element={<WeddingInvitation />} />
       <Route path="/inicio" element={<Inicio />} />
       <Route path='/logIn' element={<LogIn/>} />
-      <Route path='/dashboard' element={<EnhancedTable/>} />
+      <Route path='/dashboard' element={<Dashboard/>} />
       </Routes>
     </div>
     </ThemeProvider>

@@ -98,19 +98,19 @@ const headCells = [
     id: 'Asientos',
     numeric: true,
     disablePadding: false,
-    label: 'Asientos ',
+    label: 'Asientos',
   },
   {
     id: 'Status',
     numeric: true,
     disablePadding: false,
-    label: 'Status (g)',
+    label: 'Status',
   },
   {
     id: 'protein',
     numeric: true,
     disablePadding: false,
-    label: 'Protein (g)',
+    label: 'Protein',
   },
 ];
 
@@ -225,7 +225,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function EnhancedTable() {
+export default function TablaPrincipal() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);
@@ -296,7 +296,7 @@ export default function EnhancedTable() {
   );
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '60%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
         <TableContainer>
