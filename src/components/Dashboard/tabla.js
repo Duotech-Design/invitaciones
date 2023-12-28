@@ -32,7 +32,7 @@ function createData(id, name, calories, fat, carbs, protein) {
     protein,
   };
 }
-
+//create tabla esta relacionado con los datos de rows      
 const rows = [
   createData(1, 'Maria Aguilar', 305, 3.7, 67, 4.3),
   createData(2, 'Cristina Jerez', 452, 25.0, 51, 4.9),

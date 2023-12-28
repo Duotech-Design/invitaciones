@@ -4,9 +4,10 @@ import { Box, Container, Typography } from '@mui/material';
 const styles = {
   box: {
     //color: "D9D9D9",
-    height: "50px",
+    height: "30%",
     width: "60%",
-    backgroundColor: "#D9D9D9",
+    objectFit: "cover",
+    //backgroundColor: `url("/img/liverpool.svg")`,
     paddingLeft: "0px",
     paddingRight: "0px",
   },
@@ -63,7 +64,7 @@ const MesaDeRegalos = () => {
       sugerencias.
       </Typography>
       </div>
-      <div style={styles.box}></div>
+      <img src='/img/liverpool.svg' alt="logo" style={styles.box} />
       <Typography variant='h3'>
       Click en LOGO
       </Typography>
