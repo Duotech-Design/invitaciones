@@ -7,7 +7,7 @@ const styles = {
     position: "relative",
     textAlign: "center",
     margin: "0px 0px",
-    background: `url("/img/FotoInicio.webp")`, 
+    background: `url("/img/prueba.webp")`, 
     backgroundPosition: '50% 20%',
     width: "100%",
     height: "100vh",
