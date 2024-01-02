@@ -2,7 +2,7 @@
 
 const styles = {
   section: {
-    background: `url("/img/fotoInicio.jpg")`,
+    background: `url("/img/FotoFooter.jpg")`,
     backgroundSize: "100%",
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
@@ -12,7 +12,7 @@ const styles = {
     
   },
   sectionDos: {
-    background: `url("/img/foto2.jpg")`,
+    background: `url("/img/Ad.jpg")`,
     backgroundSize: "100%",
     width: "100%",
     height: "500px",

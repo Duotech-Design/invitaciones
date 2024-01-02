@@ -114,11 +114,11 @@ const Itinerario = () => {
           marginTop: "0",
         }}
       >
-        <div style={styles.box}></div>
+        <div style={styles.box}>HOLAAAA</div>
         <Box sx={{ display: "flex" }}>
           {matches ? <Box sx={{ flex: "1" }} >
 
-            <div style={styles.box2}></div>
+            <div style={styles.box2}>HOLAAAAA</div>
           </Box> : null}
           <Box
             sx={{
@@ -151,6 +151,7 @@ const Itinerario = () => {
           </Box>
         </Box>
       </Container>
+
     </>
   );
 };
