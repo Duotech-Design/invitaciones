@@ -7,7 +7,7 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
     width: "100%",
-    height: "500px",
+    height: "700px",
     backgroundAttachment: "fixed",
     
   },
@@ -24,7 +24,7 @@ const styles = {
     backgroundOrigin: 'border-box', // content-box padding-box
   },
   sectionTres: {
-    width: "100%",
+    //width: "100%",
     paddingBottom: "100%", /* Establece una relación de aspecto 1:1 (100% de ancho y alto igual al ancho) */
     border: "0.5px solid hsla(0deg, 0%, 60%, 0.5)",
     padding: "1rem",
@@ -50,9 +50,9 @@ export default function SectionUno() {
     </div>
     <div style={styles.sectionDos}>
     </div>
-    <div style={styles.sectionTres}>
+    {/*<div style={styles.sectionTres}>
         Zoy
-    </div>
+    </div>*/}
 
     </>
   );

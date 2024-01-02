@@ -5,17 +5,13 @@ import theme from "../../theme";
 const styles = {
   container: {
     position: "relative",
-    textAlign: "center",
+    //textAlign: "center",
     margin: "0px 0px",
     background: `url("/img/FotoInicio.webp")`, 
-    backgroundPosition: '50% 20%',
+    backgroundPosition: '50% 10%',
     width: "100%",
     height: "100vh",
     backgroundAttachment: "fixed",
-  },
-  image: {
-    maxWidth: "100%",
-    maxHeight: "100%",
   },
   textTop: {
     position: "absolute",
@@ -31,9 +27,6 @@ const styles = {
     color: theme.palette.primary.main,
     fontWeight: theme.typography.h1.fontWeight,
     fontSize: `clamp(2rem, 8vw, 6rem)`,
-
-    //color: theme.palette.primary.main,
-    //fontWeight: theme.typography.h1.fontWeight,
   },
   textContainer: {
     position: "absolute",

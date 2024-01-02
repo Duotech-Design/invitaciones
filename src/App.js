@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
     <ThemeProvider theme={theme}>
-    <div className="App">
+    
       <Routes>
       <Route path="/" element={<NewNavbar/>} />
       <Route path="/invitacion" element={<WeddingInvitation />} />
@@ -20,7 +20,7 @@ function App() {
       <Route path='/logIn' element={<LogIn/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
       </Routes>
-    </div>
+    
     </ThemeProvider>
     </Router>
   );
