@@ -23,6 +23,7 @@ const styles = {
     //backgroundPosition: '50% 50%',
     width: "100px",
     height: "100px",
+    borderRadius: "50px"
     //backgroundAttachment: "fixed",
   },
 };
@@ -45,6 +46,7 @@ console.log(menu)
           //padding: '10px',
           justifyContent: "space-between",
           backgroundColor: "#F4EBE2",
+          
         }}
       >
         <Box
@@ -86,7 +88,7 @@ console.log(menu)
 
         <div style={styles.section}>
        <img
-            src="/img/imagenNavbar.svg"
+            src="/img/LogoBien.svg"
             alt="iglesia"
             style={{
               height: "90%",
@@ -94,6 +96,7 @@ console.log(menu)
               marginTop: "5px",
               marginBottom: "5px",
               color: "white",
+              borderRadius: "50px"
             }}
           />
           
