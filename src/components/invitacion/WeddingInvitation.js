@@ -11,7 +11,7 @@ import IncioFamilia from "../Inicio/Familia";
 import SectionUno from "../Sections/Section";
 import NewNavbar from "../Navbar/NewNavbar";
 import { weddingInvitationStyles } from "./styles"; // Importa los estilos
-import Ceremonia from "../Itinerario/Ceremonia.js.js";
+import Ceremonia from "../Itinerario/Ceremonia.js";
 
 const WeddingInvitation = () => {
   return (
