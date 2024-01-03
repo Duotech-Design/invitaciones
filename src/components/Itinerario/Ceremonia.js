@@ -1,4 +1,4 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 const styles = {
   button: {
@@ -21,8 +21,8 @@ const styles = {
 const Ceremonia = () => {
   return (
     <>
-    <Container
-      sx={{
+    <div
+      style={{
         height: "100%",
         width: "100%",
         display: "flex",
@@ -89,7 +89,7 @@ const Ceremonia = () => {
         </div>
         <button style={styles.button}>¿COMO LLEGAR?</button>
       </Box>
-    </Container>
+    </div>
      <Box
         sx={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
       >

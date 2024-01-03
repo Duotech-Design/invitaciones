@@ -1,23 +1,34 @@
-import { Container, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   box: {
     //color: "D9D9D9",
-    height: "300px",
-    width: "100%",
-    backgroundColor: "#D9D9D9",
-    //paddingLeft: "0px",
-    //paddingRight: "0px",
+    height: "350px",
+    //width: "100%",
+    background: `url("/img/FotoFooter.jpg")`,
+   
+    //backgroundSize: "100%",
+    //backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 50%',
     padding:'0px, 0px',
+    flex: "1",
+    
+    //objectFit: 'cover',
+    backgroundAttachment: "fixed",
   },
   box2: {
     height: "100%",
     width: "100%",
-    backgroundColor: "#D9D9D9",
-    //paddingLeft: "0px",
-    //paddingRight: "0px",
+    background: `url("/img/FotoFooter.jpg")`,
+    //transform: 'scaleX(-1)',
+    backgroundPosition: '50% 50%',
     padding:'0px 0px',
+    flex: "1",
+    
+    backgroundAttachment: "fixed",
+    
+    
   },
   iglesia: {
     //position: "relative",
@@ -100,26 +111,18 @@ function ColorsTimeline() {
 }
 const Itinerario = () => {
   const matches = useMediaQuery('(min-width:600px)');
-  console.log(matches, "media query")
+  //console.log(matches, "media query")
   return (
     <>
-      <Container
+      <div
         sx={{
           height: "auto",
-          //width: "100%",
           display: "flex",
-          //alignItems:"stretch",
-          //paddingLeft: "0px",
-          //paddingRight: "0px",
-          //padding:'0px 0px 0px 0px',
           flexDirection: "column",
-
-          //alignItems: "center",
-          //color: "white",
           marginTop: "0",
         }}
       >
-        <div style={styles.box}>HOLAAAA</div>
+        <div style={styles.box}></div>
         <Box sx={{ display: "flex", padding:'0px 0px', }}>
           {matches ? 
             <Box sx={{ flex: "1", padding:'0px 0px' }} >
@@ -156,7 +159,7 @@ const Itinerario = () => {
             </Typography>
           </Box>
         </Box>
-      </Container>
+      </div>
 
     </>
   );

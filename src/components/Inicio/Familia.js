@@ -49,6 +49,7 @@ export default function IncioFamilia() {
         alignItems: "center",
         color: "white",
         marginTop: "0",
+        textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)"
       }}
     >
       <Typography variant="h5" sx={{ marginTop: "2%" }}>
