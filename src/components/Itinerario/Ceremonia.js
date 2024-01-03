@@ -21,6 +21,14 @@ const styles = {
 const Ceremonia = () => {
   return (
     <>
+     <img
+          src="/img/prueba.jpg"
+          alt="Imagen de inicio" // Propiedad alt para describir la imagen
+          style={{
+            height: "auto",
+            width: "100%",
+          }}
+        />
     <div
       style={{
         height: "100%",

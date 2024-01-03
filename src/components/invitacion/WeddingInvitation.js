@@ -19,13 +19,13 @@ const WeddingInvitation = () => {
       <NewNavbar />
       <Inicio />
       <IncioFamilia />
-      <Itinerario />
       <Ceremonia />
+      <Itinerario />
       <Sugerencias />
       <Confirmacion />
       <MesaDeRegalos />
       {/*<Galeria />*/}
-      
+
       <SectionUno />
       <Footer />
     </Box>
