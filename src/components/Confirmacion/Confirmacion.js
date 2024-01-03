@@ -26,18 +26,20 @@ box2:{
 }}
 const Confirmacion = () => {
   return (
-    <Container   sx={{
-      height: "500px",
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center", // Para centrar verticalmente
-      alignItems: "center",
-      color: "white",
-      marginTop: "0",
-      marginBottom: "15px", 
-      gap:"10px"
-    }}>
+    <Container
+      sx={{
+        height: "auto",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center", // Para centrar verticalmente
+        alignItems: "center",
+        color: "white",
+        marginTop: "0",
+        marginBottom: "15px",
+        gap: "10px",
+      }}
+    >
       <Box
         sx={{
           background: "#E6D4C2",
@@ -48,7 +50,7 @@ const Confirmacion = () => {
           alignItems: "center",
           color: "white",
           marginTop: "10px",
-          marginBottom: "40px",
+          marginBottom: "20px",
 
           borderTopLeftRadius: "15px",
           borderTopRightRadius: "15px",
@@ -56,7 +58,7 @@ const Confirmacion = () => {
           borderBottomRightRadius: "15px",
         }}
       >
-         <Box
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -66,64 +68,106 @@ const Confirmacion = () => {
             //alignItems: "center",
           }}
         >
-        <Typography variant="horaP" sx={{ textAlign: "center" }}>CONFIRMACION DE ASISTENCIA</Typography>
+          <Typography variant="horaP" sx={{ textAlign: "center" }}>
+            CONFIRMACION DE ASISTENCIA
+          </Typography>
 
-        <Typography variant="h2" sx={{ textAlign: "center" }}>FAM. HERNANDEZ ACEBO</Typography>
-        <Box sx={{ textAlign: "center" }}>
-        <Button variant="contained" sx={{...styles.button, textAlign: "center"}}>
-          Confirmar Asistencia
-        </Button>
-        </Box>
+          <Typography variant="h2" sx={{ textAlign: "center" }}>
+            FAM. HERNANDEZ ACEBO
+          </Typography>
+          <Box sx={{ textAlign: "center" }}>
+            <Button
+              variant="contained"
+              sx={{ ...styles.button, textAlign: "center" }}
+            >
+              Confirmar Asistencia
+            </Button>
+          </Box>
         </Box>
       </Box>
       <Box>
-      <Box
-        sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"5px" }}
-      >
-        <div
-          style={{ borderBottom: "0.3px solid #7D5730", width: "300px" }}
-        ></div>
-        
-      </Box>
-      <Typography variant="h14"  sx={{ textAlign: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "30px",
+            marginBottom: "5px",
+           
+          }}
+        >
+          <div
+            style={{ borderBottom: "0.3px solid #7D5730", width: "80vw" }}
+          ></div>
+        </Box>
+        <Typography variant="horaP" sx={{ textAlign: "center" }}>
           CÓDIGO DE VESTIMENTA
         </Typography>
         <div
-          style={{ borderBottom: "0.3px solid #7D5730", width: "300px" , marginTop:"5px"}}
+          style={{
+            borderBottom: "0.3px solid #7D5730",
+            width: "80vw",
+            marginTop: "5px",
+          }}
         ></div>
-          <Box
-        sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"5px" , flexDirection:"column"}}
-      >
-        <Typography variant="horaP"  sx={{ textAlign: "center", marginTop:"5px" }}>
-          FORMAL
-        </Typography>
-        <div
-          style={{  width: "100%" , marginTop:"15px", display:"flex", alignItems:"flex-end", justifyContent:"center"}}
-        > 
-<Typography variant="h8"  sx={{ textAlign: "center" }}>
-          HOMBRES: 
-        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "30px",
+            marginBottom: "5px",
+            flexDirection: "column",
+          }}
+        >
+          <Typography
+            variant="horaP"
+            sx={{ textAlign: "center", marginTop: "5px" }}
+          >
+            FORMAL
+          </Typography>
+          <div
+            style={{
+              width: "100%",
+              marginTop: "15px",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+            }}
+          >
+            <Typography variant="h8" sx={{ textAlign: "center" }}>
+              HOMBRES:
+            </Typography>
 
-<Typography variant="h3"  sx={{ textAlign: "center", marginLeft:"5px" }}>
-          Traje con corbata 
-        </Typography>
-        </div>
-        <div
-          style={{  width: "100%" , marginTop:"5px", display:"flex", alignItems:"flex-end", justifyContent:"center"}}
-          > 
-<Typography variant="h8"  sx={{ textAlign: "center", marginTop:"5px" }}>
-          MUJERES: 
-        </Typography>
+            <Typography
+              variant="h3"
+              sx={{ textAlign: "center", marginLeft: "5px" }}
+            >
+              Traje con corbata
+            </Typography>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              marginTop: "5px",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+            }}
+          >
+            <Typography
+              variant="h8"
+              sx={{ textAlign: "center", marginTop: "5px" }}
+            >
+              MUJERES:
+            </Typography>
 
-<Typography variant="h3"  sx={{ textAlign: "center" , marginLeft:"5px"}}>
-          Vestido largo
-        </Typography>
-        </div>
-        
-        
-        
-      </Box>
-       
+            <Typography
+              variant="h3"
+              sx={{ textAlign: "center", marginLeft: "5px" }}
+            >
+              Vestido largo
+            </Typography>
+          </div>
+        </Box>
       </Box>
     </Container>
   );

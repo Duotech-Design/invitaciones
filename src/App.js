@@ -12,7 +12,6 @@ function App() {
   return (
     <Router>
     <ThemeProvider theme={theme}>
-    
       <Routes>
       <Route path="/" element={<NewNavbar/>} />
       <Route path="/invitacion" element={<WeddingInvitation />} />
@@ -20,7 +19,6 @@ function App() {
       <Route path='/logIn' element={<LogIn/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
       </Routes>
-    
     </ThemeProvider>
     </Router>
   );

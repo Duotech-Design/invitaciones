@@ -4,4 +4,8 @@ html, body {
     padding: 0;
     border: 0;
   }
-  
+body {
+    background: #F4EBE2; /* Ajusta el color del fondo según tus preferencias */
+    backdrop-filter: blur(3px); /* Ajusta el valor de desenfoque según tus preferencias */
+    color: #333333; /* Ajusta el color del texto según tus preferencias */
+}

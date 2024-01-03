@@ -2,34 +2,21 @@
 import { Box, Container, Typography } from "@mui/material";
 
 const styles = {
-  box: {
-    //color: "D9D9D9",
-    //height: "50px",
-    
-    width: "60%",
-    objectFit: "contain",
-    //backgroundColor: `url("/img/liverpool.svg")`,
-    paddingLeft: "0px",
-    paddingRight: "0px",
-  },
-  box2: {
-    //color: "D9D9D9",
-    height: "60%",
-    width: "80%",
-    objectFit: "cover",
-    paddingLeft: "0px",
-    paddingRight: "0px",
-  },
   text: {
+    display:'flex',
+    flexDirection:'column',
     position: "absolute",
-    top: "75%",
+    with:'100%',
+    top: "85%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: "1",
   },
   imagenContenedor: {
     position: "relative",
-    
+    with:'100%',
+    border: '2px solid #CBB197', /* Ajusta el color y ancho del borde según tus preferencias */
+    borderRadius: '10px'
   }
 };
 
@@ -37,7 +24,7 @@ const MesaDeRegalos = () => {
   return (
     <Container
       sx={{
-        height: "800px",
+        height: "auto",
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -49,14 +36,26 @@ const MesaDeRegalos = () => {
         gap: "10px",
       }}
     >
-      <Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "30px",
+          //marginBottom: "5px",
+        }}
+      >
         <div
-          style={{ borderBottom: "0.3px solid #7D5730", width: "300px" }}
+          style={{ borderBottom: "0.3px solid #7D5730", width: "80vw" }}
         ></div>
       </Box>
-      <Typography variant="h14" component="h1">
-        MESA DE REGALOS
-      </Typography>
+      <Typography variant="horaP">MESA DE REGALOS</Typography>
+      <div
+        style={{
+          borderBottom: "0.3px solid #7D5730",
+          width: "80vw",
+          //marginTop: "5px",
+        }}
+      ></div>
       <div
         style={{
           display: "flex",
@@ -78,15 +77,24 @@ const MesaDeRegalos = () => {
         <Typography variant="h3">sugerencias.</Typography>
       </div>
       <div style={styles.imagenContenedor}>
-      <img src="/img/liverpool.svg" alt="logo" style={styles.box} />
-      <Typography sx={styles.text} variant="h3">
-        Click en LOGO
-      </Typography>
-      <Typography variant="h3">NUM. Evento</Typography>
+        <img src="/img/liverpool.svg" alt="logo" width="320" height="160" />
+        <Box sx={styles.text}>
+          <Typography variant="h11">Click en Logo</Typography>
+          <Typography variant="h11">Num. Evento</Typography>
+        </Box>
       </div>
-      <img src="/img/palaciodeHierro.svg" alt="logo" style={styles.box2} />
-      <Typography variant="h3">Click en LOGO</Typography>
-      <Typography variant="h3">NUM. Evento</Typography>
+      <div style={styles.imagenContenedor}>
+        <img
+          src="/img/palaciodeHierro.svg"
+          alt="Imagen 1"
+          width="320"
+          height="200"
+        />
+        <Box sx={styles.text}>
+          <Typography variant="h11">Click en Logo</Typography>
+          <Typography variant="h11">Num. Evento</Typography>
+        </Box>
+      </div>
       <div
         sx={{
           marginTop: "20px",
@@ -100,7 +108,6 @@ const MesaDeRegalos = () => {
         <Typography variant="h3">ANDREA HDZ ACEBO</Typography>
         <Typography variant="h3">000000000000</Typography>
       </div>
-      <div style={styles.box2}></div>
     </Container>
   );
 };

@@ -1,16 +1,13 @@
 export const weddingInvitationStyles = {
-    container: {
+  container: {
       display: 'flex',
       flexDirection: 'column',
-      alignContent:'stretch',
-      //alignItems: 'stretch',
-      width: "100%",
-      //padding: '20px',
-      //boxShadow: '3px 3px 5px 0px rgba(0,0,0,0.75)',
+      justifyContent: 'center',
+      //alignItems: 'center', // Centra horizontalmente
+      maxWidth: '1500px', // Ancho máximo de 1200px
+      width: '100%', // Asegura que el ancho sea 100%
       textAlign: 'center',
       background: '#F4EBE2',
-      //background: `url("/img/fondo.svg")`
-      
-    },
-  };
-  
+      margin: 'auto', // Centra verticalmente
+  },
+};
