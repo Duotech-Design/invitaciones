@@ -7,15 +7,17 @@ const styles = {
     height: "300px",
     width: "100%",
     backgroundColor: "#D9D9D9",
-    paddingLeft: "0px",
-    paddingRight: "0px",
+    //paddingLeft: "0px",
+    //paddingRight: "0px",
+    padding:'0px, 0px',
   },
   box2: {
-    height: "80%",
+    height: "100%",
     width: "100%",
     backgroundColor: "#D9D9D9",
-    paddingLeft: "0px",
-    paddingRight: "0px",
+    //paddingLeft: "0px",
+    //paddingRight: "0px",
+    padding:'0px 0px',
   },
   iglesia: {
     //position: "relative",
@@ -28,13 +30,13 @@ const styles = {
 
 function ColorsTimeline() {
   return (
-    <Box>
+    <Box sx={{padding:'0px'}}>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          padding:'0px 0px 0px 0px'
+          //padding:'0px 0px 0px 0px'
           //height:"100%"
         }}
       >
@@ -103,11 +105,13 @@ const Itinerario = () => {
     <>
       <Container
         sx={{
-          height: "600px",
-          width: "100%",
+          height: "auto",
+          //width: "100%",
           display: "flex",
-          paddingLeft: "0px",
-          paddingRight: "0px",
+          //alignItems:"stretch",
+          //paddingLeft: "0px",
+          //paddingRight: "0px",
+          //padding:'0px 0px 0px 0px',
           flexDirection: "column",
 
           //alignItems: "center",
@@ -116,11 +120,11 @@ const Itinerario = () => {
         }}
       >
         <div style={styles.box}>HOLAAAA</div>
-        <Box sx={{ display: "flex" }}>
-          {matches ? <Box sx={{ flex: "1" }} >
-
-            <div style={styles.box2}>HOLAAAAA</div>
-          </Box> : null}
+        <Box sx={{ display: "flex", padding:'0px 0px', }}>
+          {matches ? 
+            <Box sx={{ flex: "1", padding:'0px 0px' }} >
+              <div style={styles.box2}>HOLAAAAA</div>
+            </Box> : null}
           <Box
             sx={{
               flex: "1",
@@ -128,9 +132,10 @@ const Itinerario = () => {
               flexDirection: "column",
               //gap: "0.2rem",
               justifyContent: "center",
-              alignItems: "center",
+              //alignItems: "center",
               height: "100%",
               backgroundImage: "url('/img/fondo.svg')",
+              padding:'0px 0px'
             }}
           >
             <Typography

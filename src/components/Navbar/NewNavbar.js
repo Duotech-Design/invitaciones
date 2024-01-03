@@ -46,7 +46,6 @@ console.log(menu)
           //padding: '10px',
           justifyContent: "space-between",
           backgroundColor: "#F4EBE2",
-          
         }}
       >
         <Box
@@ -54,7 +53,7 @@ console.log(menu)
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
-            paddingLeft: "20px"
+            paddingLeft: "20px",
           }}
         >
           <Box style={{ textAlign: "center", padding: "5px" }}>
@@ -87,7 +86,7 @@ console.log(menu)
         </Box>
 
         <div style={styles.section}>
-       <img
+          <img
             src="/img/LogoBien.svg"
             alt="iglesia"
             style={{
@@ -96,49 +95,54 @@ console.log(menu)
               marginTop: "5px",
               marginBottom: "5px",
               color: "white",
-              borderRadius: "50px"
+              borderRadius: "50px",
             }}
           />
-          
         </div>
       </Box>
-      {menu ?  
-        <Box style={{
-          display: "flex",
-          width: "100%",
-          //padding: '10px',
-          justifyContent: "center",
-          //backgroundColor: "#F4EBE2",
-        }}>
-          < ExpandMoreIcon onClick={handdleClickExpand} sx={NavbarStyles.expand}/>
-        </Box> : null}
+      {menu ? (
+        <Box
+          style={{
+            display: "flex",
+            width: "100%",
+            //padding: '10px',
+            justifyContent: "center",
+            //backgroundColor: "#F4EBE2",
+          }}
+        >
+          <ExpandMoreIcon
+            onClick={handdleClickExpand}
+            sx={NavbarStyles.expand}
+          />
+        </Box>
+      ) : null}
       <AppBar position="static" sx={NavbarStyles.nav}>
-       {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
+        {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
           A & D
           </Typography>*/}
-          {menu ? null :  <Toolbar sx={NavbarStyles.toolbar}>
-        <CloseIcon onClick={handdleClick} sx={NavbarStyles.closing}/>
-          <Typography variant="h2" sx={NavbarStyles.content}>
-            INICIO
-           
-          </Typography>
-          <Typography variant="h2" sx={NavbarStyles.content}>
-            ITINERARIO
-          </Typography>
-          <Typography variant="h2" sx={NavbarStyles.content}>
-            SUGERENCIAS
-          </Typography>
-          <Typography variant="h2" sx={NavbarStyles.content}>
-            CONFIRMACION
-          </Typography>
-          <Typography variant="h2" sx={NavbarStyles.content}>
-            GALERIA
-          </Typography>
-          <Typography variant="h2" sx={NavbarStyles.content}>
-            MESA DE REGALOS
-          </Typography>
-        </Toolbar>}
-       
+        {menu ? null : (
+          <Toolbar sx={NavbarStyles.toolbar}>
+            <CloseIcon onClick={handdleClick} sx={NavbarStyles.closing} />
+            <Typography variant="h2" sx={NavbarStyles.content}>
+              INICIO
+            </Typography>
+            <Typography variant="h2" sx={NavbarStyles.content}>
+              ITINERARIO
+            </Typography>
+            <Typography variant="h2" sx={NavbarStyles.content}>
+              SUGERENCIAS
+            </Typography>
+            <Typography variant="h2" sx={NavbarStyles.content}>
+              CONFIRMACION
+            </Typography>
+            <Typography variant="h2" sx={NavbarStyles.content}>
+              GALERIA
+            </Typography>
+            <Typography variant="h2" sx={NavbarStyles.content}>
+              MESA DE REGALOS
+            </Typography>
+          </Toolbar>
+        )}
       </AppBar>
     </>
   );

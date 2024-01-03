@@ -1,32 +1,34 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 //import fotoInicio from '@/public/img/fotoInicio.jpg';
 import theme from "../../theme";
 
 const styles = {
-  container: {
+  container: {//cambie el container por un div
+    background: `url("/img/FotoInicio.webp")`,
     position: "relative",
-    //textAlign: "center",
     margin: "0px 0px",
-    background: `url("/img/FotoInicio.webp")`, 
     backgroundPosition: '50% 10%',
     width: "100%",
     height: "100vh",
     backgroundAttachment: "fixed",
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'center',
+    alignContent:'center',
+   
   },
   textTop: {
     position: "absolute",
-    top: "10%", // Ajusta la posición vertical del texto "ANDREA & DIEGO"
-    left: "52%",
-    transform: "translateX(-50%)",
+    top: "8%", // Ajusta la posición vertical del texto "ANDREA & DIEGO"
+    width: "100%",
     display: "flex",
     displayDirection: "column",
     alignItems: "center",
-    width: "75%",
-    textAlign: "center",
-    justifyContet: "center",
+    justifyContent: "center", // Para centrar verticalmente
     color: theme.palette.primary.main,
     fontWeight: theme.typography.h1.fontWeight,
     fontSize: `clamp(2rem, 8vw, 6rem)`,
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
   },
   textContainer: {
     position: "absolute",
@@ -44,24 +46,26 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", //lo agregue el 2 enero
     // fontSize: `clamp(5px, 5vw, 3.5rem)`,
   },
-
   numbersContainer: {
     position: "absolute",
-    bottom: "5%", // Coloca el cuadro en la parte inferior
-    left: "50%",
+    top: "87%", // Coloca el cuadro en la parte inferior
     transform: "translateX(-50%)",
+    width: "auto",
     display: "flex",
-    alignItems: "flex-start",
+    //alignItems: "flex-start",
     textColor: "#FFFFFF",
-
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",//lo agregue 2 enero
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    borderRadius:'10px',
   },
 };
 
 const Inicio = () => {
   return (
-    <Container style={styles.container}>
+    <div style={styles.container}>
       <Typography variant="h1" component="h3" style={styles.textTop}>
         ANDREA & DIEGO
       </Typography>
@@ -85,13 +89,13 @@ const Inicio = () => {
             width: "70px",
           }}
         >
-          <Typography variant="h4">23 </Typography>
+          <Typography variant="reloj">23 </Typography>
 
-          <Typography variant="h4" style={{ width: "100%" }}>
+          <Typography variant="reloj" style={{ width: "100%" }}>
             Días
           </Typography>
         </div>
-        <Typography variant="h4"> : </Typography>
+        <Typography variant="reloj"> : </Typography>
         <div
           style={{
             display: "flex",
@@ -100,13 +104,13 @@ const Inicio = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h4">30 </Typography>
-          <Typography variant="h4" style={{ marginLeft: "10px" }}>
+          <Typography variant="reloj">30 </Typography>
+          <Typography variant="reloj" style={{ marginLeft: "10px" }}>
             Horas
           </Typography>
           
         </div>
-        <Typography variant="h4"> : </Typography>
+        <Typography variant="reloj"> : </Typography>
         <div
           style={{
             display: "flex",
@@ -115,12 +119,12 @@ const Inicio = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h4">30 </Typography>
-          <Typography variant="h4" style={{ marginLeft: "10px" }}>
+          <Typography variant="reloj">30 </Typography>
+          <Typography variant="reloj" style={{ marginLeft: "10px" }}>
             Minutos
           </Typography>
         </div>
-        <Typography variant="h4"> : </Typography>
+        <Typography variant="reloj"> : </Typography>
         <div
           style={{
             display: "flex",
@@ -129,15 +133,15 @@ const Inicio = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h4">30 </Typography>
-          <Typography variant="h4" style={{ marginLeft: "10px" }}>
+          <Typography variant="reloj">30 </Typography>
+          <Typography variant="reloj" style={{ marginLeft: "10px" }}>
             Segundos
           </Typography>
         </div>
        
       </div>
       </Box>
-    </Container>
+    </div>
   );
 };
 
