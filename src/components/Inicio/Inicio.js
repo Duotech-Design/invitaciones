@@ -29,6 +29,7 @@ const styles = {
     fontWeight: theme.typography.h1.fontWeight,
     fontSize: `clamp(2rem, 8vw, 6rem)`,
     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+    
   },
   textContainer: {
     position: "absolute",
@@ -37,7 +38,8 @@ const styles = {
     transform: "translateX(-50%)", // Centra horizontalmente
     width: "60%",
     height: "9%", // Anchura del cuadro
-    backgroundColor: "#E6D4C2",
+    //backgroundColor: "#E6D4C2",
+    background: `url("/img/FondoLogin.svg")`,
     padding: "5px",
     borderTopLeftRadius: "50px",
     borderTopRightRadius: "50px",
