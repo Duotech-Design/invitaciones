@@ -25,10 +25,12 @@ const Ceremonia = () => {
           src="/img/prueba.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
-            height: "auto",
+            height: "500px",
             width: "100%",
+            overFlow: "hidden",
           }}
         />
+        
     <div
       style={{
         height: "100%",
@@ -37,7 +39,7 @@ const Ceremonia = () => {
         alignItems: "center",
         color: "white",
         marginTop: "0",
-        marginBottom: "15px"
+      
       }}
     >
       <Box sx={{ flex: "1" }}>
@@ -98,13 +100,7 @@ const Ceremonia = () => {
         <button style={styles.button}>¿COMO LLEGAR?</button>
       </Box>
     </div>
-     <Box
-        sx={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
-      >
-        <div
-          style={{ height:"15px", width: "80%" }}
-        ></div>
-      </Box>
+    
       </>
   );
 };

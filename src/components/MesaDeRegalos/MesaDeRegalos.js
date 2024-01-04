@@ -3,10 +3,10 @@ import { Box, Container, Typography } from "@mui/material";
 
 const styles = {
   text: {
-    display:'flex',
-    flexDirection:'column',
+    display: "flex",
+    flexDirection: "column",
     position: "absolute",
-    with:'100%',
+    with: "100%",
     top: "85%",
     left: "50%",
     transform: "translate(-50%, -50%)",
@@ -14,10 +14,11 @@ const styles = {
   },
   imagenContenedor: {
     position: "relative",
-    with:'100%',
-    border: '2px solid #CBB197', /* Ajusta el color y ancho del borde según tus preferencias */
-    borderRadius: '10px'
-  }
+    with: "100%",
+    border:
+      "2px solid #CBB197" /* Ajusta el color y ancho del borde según tus preferencias */,
+    borderRadius: "10px",
+  },
 };
 
 const MesaDeRegalos = () => {
@@ -79,7 +80,6 @@ const MesaDeRegalos = () => {
       <div style={styles.imagenContenedor}>
         <img src="/img/liverpool.svg" alt="logo" width="320" height="160" />
         <Box sx={styles.text}>
-          <Typography variant="h11">Click en Logo</Typography>
           <Typography variant="h11">Num. Evento</Typography>
         </Box>
       </div>
@@ -91,7 +91,6 @@ const MesaDeRegalos = () => {
           height="200"
         />
         <Box sx={styles.text}>
-          <Typography variant="h11">Click en Logo</Typography>
           <Typography variant="h11">Num. Evento</Typography>
         </Box>
       </div>

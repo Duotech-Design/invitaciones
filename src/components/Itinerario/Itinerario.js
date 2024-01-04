@@ -126,7 +126,7 @@ const Itinerario = () => {
         <Box sx={{ display: "flex", padding:'0px 0px', }}>
           {matches ? 
             <Box sx={{ flex: "1", padding:'0px 0px' }} >
-              <div style={styles.box2}>HOLAAAAA</div>
+              <div style={styles.box2}></div>
             </Box> : null}
           <Box
             sx={{

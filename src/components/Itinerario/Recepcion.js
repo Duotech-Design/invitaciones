@@ -21,19 +21,20 @@ const styles = {
 const Recepcion = () => {
   return (
     <>
-      <Container
-        sx={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          //alignItems: "center",
-          color: "white",
-          marginTop: "0",
+      <div
+       style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        color: "white",
+        marginTop: "0",
+        marginBottom: "15px"
         }}
       >
         <Box sx={{ flex: "1" }}>
           <img
-            src="/img/fotoInicio.jpg"
+            src="/img/Ad.jpg"
             alt="Imagen de inicio" // Propiedad alt para describir la imagen
             style={{
               height: "100%",
@@ -105,7 +106,7 @@ const Recepcion = () => {
           </Typography>
           <button style={styles.button}>¿COMO LLEGAR?</button>
         </Box>
-      </Container>
+      </div>
       <Box
         sx={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom:"25px" }}
       >

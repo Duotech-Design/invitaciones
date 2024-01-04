@@ -12,6 +12,7 @@ import SectionUno from "../Sections/Section";
 import NewNavbar from "../Navbar/NewNavbar";
 import { weddingInvitationStyles } from "./styles"; // Importa los estilos
 import Ceremonia from "../Itinerario/Ceremonia.js";
+import Recepcion from "../Itinerario/Recepcion.js";
 
 const WeddingInvitation = () => {
   return (
@@ -20,6 +21,7 @@ const WeddingInvitation = () => {
       <Inicio />
       <IncioFamilia />
       <Ceremonia />
+      <Recepcion/>
       <Itinerario />
       <Sugerencias />
       <Confirmacion />
