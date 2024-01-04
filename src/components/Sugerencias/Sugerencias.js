@@ -37,12 +37,7 @@ const Sugerencias = () => {
           marginTop: "5px",
         }}
       ></div>
-      <Typography variant="h4" component="h1">
-        Sugerencias para la boda
-      </Typography>
-      <Typography variant="body1">
-        Consejos para los invitados, cómo llegar, regalos, etc.
-      </Typography>
+     
     </Container>
   );
 };
