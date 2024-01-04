@@ -1,9 +1,9 @@
 import { NavbarStyles } from "./styles";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 //import MenuIcon from '@mui/icons-material/Menu';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const styles = {
   textContainer: {
@@ -18,25 +18,25 @@ const styles = {
   section: {
     backgroundSize: "cover",
     //backgroundRepeat: 'no-repeat',
-    backgroundColor: "#CBB197",
+    //backgroundColor: "#CBB197",
     //padding: '15px',
     //backgroundPosition: '50% 50%',
     width: "100px",
     height: "100px",
-    borderRadius: "50px"
+    borderRadius: "50px",
     //backgroundAttachment: "fixed",
   },
 };
 
 const NewNavbar = () => {
   const [menu, setMenu] = useState(false);
-  const handdleClick = ()=> {
-    setMenu(true) 
-  }
+  const handdleClick = () => {
+    setMenu(true);
+  };
   const handdleClickExpand = () => {
-    setMenu(false) 
-  }
-console.log(menu)
+    setMenu(false);
+  };
+  console.log(menu);
   return (
     <>
       <Box
@@ -45,7 +45,8 @@ console.log(menu)
           width: "100%",
           //padding: '10px',
           justifyContent: "space-between",
-          backgroundColor: "#F4EBE2",
+          //backgroundColor: "#F4EBE2",
+          background: `url("/img/FondoLogin.svg")`,
         }}
       >
         <Box
@@ -56,9 +57,7 @@ console.log(menu)
             paddingLeft: "20px",
           }}
         >
-          <Box style={{ textAlign: "center", padding: "5px" }}>
-            <Typography variant="h14">ANDREA & DIEGO</Typography>
-          </Box>
+          <Box style={{ textAlign: "center", padding: "5px" }}></Box>
           <Box style={styles.textContainer}>
             <div
               style={{

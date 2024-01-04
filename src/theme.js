@@ -23,6 +23,7 @@ const theme = createTheme({
     text: {
       primary: "#000000", // Color de texto principal (negro)
     },
+   
   },
   typography: {
     fontFamily: "Roboto", // Fuente de respaldo en caso de que las fuentes personalizadas no se carguen
