@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 //import MenuIcon from '@mui/icons-material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   textContainer: {
@@ -17,26 +18,21 @@ const styles = {
   },
   section: {
     backgroundSize: "cover",
-    //backgroundRepeat: 'no-repeat',
-    //backgroundColor: "#CBB197",
-    //padding: '15px',
-    //backgroundPosition: '50% 50%',
     width: "120px",
     height: "100px",
     borderRadius: "50px",
-    //backgroundAttachment: "fixed",
   },
 };
 
 const NewNavbar = () => {
 
   const [menu, setMenu] = useState(false);
-  
+  const matches = useMediaQuery('(min-width:900px)');//true cuando es igual o mayor a 900
   const handdleClickExpand = () => {
     setMenu(!menu);
   };
-
-  console.log(menu);
+  
+  console.log(matches);
 
   return (
     <>
@@ -48,6 +44,7 @@ const NewNavbar = () => {
           background: `url("/img/fondoBeige.jpg")`,
         }}
       >
+
         <div style={styles.section}>
           <img
             src="/img/logo.png"
@@ -55,13 +52,12 @@ const NewNavbar = () => {
             style={{
               height: "100%",
               width: "100%",
-              //marginTop: "5px",
-              //marginBottom: "5px",
               color: "white",
               borderRadius: "50px",
             }}
           />
         </div>
+        {!matches ? 
         <Box
           sx={{
             height: "100%",
@@ -79,10 +75,36 @@ const NewNavbar = () => {
           ) : (
             <MenuIcon onClick={handdleClickExpand} sx={NavbarStyles.expand} />
           )}
-        </Box>
+        </Box> : 
+         <AppBar position="static" sx={NavbarStyles.nav_desk}>
+         
+           <Toolbar sx={NavbarStyles.toolbar_desk}>
+             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+               INICIO
+             </Typography>
+             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+               ITINERARIO
+             </Typography>
+             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+               SUGERENCIAS
+             </Typography>
+             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+               CONFIRMACION
+             </Typography>
+             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+               GALERIA
+             </Typography>
+             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+               MESA DE REGALOS
+             </Typography>
+           </Toolbar>
+         
+         </AppBar>
+       }
+
       </Box>
       <AppBar position="static" sx={NavbarStyles.nav}>
-        {menu ? (
+        {menu && !matches ? (
           <Toolbar sx={NavbarStyles.toolbar}>
             <Typography variant="h2" sx={NavbarStyles.content}>
               INICIO

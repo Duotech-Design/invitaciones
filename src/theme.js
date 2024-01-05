@@ -141,6 +141,12 @@ const theme = createTheme({
       fontWeight: 400,
       color: "#7D5730",
     },
+    h14_2: {
+      fontFamily: "Cormorant", // Cambia a Zeyada
+      fontSize: `clamp(16px, 1rem, 0.9rem)`,
+      fontWeight: 700,
+      color: "#7D5730",
+    },
     h15: {
       fontFamily: "Parisienne, cursive", // Cambia a Zeyada
       fontSize: `clamp(22px, 3.5vw, 2.5rem)`,
