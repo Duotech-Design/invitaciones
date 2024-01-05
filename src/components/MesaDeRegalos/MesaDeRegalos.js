@@ -73,9 +73,8 @@ const MesaDeRegalos = () => {
           mejor regalo. Sin embargo, si desean obsequiarnos
         </Typography>
         <Typography variant="h3">
-          algo más, pueden hacerlo a través de estas
+          algo más, pueden hacerlo a través de estas sugerencias.
         </Typography>
-        <Typography variant="h3">sugerencias.</Typography>
       </div>
       <div style={styles.imagenContenedor}>
         <img src="/img/liverpool.svg" alt="logo" width="320" height="160" />
@@ -84,19 +83,14 @@ const MesaDeRegalos = () => {
         </Box>
       </div>
       <div style={styles.imagenContenedor}>
-        <img
-          src="/img/palaciodeHierro.svg"
-          alt="Imagen 1"
-          width="320"
-          height="200"
-        />
+        <img src="/img/palacio.svg" alt="Imagen 1" width="320" height="160" />
         <Box sx={styles.text}>
           <Typography variant="h11">Num. Evento</Typography>
         </Box>
       </div>
       <div
-        sx={{
-          marginTop: "20px",
+        style={{
+          padding:"20px", 
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
