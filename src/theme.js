@@ -141,6 +141,12 @@ const theme = createTheme({
       fontWeight: 400,
       color: "#7D5730",
     },
+    h15: {
+      fontFamily: "Parisienne, cursive", // Cambia a Zeyada
+      fontSize: `clamp(22px, 3.5vw, 2.5rem)`,
+      fontWeight: 500,
+      color: "#FFFFFF",
+    },
     // Define otras fuentes personalizadas según sea necesario
   },
 });

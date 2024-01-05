@@ -63,8 +63,8 @@ export default function IncioFamilia() {
 
       <div style={styles.row}>
         <div style={styles.column}>
-          <Typography variant="h6">Leticia Acebo Martínez</Typography>
-          <Typography variant="h6">David Hernandez Escobar</Typography>
+          <Typography variant="h15">Leticia Acebo Martínez</Typography>
+          <Typography variant="h15">David Hernandez Escobar</Typography>
         </div>
        
           <img
@@ -74,22 +74,22 @@ export default function IncioFamilia() {
           />
      
         <div style={styles.column}>
-          <Typography variant="h6">Verónica Carbajal Treto </Typography>
-          <Typography variant="h6">Carlos Toranzo Noriega</Typography>
+          <Typography variant="h15">Verónica Carbajal Treto </Typography>
+          <Typography variant="h15">Carlos Toranzo Noriega</Typography>
         </div>
       </div>
       
       <Typography variant="h7" sx={{ marginTop: "5%" }}>
-        ESTAMOS FELICES DE COMPARTIR
+        ESTAMOS FELICES DE COMPARTIR ESTE DÍA TAN ESPECIAL CON
       </Typography>
       <Typography variant="h7">
-        ESTE DÍA TAN ESPECIAL CON
+       
       </Typography>
       <Typography variant="h7">
-        USTEDES, Y NOS COMPLACE
+        USTEDES, Y NOS COMPLACE INVITARLOS A NUESTRA BODA
       </Typography>
       <Typography variant="h7" sx={{marginBottom:"15px "}}>
-        INVITARLOS A NUESTRA BODA
+        
       </Typography>
       
       {/* El Box contiene a la imagen*/}
