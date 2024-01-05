@@ -7,7 +7,7 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
     width: "100%",
-    height: "700px",
+    height: "200px",
     backgroundAttachment: "fixed",
     
   },

@@ -32,13 +32,14 @@ const Recepcion = () => {
         marginBottom: "15px"
         }}
       >
-        <Box sx={{ flex: "1" }}>
+        <Box sx={{ flex: "1", height:'auto' }}>
           <img
             src="/img/Ad.jpg"
             alt="Imagen de inicio" // Propiedad alt para describir la imagen
             style={{
               height: "100%",
               width: "100%",
+              objectFit: "contain",
             }}
           />
         </Box>

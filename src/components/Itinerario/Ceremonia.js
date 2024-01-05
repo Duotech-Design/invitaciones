@@ -1,4 +1,5 @@
 import { Typography, Box } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   button: {
@@ -19,15 +20,18 @@ const styles = {
 };
 
 const Ceremonia = () => {
+  const matches = useMediaQuery('(min-width:900px)');
+
   return (
     <>
      <img
           src="/img/A&D.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
-            height: "500px",
             width: "100%",
-            overFlow: "hidden",
+            height: matches ? '450px' : '120px',
+            objectFit: 'cover',  // Puedes cambiar a 'contain' si prefieres mostrar toda la imagen
+            objectPosition: "center",
           }}
         />
         

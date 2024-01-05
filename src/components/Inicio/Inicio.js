@@ -4,7 +4,7 @@ import theme from "../../theme";
 
 const styles = {
   container: {//cambie el container por un div
-    background: `url("/img/FotoInicio.webp")`,
+    background: `url("/img/fotoo4.jpg")`,
     position: "relative",
     margin: "0px 0px",
     backgroundPosition: '50% 10%',
@@ -15,11 +15,11 @@ const styles = {
     flexDirection:'column',
     alignItems:'center',
     alignContent:'center',
-   
+    backgroundSize:'cover'
   },
   textTop: {
     position: "absolute",
-    top: "8%", // Ajusta la posición vertical del texto "ANDREA & DIEGO"
+    top: "0%", // Ajusta la posición vertical del texto "ANDREA & DIEGO"
     width: "100%",
     display: "flex",
     displayDirection: "column",

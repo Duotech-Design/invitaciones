@@ -31,8 +31,6 @@ const NewNavbar = () => {
   const handdleClickExpand = () => {
     setMenu(!menu);
   };
-  
-  console.log(matches);
 
   return (
     <>
