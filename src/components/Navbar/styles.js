@@ -20,12 +20,12 @@ export const NavbarStyles = {
     background: `url("/img/fondoNavbar2.svg")`,
     //flexWrap: "wrap",
   },
-  closing: {
+  /*closing: {
     position: "absolute",
     left: "85%",
     top: "5%",
     fontSize: "24px",
-  },
+  },*/
   expand: {
     fontSize: "36px",
   },

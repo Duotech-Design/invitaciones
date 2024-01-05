@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 //import MenuIcon from '@mui/icons-material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const styles = {
   textContainer: {
@@ -21,7 +21,7 @@ const styles = {
     //backgroundColor: "#CBB197",
     //padding: '15px',
     //backgroundPosition: '50% 50%',
-    width: "120px",
+    width: "100px",
     height: "100px",
     borderRadius: "50px",
     //backgroundAttachment: "fixed",
@@ -29,61 +29,99 @@ const styles = {
 };
 
 const NewNavbar = () => {
-
   const [menu, setMenu] = useState(false);
-  
-  const handdleClickExpand = () => {
-    setMenu(!menu);
+  const handdleClick = () => {
+    setMenu(true);
   };
-
+  const handdleClickExpand = () => {
+    setMenu(false);
+  };
   console.log(menu);
-
   return (
     <>
       <Box
         style={{
           display: "flex",
           width: "100%",
+          //padding: '10px',
           justifyContent: "space-between",
+          //backgroundColor: "#F4EBE2",
           background: `url("/img/fondoNavbar.svg")`,
         }}
       >
+        <Box
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            paddingLeft: "20px",
+          }}
+        >
+          <Box style={{ textAlign: "center", padding: "5px" }}></Box>
+          <Box style={styles.textContainer}>
+            <div
+              style={{
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "column",
+                padding: "10px",
+              }}
+            >
+              <Typography variant="h9">VIERNES</Typography>
+              <Typography variant="h9">21 DE ABRIL 2024</Typography>
+            </div>
+            <div
+              style={{
+                borderLeft: "1px solid #7D5730",
+                textAlign: "center",
+
+                padding: "10px",
+              }}
+            >
+              <Typography variant="h9">SAN LUIS POTOSÍ, </Typography>
+              <Typography variant="h9">S.L.P.</Typography>
+            </div>
+          </Box>
+        </Box>
+
         <div style={styles.section}>
           <img
             src="/img/logoSF.svg"
             alt="iglesia"
             style={{
-              height: "100%",
+              height: "90%",
               width: "100%",
-              //marginTop: "5px",
-              //marginBottom: "5px",
+              marginTop: "5px",
+              marginBottom: "5px",
               color: "white",
               borderRadius: "50px",
             }}
           />
         </div>
+      </Box>
+      {menu ? (
         <Box
-          sx={{
-            height: "100%",
-            width: "100px",
+          style={{
             display: "flex",
-            alignItems: "center",
+            width: "100%",
+            //padding: '10px',
             justifyContent: "center",
-            borderRadius: "50px",
-            marginTop: "auto",
-            marginBottom: "auto",
+            //backgroundColor: "#F4EBE2",
           }}
         >
-          {menu ? (
-            <CloseIcon onClick={handdleClickExpand} sx={NavbarStyles.expand} />
-          ) : (
-            <MenuIcon onClick={handdleClickExpand} sx={NavbarStyles.expand} />
-          )}
+          <ExpandMoreIcon
+            onClick={handdleClickExpand}
+            sx={NavbarStyles.expand}
+          />
         </Box>
-      </Box>
+      ) : null}
       <AppBar position="static" sx={NavbarStyles.nav}>
-        {menu ? (
+        {/*} <Typography variant="h10" sx={NavbarStyles.iniciales}>
+          A & D
+          </Typography>*/}
+        {menu ? null : (
           <Toolbar sx={NavbarStyles.toolbar}>
+            <CloseIcon onClick={handdleClick} sx={NavbarStyles.closing} />
             <Typography variant="h2" sx={NavbarStyles.content}>
               INICIO
             </Typography>
@@ -103,7 +141,7 @@ const NewNavbar = () => {
               MESA DE REGALOS
             </Typography>
           </Toolbar>
-        ) : null }
+        )}
       </AppBar>
     </>
   );
