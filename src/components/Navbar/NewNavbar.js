@@ -46,7 +46,7 @@ const NewNavbar = () => {
           //padding: '10px',
           justifyContent: "space-between",
           //backgroundColor: "#F4EBE2",
-          background: `url("/img/FondoLogin.svg")`,
+          background: `url("/img/fondoNavbar.svg")`,
         }}
       >
         <Box
@@ -86,7 +86,7 @@ const NewNavbar = () => {
 
         <div style={styles.section}>
           <img
-            src="/img/LogoBien.svg"
+            src="/img/logoSF.svg"
             alt="iglesia"
             style={{
               height: "90%",

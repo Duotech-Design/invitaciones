@@ -22,7 +22,7 @@ const Ceremonia = () => {
   return (
     <>
      <img
-          src="/img/prueba.jpg"
+          src="/img/A&D.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             height: "500px",

@@ -41,7 +41,8 @@ export default function IncioFamilia() {
   return (
     <Box
       sx={{
-        background: "#E6D4C2",
+        //background: "#E6D4C2",
+        background: `url("/img/fondoNavbar2.svg")`,
         height: "100%",
         width: "100%",
         display: "flex",

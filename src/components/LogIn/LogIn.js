@@ -35,7 +35,7 @@ export default function LogIn() {
   return (
     <Box
       sx={{
-        background: `url("/img/FondoLogin.svg")`,
+        background: `url("/img/fondoNavbar.svg")`,
         height: "100vh",
         display: "flex",
         justifyContent: "center",
