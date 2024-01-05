@@ -55,15 +55,9 @@ export const NavbarStyles = {
     textAlign: "center",
     padding: "0.7rem 1rem",
     flex: "1",
-    //smarginLeft:'40px',
     whiteSpace: "nowrap",
-    //transition: "background-color 0.3s, border-radius 0.2s", // Agrega una transición para suavizar el cambio de color de fondo y los bordes en hover
-    //backgroundColor: "#E5D4C2", // Color de fondo normal
-    //borderRadius: "5px", // Bordes redondeados normales
     "&:hover": {
-      //backgroundColor: "#CBB197", // Color de fondo en hover
       borderBottom: "2px solid #CBB197",
-      //borderRadius: "50px", // Bordes redondeados en hover
     },
   },
   content_desk: {

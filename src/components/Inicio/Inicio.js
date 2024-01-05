@@ -28,7 +28,7 @@ const styles = {
     color: theme.palette.primary.main,
     fontWeight: theme.typography.h1.fontWeight,
     fontSize: `clamp(2rem, 8vw, 6rem)`,
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 1)",
     
   },
   textContainer: {
@@ -48,12 +48,14 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", //lo agregue el 2 enero
+    textShadow: '2px 2px 4px rgba(125, 87, 46, 0.2)', //lo agregue el 2 enero
     // fontSize: `clamp(5px, 5vw, 3.5rem)`,
   },
   numbersContainer: {
     position: "absolute",
     top: "87%", // Coloca el cuadro en la parte inferior
+    paddingRight: '15px',
+    paddingLeft: '15px',
     transform: "translateX(-50%)",
     width: "auto",
     display: "flex",
@@ -61,7 +63,8 @@ const styles = {
     textColor: "#FFFFFF",
     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",//lo agregue 2 enero
     backgroundColor: "rgba(255, 255, 255, 0.2)",
-    borderRadius:'10px',
+    borderRadius:'50px',
+    backdropFilter: "blur(1px)",
   },
 };
 
@@ -137,7 +140,7 @@ const Inicio = () => {
         >
           <Typography variant="reloj">30 </Typography>
           <Typography variant="reloj" style={{ marginLeft: "10px" }}>
-            Segundos
+            Seg.
           </Typography>
         </div>
        

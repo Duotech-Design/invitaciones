@@ -36,15 +36,15 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: "Cormorant", // Cambia a Zeyada
-      fontSize: `clamp(3px, 3.5vw, 2.5rem)`,
-      fontWeight: 400,
+      fontSize: `clamp(4px, 3.5vw, 2.5rem)`,
+      fontWeight: 700,
       color: "#7D5730",
     },
 
     h3: {
       fontFamily: "Cinzel",
       fontSize: `clamp(5px, 2.5vw, 2rem)`,
-      fontWeight: 300,
+      fontWeight: 500,
       color: "#7D5730",
       // Color de texto negro
     },
@@ -57,11 +57,11 @@ const theme = createTheme({
       // Color de texto negro
     },
     reloj: {
-      fontFamily: "Poppins",
+      fontFamily: "Cinzel",
       //Glacial Indifference
-      fontSize: `clamp(8px, 2.0vw, 2rem)`,
-      fontWeight: 400,
-      color: "#FFFFFF",
+      fontSize: `clamp(15px, 2.2vw, 2.2rem)`, //clamp(10px, 2.2vw, 2.2rem)
+      fontWeight: 700,
+      color: "#F4EBE2",
       // Color de texto negro
     },
     h5: {
