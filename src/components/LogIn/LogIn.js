@@ -40,6 +40,8 @@ export default function LogIn() {
         display: "flex",
         justifyContent: "center",
         position: "relative",
+        alignContent: "center",
+        alignItems:"center"
       }}
     >
       <Box style={styles.logoContainer}>
@@ -52,6 +54,7 @@ export default function LogIn() {
             flexDirection: "column",
             alignContent: "center",
             marginTop: "250px",
+            alignItems: "center"
           }}
           noValidate
           autoComplete="off"
