@@ -33,11 +33,11 @@ const styles = {
   },
   textContainer: {
     position: "absolute",
-    bottom: "15%", // Coloca el cuadro en la parte inferior
+    bottom: "20%", // Coloca el cuadro en la parte inferior
     left: "50%",
     transform: "translateX(-50%)", // Centra horizontalmente
-    width: "60%",
-    height: "9%", // Anchura del cuadro
+    width: "64%",
+    height: "auto", // Anchura del cuadro
     //backgroundColor: "#E6D4C2",
     background: `url("/img/fondoBeige.jpg")`,
     padding: "5px",
@@ -53,7 +53,7 @@ const styles = {
   },
   numbersContainer: {
     position: "absolute",
-    top: "87%", // Coloca el cuadro en la parte inferior
+    top: "83%", // Coloca el cuadro en la parte inferior
     paddingRight: '15px',
     paddingLeft: '15px',
     transform: "translateX(-50%)",

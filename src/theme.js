@@ -43,7 +43,7 @@ const theme = createTheme({
 
     h3: {
       fontFamily: "Cinzel",
-      fontSize: `clamp(5px, 2.5vw, 2rem)`,
+      fontSize: `clamp(13px, 2.5vw, 2rem)`,
       fontWeight: 500,
       color: "#7D5730",
       // Color de texto negro
