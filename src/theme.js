@@ -36,7 +36,7 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: "Cormorant", // Cambia a Zeyada
-      fontSize: `clamp(4px, 3.5vw, 2.5rem)`,
+      fontSize: `clamp(16px, 3.5vw, 2.5rem)`,//clamp(4px, 3.5vw, 2.5rem)
       fontWeight: 700,
       color: "#7D5730",
     },
