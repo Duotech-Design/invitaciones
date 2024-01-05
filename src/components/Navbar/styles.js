@@ -17,7 +17,7 @@ export const NavbarStyles = {
     padding: "0",
     //boxShadow: '3px 3px 5px 0px rgba(0,0,0,0.75)',
     //textAlign: 'center',
-    background: `url("/img/fondoNavbar2.svg")`,
+    background: `url("/img/fondoBeigeFuerte.jpg")`,
     //flexWrap: "wrap",
   },
   /*closing: {

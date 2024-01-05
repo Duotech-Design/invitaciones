@@ -39,7 +39,7 @@ const styles = {
     width: "60%",
     height: "9%", // Anchura del cuadro
     //backgroundColor: "#E6D4C2",
-    background: `url("/img/FondoLogin.svg")`,
+    background: `url("/img/fondoBeige.jpg")`,
     padding: "5px",
     borderTopLeftRadius: "50px",
     borderTopRightRadius: "50px",

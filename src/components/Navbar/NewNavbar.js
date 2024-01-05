@@ -45,12 +45,12 @@ const NewNavbar = () => {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
-          background: `url("/img/fondoNavbar.svg")`,
+          background: `url("/img/fondoBeige.jpg")`,
         }}
       >
         <div style={styles.section}>
           <img
-            src="/img/logoSF.svg"
+            src="/img/logo.png"
             alt="iglesia"
             style={{
               height: "100%",
