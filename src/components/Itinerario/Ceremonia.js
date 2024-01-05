@@ -40,7 +40,7 @@ const Ceremonia = () => {
         height: "100%",
         width: "100%",
         display: "flex",
-        alignItems: "center",
+        //alignItems: "stretch",
         color: "white",
         marginTop: "0",
       
@@ -51,8 +51,10 @@ const Ceremonia = () => {
           src="/img/FOTOPrueba.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
-            height: "90%",
+            height: "100%",
             width: "100%",
+            objectFit: 'cover',  // Puedes cambiar a 'contain' si prefieres mostrar toda la imagen
+            objectPosition: "center",
           }}
         />
       </Box>

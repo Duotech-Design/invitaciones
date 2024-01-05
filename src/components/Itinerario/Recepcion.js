@@ -26,7 +26,6 @@ const Recepcion = () => {
         height: "100%",
         width: "100%",
         display: "flex",
-        alignItems: "center",
         color: "white",
         marginTop: "0",
         marginBottom: "15px"
@@ -39,7 +38,8 @@ const Recepcion = () => {
             style={{
               height: "100%",
               width: "100%",
-              objectFit: "contain",
+              objectFit: 'cover',  // Puedes cambiar a 'contain' si prefieres mostrar toda la imagen
+              objectPosition: "center",
             }}
           />
         </Box>
