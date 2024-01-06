@@ -4,13 +4,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 const styles = {
   box: {
     //color: "D9D9D9",
-    height: "350px",
+    //height: "350px",
     //width: "100%",
     background: `url("/img/FotoFooter.jpg")`,
    
     //backgroundSize: "100%",
     //backgroundRepeat: 'no-repeat',
-    backgroundPosition: '50% 50%',
     padding:'0px, 0px',
     flex: "1",
     
@@ -60,6 +59,7 @@ function ColorsTimeline() {
             flexDirection: "column",
             justifyContent: "space-around",
             height: "100%",
+
           }}
         >
           <Typography variant="h11">CEREMONIA RELIGIOSA</Typography>
@@ -118,7 +118,11 @@ const Itinerario = () => {
           marginTop: "0",
         }}
       >
-        <div style={styles.box}></div>
+        <div style={{...styles.box, backgroundPosition: matches ? '50% 50%' : '-65% -80%', 
+             objectFit: matches ? '' : 'cover',  // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
+             objectPosition: matches ? '' : "center",
+             height: matches ? '350px' : "300px",
+             backgroundAttachment: matches ? "fixed": '', }}></div>
         <Box sx={{ display: "flex", padding:'0px 0px', }}>
           {matches ? 
             <Box sx={{ flex: "1", padding:'0px 0px' }} >

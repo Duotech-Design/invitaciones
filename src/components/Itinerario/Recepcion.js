@@ -14,7 +14,7 @@ const styles = {
     fontStyle: "normal",
     fontWeight: "400px",
     lineHeight: "normal",
-    marginBottom:"10px"
+    //marginBottom:"10px"
   },
 };
 
@@ -108,13 +108,7 @@ const Recepcion = () => {
           <button style={styles.button}>¿COMO LLEGAR?</button>
         </Box>
       </div>
-      <Box
-        sx={{ display: "flex", justifyContent: "center", marginBottom:"10px" }}
-      >
-        <div
-          style={{ borderBottom: "0.5px solid #7D5730", width: "80vw" }}
-        ></div>
-      </Box>
+      
     </>
   );
 };
