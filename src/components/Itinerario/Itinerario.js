@@ -47,8 +47,6 @@ function ColorsTimeline() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          //padding:'0px 0px 0px 0px'
-          //height:"100%"
         }}
       >
         <img
@@ -62,8 +60,6 @@ function ColorsTimeline() {
             flexDirection: "column",
             justifyContent: "space-around",
             height: "100%",
-            //gap: "10px",
-            //alignItems: "center",
           }}
         >
           <Typography variant="h11">CEREMONIA RELIGIOSA</Typography>

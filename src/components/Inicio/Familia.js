@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   container: {
@@ -29,8 +30,9 @@ const styles = {
     //width: "20%",
     //color: "#FFFFFF",
     //flex: 1,
-    minWidth: `clamp(150px, 15%, 20%)`,
-    maxWidth: '20%',
+    
+    minWidth: `clamp(200px, 15%, 20%)`,
+    maxWidth: '30%', //20%
   },
   image2: {
     width: "100%",
@@ -38,6 +40,8 @@ const styles = {
   },
 };
 export default function IncioFamilia() {
+  const matches = useMediaQuery('(min-width:900px)');
+  
   return (
     <Box
       sx={{
