@@ -1,6 +1,13 @@
 //import React from 'react';
 import { Box, Container, Typography } from "@mui/material";
 
+const styles = {
+  logo: {
+    maxWidth: "30%",
+    maxHeight: "30%"
+  }
+}
+
 const Sugerencias = () => {
   return (
     <Container   sx={{
@@ -17,27 +24,36 @@ const Sugerencias = () => {
     }}>
       <Box>
         <div
-          style={{ borderBottom: "0.3px solid #7D5730", width: "300px" }}
+          style={{ borderBottom: "0.3px solid #7D5730", width: "50vw" }}
         ></div>
       </Box>
-      <Typography variant="h14" sx={{ textAlign: "center" }}>
-        SUGERENCIAS PEINADO
+      <Typography variant="horaP" sx={{ textAlign: "center" }}>
+        SUGERENCIAS 
       </Typography>
       <div>
-      <Typography variant="h14" sx={{ textAlign: "center" }}>
-        Y MAQUILLAJE
+      <Typography variant="horaP" sx={{ textAlign: "center" }}>
+      PEINADO Y MAQUILLAJE
       </Typography>
       </div>
-     
+    
 
       <div
         style={{
           borderBottom: "0.3px solid #7D5730",
-          width: "300px",
+          width: "50vw",
           marginTop: "5px",
         }}
       ></div>
-     
+       <img
+          src="/img/instaLogo.png"
+          alt="Instagram" // Propiedad alt para describir la imagen
+          style={styles.logo}
+        />
+          <img
+          src="/img/waLogo.png"
+          alt="Whatsapp" // Propiedad alt para describir la imagen
+          style={styles.logo}
+        />
     </Container>
   );
 };
