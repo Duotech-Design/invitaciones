@@ -21,10 +21,10 @@ const WeddingInvitation = () => {
       <Inicio />
       <IncioFamilia />
       <Ceremonia />
-      <Recepcion/>
+      <Recepcion />
       <Itinerario />
-      <Sugerencias />
       <Confirmacion />
+      <Sugerencias />
       <MesaDeRegalos />
       {/*<Galeria />*/}
 
