@@ -23,8 +23,8 @@ const styles = {
   logoContainer: {
     position: "absolute",
     top: "20px", // Ajusta la posición vertical según tus necesidades
-    background: `url("/img/LogoBien.svg")`,
-    height: "100%", // Ajusta la altura del logo según tus necesidades
+    background: `url("/img/logoSinF.png")`,
+    height: "auto", // Ajusta la altura del logo según tus necesidades
     backgroundSize: "contain",
     backgroundRepeat:"no-repeat",
     marginBottom:"20px" // Ajusta el tamaño de fondo del logo

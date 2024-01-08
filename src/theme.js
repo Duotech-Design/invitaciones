@@ -153,6 +153,12 @@ const theme = createTheme({
       fontWeight: 500,
       color: "#FFFFFF",
     },
+    h16: {
+      fontFamily: "Homemade Apple", // Cambia a Zeyada
+      fontSize: `clamp(22px, 3.5vw, 2rem)`,
+      fontWeight: 300,
+      color: "#FFFFFF",
+    },
     // Define otras fuentes personalizadas según sea necesario
   },
 });

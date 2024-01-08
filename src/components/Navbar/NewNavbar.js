@@ -45,7 +45,7 @@ const NewNavbar = () => {
 
         <div style={styles.section}>
           <img
-            src="/img/logo.png"
+            src="/img/logoBien.png"
             alt="iglesia"
             style={{
               height: "100%",

@@ -67,19 +67,19 @@ export default function IncioFamilia() {
 
       <div style={styles.row}>
         <div style={styles.column}>
-          <Typography variant="h15">Leticia Acebo Martínez</Typography>
-          <Typography variant="h15">David Hernandez Escobar</Typography>
+          <Typography variant="h16">Leticia Acebo Martínez</Typography>
+          <Typography variant="h16">David Hernandez Escobar</Typography>
         </div>
        
           <img
-            src="/img/arco blanco.png"
+            src="/img/flor.png"
             alt="Arco flores" // Propiedad alt para describir la imagen
             style={styles.image}
           />
      
         <div style={styles.column}>
-          <Typography variant="h15">Verónica Carbajal Treto </Typography>
-          <Typography variant="h15">Carlos Toranzo Noriega</Typography>
+          <Typography variant="h16">Verónica Carbajal Treto </Typography>
+          <Typography variant="h16">Carlos Toranzo Noriega</Typography>
         </div>
       </div>
       
