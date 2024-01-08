@@ -4,7 +4,7 @@ import theme from "../../theme";
 
 const styles = {
   container: {//cambie el container por un div
-    background: `url("/img/fotoo4.jpg")`,
+    background: `url("/img/FotoInicio.jpg")`,
     position: "relative",
     margin: "0px 0px",
     backgroundPosition: '50% 10%',
