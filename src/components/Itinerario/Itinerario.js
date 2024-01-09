@@ -6,7 +6,7 @@ const styles = {
     //color: "D9D9D9",
     //height: "350px",
     //width: "100%",
-    background: `url("/img/FotoFooter.jpg")`,
+    background: `url("/img/ADfoto2.jpg")`,
    
     //backgroundSize: "100%",
     //backgroundRepeat: 'no-repeat',
@@ -19,7 +19,7 @@ const styles = {
   box2: {
     height: "100%",
     width: "100%",
-    background: `url("/img/FotoFooter.jpg")`,
+    background: `url("/img/adFotodesliz.jpg")`,
     //transform: 'scaleX(-1)',
     backgroundPosition: '50% 50%',
     padding:'0px 0px',
@@ -36,7 +36,14 @@ const styles = {
     maxWidth: "30%",
     maxHeight: "30%",
   },
-};
+  copas: {
+    //position: "relative",
+    //textAlign: "center",
+    margin: "0px 0px",
+    maxWidth: "40%",
+    maxHeight: "40%",
+},
+}
 
 function ColorsTimeline() {
   return (
@@ -79,9 +86,9 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/copas.svg"
+          src="/img/copas.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
-          style={styles.iglesia}
+          style={styles.copas}
         />
         <Box
           sx={{
@@ -150,13 +157,14 @@ const Itinerario = () => {
             </Typography>
            
             <ColorsTimeline />
-            <Typography
+           { /* <Typography
               variant="h12"
               sx={{ marginTop: "20px", marginBottom: "10px" }}
             >
               {" "}
               A.D{" "}
             </Typography>
+          */}
           </Box>
         </Box>
       </div>
