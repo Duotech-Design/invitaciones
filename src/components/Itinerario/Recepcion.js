@@ -33,7 +33,7 @@ const Recepcion = () => {
       >
         <Box sx={{ flex: "1", height:'auto' }}>
           <img
-            src="/img/Ad.jpg"
+            src="/img/ADfoto4.jpg"
             alt="Imagen de inicio" // Propiedad alt para describir la imagen
             style={{
               height: "100%",
