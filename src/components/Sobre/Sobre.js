@@ -1,19 +1,10 @@
 import { Box } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-const styles = {
-  sobre: {
-    //position: "relative",
-    //textAlign: "center",
-    margin: "0px 0px",
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    //maxWidth: "70%",
-    //maxHeight: "70%",
-  },
-};
+
 
 function Sobre() {
+    const matches = useMediaQuery('(min-width:900px)');
   return (
     <Box
       sx={{
@@ -24,7 +15,7 @@ function Sobre() {
         height: "100vh",
         backgroundImage: "url('/img/Sobre.png')",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "38% 50%",
+        backgroundPosition: matches ? "50% 50%" : "38% 50%",
       }}
     >
       {/*}  <img
