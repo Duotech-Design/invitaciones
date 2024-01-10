@@ -4,7 +4,7 @@ import theme from "../../theme";
 
 const styles = {
   container: {//cambie el container por un div
-    background: `url("/img/prueba.jpg")`,
+    background: `url("/img/1.jpg")`,
     position: "relative",
     margin: "0px 0px",
     backgroundPosition: '50% 10%',
@@ -39,7 +39,7 @@ const styles = {
     width: "64%",
     height: "auto", // Anchura del cuadro
     //backgroundColor: "#E6D4C2",
-    background: `url("/img/fondo-textura-beige.png")`,
+    background: `url("/img/1.1.png")`,
     padding: "5px",
     borderTopLeftRadius: "50px",
     borderTopRightRadius: "50px",

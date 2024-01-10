@@ -38,13 +38,13 @@ const NewNavbar = () => {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
-          background: `url("/img/fondo-textura-beige.png")`,
+          background: `url("/img/1.1.png")`,
         }}
       >
 
         <div style={styles.section}>
           <img
-            src="/img/logoSinF.png"
+            src="/img/1.2.png"
             alt="iglesia"
             style={{
               height: "100%",

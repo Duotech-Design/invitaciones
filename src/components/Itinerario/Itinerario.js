@@ -6,7 +6,7 @@ const styles = {
     //color: "D9D9D9",
     //height: "350px",
     //width: "100%",
-    background: `url("/img/fondoP.png")`,
+    background: `url("/img/ADfoto2.jpg")`,
    
     //backgroundSize: "100%",
     //backgroundRepeat: 'no-repeat',
@@ -142,19 +142,16 @@ const Itinerario = () => {
             </Box>
           ) : null}
           <Box
-            sx={{
-              flex: "1",
-              display: "flex",
-              flexDirection: "column",
-              //gap: "0.2rem",
-              justifyContent: "center",
-              //alignItems: "center",
-              height: "100%",
-              width:"100%",
-              backgroundRepeat:"no-repeat",
-              backgroundImage: "url('/img/fondoP.png')",
-              padding: "0px 0px",
-             
+           sx={{
+            flex: "1",
+            display: "flex",
+            flexDirection: "column",
+            //gap: "0.2rem",
+            justifyContent: "center",
+            //alignItems: "center",
+            height: "100%",
+            backgroundImage: "url('/img/fondo-textura.png')",
+            padding: "0px 0px",
             }}
           >
             <Typography
