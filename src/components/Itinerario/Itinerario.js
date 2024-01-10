@@ -150,7 +150,7 @@ const Itinerario = () => {
               justifyContent: "center",
               //alignItems: "center",
               height: "100%",
-              backgroundImage: "url('/img/fondo.svg')",
+              backgroundImage: "url('/img/fondo-textura.png')",
               padding: "0px 0px",
             }}
           >
