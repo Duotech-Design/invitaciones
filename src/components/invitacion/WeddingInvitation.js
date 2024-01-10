@@ -14,10 +14,21 @@ import { weddingInvitationStyles } from "./styles"; // Importa los estilos
 import Ceremonia from "../Itinerario/Ceremonia.js";
 import Recepcion from "../Itinerario/Recepcion.js";
 import Vestimenta from "../Confirmacion/Vestimenta.js";
+import Sobre from "../Sobre/Sobre.js";
+import { useState } from "react";
+
+
 
 const WeddingInvitation = () => {
+  const [click, setClick] = useState(false)
+  const handdleClick = () => {
+    setClick(true)
+  }
   return (
+    
     <Box style={weddingInvitationStyles.container}>
+      {click ? 
+      <>
       <NewNavbar />
       <Inicio />
       <IncioFamilia />
@@ -32,6 +43,8 @@ const WeddingInvitation = () => {
 
       <SectionUno />
       <Footer />
+      </>
+    : <Sobre onClick = {handdleClick}/> }
     </Box>
   );
 };

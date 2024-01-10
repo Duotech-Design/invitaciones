@@ -3,7 +3,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
-function Sobre() {
+function Sobre({onClick}) {
+  
     const matches = useMediaQuery('(min-width:900px)');
   return (
     <Box
@@ -18,7 +19,9 @@ function Sobre() {
         backgroundPosition: matches ? "50% 50%" : "38% 50%",
         transform: matches ? "scale(1.5)" : 'scale(1)'
       }}
+      onClick={onClick}
     >
+      
       {/*}  <img
         src="/img/Sobre.png"
         alt="Imagen de inicio" // Propiedad alt para describir la imagen
