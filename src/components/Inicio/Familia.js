@@ -26,13 +26,10 @@ const styles = {
     minWidth: `clamp(240px, 240px, 350px)`,
   },
   image: {
-    //height: "20%",
-    //width: "20%",
-    //color: "#FFFFFF",
-    //flex: 1,
-    
     minWidth: `clamp(200px, 15%, 20%)`,
     maxWidth: '30%', //20%
+    //boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
+    //filter: 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.2))'
   },
   image2: {
     width: "100%",

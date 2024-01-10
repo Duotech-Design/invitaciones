@@ -3,19 +3,18 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   button: {
-    width: `clamp(7rem, 8.5rem, 13rem)`,
-    height: `clamp(1.8rem, 2.5rem, 3.5rem)`,
+    width: "auto",
+    height: "auto",
     borderRadius: "50px",
     border: "1px solid #7D5730",
     background: "rgba(255, 255, 255, 0.00)",
     color: "#7D5730",
     textAlign: "center",
     fontFamily: "Cinzel",
-    fontSize:`clamp(12px, 0.8rem, 0.9rem)`,
+    fontSize: `clamp(2.5px, 3vw, 1.5rem)`,
     fontStyle: "normal",
-    fontWeight: "400px",
-    lineHeight: "normal",
-    marginBottom:"10px"
+    fontWeight: "500",
+    padding:"10px 15px 10px 15px",
   },
 };
 
@@ -29,7 +28,7 @@ const Ceremonia = () => {
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             width: "100%",
-            height: matches ? '450px' : '120px',
+            height: matches ? '500px' : '300px',
             objectFit: 'cover',  // Puedes cambiar a 'contain' si prefieres mostrar toda la imagen
             objectPosition: "center",
           }}
@@ -40,10 +39,8 @@ const Ceremonia = () => {
         height: "100%",
         width: "100%",
         display: "flex",
-        //alignItems: "stretch",
         color: "white",
-        marginTop: "0",
-      
+        marginTop: "0",    
       }}
     >
       <Box sx={{ flex: "1" }}>
@@ -64,9 +61,11 @@ const Ceremonia = () => {
           display: "flex",
           flexDirection: "column",
           gap:'0.2rem',
-          //justifyContent: "space-around",
           alignItems: "center",
-          height: "100%",
+          justifyContent:"space-around",
+          paddingTop:"15px",
+          paddingBottom:"15px",
+          height: "auto",
         }}
       >
         <Typography variant="h2" sx={{ marginBottom: "10px" }}>

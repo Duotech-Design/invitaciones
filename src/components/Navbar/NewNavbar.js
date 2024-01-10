@@ -2,7 +2,6 @@ import { NavbarStyles } from "./styles";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
-//import MenuIcon from '@mui/icons-material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -27,7 +26,7 @@ const styles = {
 const NewNavbar = () => {
 
   const [menu, setMenu] = useState(false);
-  const matches = useMediaQuery('(min-width:900px)');//true cuando es igual o mayor a 900
+  const matches = useMediaQuery('(min-width:900px)');
   const handdleClickExpand = () => {
     setMenu(!menu);
   };
