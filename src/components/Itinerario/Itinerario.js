@@ -40,8 +40,8 @@ const styles = {
     //position: "relative",
     //textAlign: "center",
     margin: "0px 0px",
-    maxWidth: "40%",
-    maxHeight: "40%",
+    maxWidth: "60%",
+    maxHeight: "60%",
 },
 }
 
@@ -86,7 +86,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/copasC.png"
+          src="/img/copas.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.copas}
         />
