@@ -47,7 +47,7 @@ const styles = {
     backgroundColor: "#F4EBE2",
     textAlign: "center",
     fontFamily: "Cinzel",
-    fontSize: `clamp(12px, 0.8rem, 0.9rem)`,
+    fontSize: `clamp(16px, 0.8rem, 0.9rem)`,
     fontStyle: "normal",
     fontWeight: "500",
     lineHeight: "normal",

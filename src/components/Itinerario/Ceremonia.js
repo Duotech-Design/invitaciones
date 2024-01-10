@@ -24,11 +24,11 @@ const Ceremonia = () => {
   return (
     <>
      <img
-          src="/img/ADFOTO.jpg"
+          src="/img/ADfoto2.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             width: "100%",
-            height: matches ? '500px' : '300px',
+            height: matches ? '450px' : '220px',
             objectFit: 'cover',  // Puedes cambiar a 'contain' si prefieres mostrar toda la imagen
             objectPosition: "center",
           }}

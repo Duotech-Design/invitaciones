@@ -73,7 +73,7 @@ const styles = {
 const Inicio = () => {
   return (
     <div style={styles.container}>
-      <Typography variant="h1" component="h3" style={styles.textTop}>
+      <Typography variant="h1" style={styles.textTop}>
         ANDREA & DIEGO
       </Typography>
       <Box>

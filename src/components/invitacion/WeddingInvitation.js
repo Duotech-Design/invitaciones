@@ -14,6 +14,7 @@ import { weddingInvitationStyles } from "./styles"; // Importa los estilos
 import Ceremonia from "../Itinerario/Ceremonia.js";
 import Recepcion from "../Itinerario/Recepcion.js";
 import Vestimenta from "../Confirmacion/Vestimenta.js";
+import ImageMasonry from "../Masonry/Masonry.js";
 
 const WeddingInvitation = () => {
   return (
@@ -29,8 +30,8 @@ const WeddingInvitation = () => {
       <Sugerencias />
       <MesaDeRegalos />
       {/*<Galeria />*/}
-
-      <SectionUno />
+      {/*<SectionUno />*/}
+      <ImageMasonry/>
       <Footer />
     </Box>
   );
