@@ -43,15 +43,13 @@ const Confirmacion = () => {
       <Box
         sx={{
           background: "#E6D4C2",
-          height: "200px",
+          height: "auto",
           width: "80%",
-          //display: "flex",
           flexDirection: "column",
           alignItems: "center",
           color: "white",
           marginTop: "10px",
           marginBottom: "20px",
-
           borderTopLeftRadius: "15px",
           borderTopRightRadius: "15px",
           borderBottomLeftRadius: "15px",
@@ -65,7 +63,6 @@ const Confirmacion = () => {
             justifyContent: "space-around",
             height: "100%",
             gap: "10px",
-            //alignItems: "center",
           }}
         >
           <Typography variant="horaP" sx={{ textAlign: "center" }}>
@@ -76,15 +73,15 @@ const Confirmacion = () => {
             FAM. HERNANDEZ ACEBO
           </Typography>
           <Box sx={{ textAlign: "center" }}>
-            <Button
-              variant="contained"
-              sx={{ ...styles.button, textAlign: "center" }}
+            <buttom
+              style={{ ...styles.button, textAlign: "center" }}
             >
               Confirmar Asistencia
-            </Button>
+            </buttom>
           </Box>
         </Box>
       </Box>
+
       <Box>
         <Box
           sx={{
