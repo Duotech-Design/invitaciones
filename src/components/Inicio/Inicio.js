@@ -4,7 +4,7 @@ import theme from "../../theme";
 
 const styles = {
   container: {//cambie el container por un div
-    background: `url("/img/FotoInicio.jpg")`,
+    background: `url("/img/prueba.jpg")`,
     position: "relative",
     margin: "0px 0px",
     backgroundPosition: '50% 10%',
@@ -49,6 +49,8 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-around",
     textShadow: '2px 2px 4px rgba(125, 87, 46, 0.2)', //lo agregue el 2 enero
+    paddingTop:'10px',
+    paddingBottom:'10px',
     // fontSize: `clamp(5px, 5vw, 3.5rem)`,
   },
   numbersContainer: {

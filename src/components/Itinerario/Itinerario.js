@@ -86,7 +86,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/copas.png"
+          src="/img/copasC.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.copas}
         />
@@ -125,16 +125,22 @@ const Itinerario = () => {
           marginTop: "0",
         }}
       >
-        <div style={{...styles.box, backgroundPosition: matches ? '50% 50%' : '-65% -80%', 
-             objectFit: matches ? '' : 'cover',  // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
-             objectPosition: matches ? '' : "center",
-             height: matches ? '350px' : "300px",
-             backgroundAttachment: matches ? "fixed": '', }}></div>
-        <Box sx={{ display: "flex", padding:'0px 0px', }}>
-          {matches ? 
-            <Box sx={{ flex: "1", padding:'0px 0px' }} >
+        <div
+          style={{
+            ...styles.box,
+            backgroundPosition: matches ? "50% 50%" : "-65% -80%",
+            objectFit: matches ? "contain" : "cover", // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
+            objectPosition: matches ? "" : "center",
+            height: matches ? "350px" : "300px",
+            backgroundAttachment: matches ? "fixed" : "",
+          }}
+        ></div>
+        <Box sx={{ display: "flex", padding: "0px 0px" }}>
+          {matches ? (
+            <Box sx={{ flex: "1", padding: "0px 0px" }}>
               <div style={styles.box2}></div>
-            </Box> : null}
+            </Box>
+          ) : null}
           <Box
             sx={{
               flex: "1",
@@ -145,7 +151,7 @@ const Itinerario = () => {
               //alignItems: "center",
               height: "100%",
               backgroundImage: "url('/img/fondo.svg')",
-              padding:'0px 0px'
+              padding: "0px 0px",
             }}
           >
             <Typography
@@ -155,20 +161,10 @@ const Itinerario = () => {
               {" "}
               ITINERARIO{" "}
             </Typography>
-           
             <ColorsTimeline />
-           { /* <Typography
-              variant="h12"
-              sx={{ marginTop: "20px", marginBottom: "10px" }}
-            >
-              {" "}
-              A.D{" "}
-            </Typography>
-          */}
           </Box>
         </Box>
       </div>
-
     </>
   );
 };
