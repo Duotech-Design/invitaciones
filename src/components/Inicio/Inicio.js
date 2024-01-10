@@ -10,7 +10,7 @@ const styles = {
     backgroundPosition: '50% 10%',
     width: "100%",
     height: "100vh",
-    backgroundAttachment: "fixed",
+    //backgroundAttachment: "fixed",
     display:'flex',
     flexDirection:'column',
     alignItems:'center',
