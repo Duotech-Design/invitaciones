@@ -13,6 +13,7 @@ import NewNavbar from "../Navbar/NewNavbar";
 import { weddingInvitationStyles } from "./styles"; // Importa los estilos
 import Ceremonia from "../Itinerario/Ceremonia.js";
 import Recepcion from "../Itinerario/Recepcion.js";
+import Vestimenta from "../Confirmacion/Vestimenta.js";
 
 const WeddingInvitation = () => {
   return (
@@ -24,6 +25,7 @@ const WeddingInvitation = () => {
       <Recepcion />
       <Itinerario />
       <Confirmacion />
+      <Vestimenta/>
       <Sugerencias />
       <MesaDeRegalos />
       {/*<Galeria />*/}
