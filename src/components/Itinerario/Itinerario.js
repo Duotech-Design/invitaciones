@@ -145,7 +145,7 @@ const Itinerario = () => {
               //alignItems: "center",
               height: "100%",
               backgroundImage: "url('/img/fondo-min.png')",
-              padding:'0px 0px'
+              padding: "0px 0px",
             }}
           >
             <Typography
