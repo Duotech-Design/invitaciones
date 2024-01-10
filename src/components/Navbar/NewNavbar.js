@@ -39,7 +39,7 @@ const NewNavbar = () => {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
-          background: `url("/img/fondoBeige.jpg")`,
+          background: `url("/img/NavbarFondo.jpg")`,
         }}
       >
 

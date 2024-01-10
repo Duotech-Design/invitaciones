@@ -86,7 +86,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/copas.png"
+          src="/img/copasC.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.copas}
         />
