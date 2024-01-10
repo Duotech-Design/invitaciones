@@ -6,7 +6,7 @@ const styles = {
     //color: "D9D9D9",
     //height: "350px",
     //width: "100%",
-    background: `url("/img/ADfoto2.jpg")`,
+    background: `url("/img/fondoP.png")`,
    
     //backgroundSize: "100%",
     //backgroundRepeat: 'no-repeat',
@@ -150,8 +150,11 @@ const Itinerario = () => {
               justifyContent: "center",
               //alignItems: "center",
               height: "100%",
-              backgroundImage: "url('/img/fondo-textura.png')",
+              width:"100%",
+              backgroundRepeat:"no-repeat",
+              backgroundImage: "url('/img/fondoP.png')",
               padding: "0px 0px",
+             
             }}
           >
             <Typography
