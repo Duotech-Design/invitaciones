@@ -45,12 +45,12 @@ const Sugerencias = () => {
         }}
       ></div>
        <img
-          src="/img/instaLogo.png"
+          src="/img/6.png"
           alt="Instagram" // Propiedad alt para describir la imagen
           style={styles.logo}
         />
           <img
-          src="/img/waLogo.png"
+          src="/img/6.1.png"
           alt="Whatsapp" // Propiedad alt para describir la imagen
           style={styles.logo}
         />

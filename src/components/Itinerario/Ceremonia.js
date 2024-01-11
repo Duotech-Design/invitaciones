@@ -88,7 +88,7 @@ const Ceremonia = () => {
         </div>
         <Typography variant="hora" sx={{ marginBottom: "10px" }}>
           {" "}
-          18:30 hrs.{" "}
+          18:00 hrs.{" "}
         </Typography>
         <div
           style={{
@@ -102,7 +102,7 @@ const Ceremonia = () => {
           <Typography variant="h11" sx={{ textAlign: "center" }}> RINCÓN DE FRASCATI 100, </Typography>
           <Typography variant="h11" sx={{ marginBottom: "10px", textAlign: "center" }}> NUEVA RINCONADA DE LOS ANDRES. </Typography>
         </div>
-        <button style={styles.button}>¿COMO LLEGAR?</button>
+        <button style={styles.button}>VER MAPA</button>
       </Box>
     </div>
     

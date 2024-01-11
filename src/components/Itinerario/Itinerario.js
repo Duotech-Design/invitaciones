@@ -33,15 +33,15 @@ const styles = {
     //position: "relative",
     //textAlign: "center",
     margin: "0px 0px",
-    maxWidth: "30%",
-    maxHeight: "30%",
+    maxWidth: "40%",
+    maxHeight: "40%",
   },
   copas: {
     //position: "relative",
     //textAlign: "center",
     margin: "0px 0px",
-    maxWidth: "60%",
-    maxHeight: "60%",
+    maxWidth: "40%",
+    maxHeight: "40%",
 },
 }
 
@@ -86,7 +86,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/copas.png"
+          src="/img/5.3.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.copas}
         />
@@ -101,7 +101,7 @@ function ColorsTimeline() {
           }}
         >
           <Typography variant="h11">RECEPCIÓN</Typography>
-          <Typography  variant="horaP">9:00 PM</Typography>
+          <Typography  variant="horaP">7:30 PM</Typography>
           <Box sx={{display:"flex", flexDirection:"column"}}>
             <Typography variant="h11"> SALÓN DE EVENTOS</Typography>
             <Typography variant="h11">TALLER 2560</Typography>
@@ -144,7 +144,7 @@ const Itinerario = () => {
             justifyContent: "center",
             //alignItems: "center",
             height: "100%",
-            backgroundImage: "url('/img/fondo-textura.png')",
+            backgroundImage: "url('/img/5.4.png')",
             padding: "0px 0px",
             }}
           >
