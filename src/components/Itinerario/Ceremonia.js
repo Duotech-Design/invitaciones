@@ -24,7 +24,7 @@ const Ceremonia = () => {
   return (
     <>
      <img
-          src="/img/ADfoto2.jpg"
+          src="/img/3.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             width: "100%",
@@ -45,7 +45,7 @@ const Ceremonia = () => {
     >
       <Box sx={{ flex: "1" }}>
         <img
-          src="/img/foto3AD.jpg"
+          src="/img/3.1.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             height: "100%",
