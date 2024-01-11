@@ -99,7 +99,7 @@ const MesaDeRegalos = () => {
       >
         <Typography variant="h3">SANTANDER</Typography>
         <Typography variant="h3">ANDREA HDZ ACEBO</Typography>
-        <Typography variant="h3">000000000000</Typography>
+        <Typography variant="h3">5579070128662353</Typography>
       </div>
     </Container>
   );

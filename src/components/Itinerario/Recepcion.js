@@ -97,7 +97,7 @@ const Recepcion = () => {
           </div>
           <Typography variant="hora" sx={{ marginBottom: "10px" }}>
             {" "}
-            20:00 hrs.{" "}
+            19:30 hrs.{" "}
           </Typography>
           <Typography
             variant="h11"
@@ -106,7 +106,7 @@ const Recepcion = () => {
             {" "}
             AV. CONSTITUCIÓN 2560, CONSTITUYENTES 2DA SECC. 78622.
           </Typography>
-          <button style={styles.button}>¿COMO LLEGAR?</button>
+          <button style={styles.button}>VER MAPA</button>
         </Box>
       </div>
       

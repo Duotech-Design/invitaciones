@@ -101,7 +101,7 @@ function ColorsTimeline() {
           }}
         >
           <Typography variant="h11">RECEPCIÓN</Typography>
-          <Typography  variant="horaP">9:00 PM</Typography>
+          <Typography  variant="horaP">7:30 PM</Typography>
           <Box sx={{display:"flex", flexDirection:"column"}}>
             <Typography variant="h11"> SALÓN DE EVENTOS</Typography>
             <Typography variant="h11">TALLER 2560</Typography>
