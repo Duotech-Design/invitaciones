@@ -13,11 +13,11 @@ function Sobre({onClick}) {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        height: "100vh",
+        height: "90vh",
         backgroundImage: "url('/img/Sobre.png')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: matches ? "50% 50%" : "38% 50%",
-        transform: matches ? "scale(1.5)" : 'scale(1)'
+        transform: matches ? "scale(1.2)" : 'scale(1)'
       }}
       onClick={onClick}
     >
