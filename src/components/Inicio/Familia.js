@@ -69,8 +69,8 @@ export default function IncioFamilia() {
         </div>
        
           <img
-            src="/img/flor.png"
-            alt="Arco flores" // Propiedad alt para describir la imagen
+            src="/img/2.png"
+            alt="flor" // Propiedad alt para describir la imagen
             style={styles.image}
           />
      

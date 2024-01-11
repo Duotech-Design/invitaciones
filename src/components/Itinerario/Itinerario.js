@@ -6,7 +6,7 @@ const styles = {
     //color: "D9D9D9",
     //height: "350px",
     //width: "100%",
-    background: `url("/img/ADfoto2.jpg")`,
+    background: `url("/img/5.jpg")`,
    
     //backgroundSize: "100%",
     //backgroundRepeat: 'no-repeat',
@@ -19,7 +19,7 @@ const styles = {
   box2: {
     height: "100%",
     width: "100%",
-    background: `url("/img/adFotodesliz.jpg")`,
+    background: `url("/img/5.1.jpg")`,
     //transform: 'scaleX(-1)',
     backgroundPosition: '50% 50%',
     padding:'0px 0px',
@@ -56,7 +56,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/iglesia.svg"
+          src="/img/5.2.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.iglesia}
         />
