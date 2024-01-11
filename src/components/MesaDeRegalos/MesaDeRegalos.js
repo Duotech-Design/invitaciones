@@ -77,13 +77,13 @@ const MesaDeRegalos = () => {
         </Typography>
       </div>
       <div style={styles.imagenContenedor}>
-        <img src="/img/liverpool.png" alt="logo" width="320" height="160" />
+        <img src="/img/7.png" alt="logo" width="320" height="160" />
         <Box sx={styles.text}>
           <Typography variant="h11">Num. Evento</Typography>
         </Box>
       </div>
       <div style={styles.imagenContenedor}>
-        <img src="/img/palacio.png" alt="Imagen 1" width="320" height="160" />
+        <img src="/img/7.1.png" alt="Imagen 1" width="320" height="160" />
         <Box sx={styles.text}>
           <Typography variant="h11">Num. Evento</Typography>
         </Box>
