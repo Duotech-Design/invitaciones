@@ -4,13 +4,18 @@ import { Container, Box, Typography } from "@mui/material";
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-function Lista() {
+function Lista({guest, check, handleCheck}) {
+
   return (
-    <Container sx={{display:"flex", justifyContent:"space-between", alignItems:"center", background:"#F4EBE2", color:"#7D572E"}}>
-      <Typography>Alison Rangel</Typography>
-      <Checkbox {...label} color="default" />
-      
-    </Container>
+    <div style={{display:"flex",justifyContent:"space-between", alignItems:"center",}}>
+      <Typography>{guest}</Typography>
+      <Checkbox 
+        {...label} 
+        color="default" 
+        checked={check}
+        onChange={handleCheck}
+        />
+    </div>
   );
 }
 

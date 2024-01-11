@@ -1,9 +1,11 @@
 import { Container, Button, Box, Typography } from "@mui/material";
 import Lista from "./Lista";
+import React, { useState, useEffect } from 'react';
+
 const styles = {
   container: {
     height: "auto",
-    width: "auto",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center", // Para centrar verticalmente
@@ -14,7 +16,8 @@ const styles = {
   box: {
     background: "#E6D4C2",
     height: "auto",
-    width: "80%",
+    width: "100%",
+    display: "flex",
     flexDirection: "column",
     alignItems: "center",
     color: "white",
@@ -30,6 +33,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-around",
     height: "100%",
+    width:"80%",
     gap: "20px",
     padding:"20px"
   },
@@ -55,9 +59,26 @@ const styles = {
   },
 };
 
+const guests = [
+  "Alison Rangel",
+  "Zoy Mendoza",
+  "Escareño"
+]
+
 const Confirmacion = () => {
+  const [isChecked, setIsChecked] = useState(Array(guests.length).fill(true));
+  const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
+  
+  const handleCheckboxChange = (index) => {
+    const newArray = [...isChecked];
+    newArray[index] = !newArray[index];
+    const newCantidad = newArray.filter(elemento => elemento === true).length;
+    setIsChecked(newArray);
+    setCantidad(newCantidad);
+  };
+  
   return (
-    <Container sx={styles.container}>
+    <Box sx={styles.container}>
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
           <Typography variant="horaP" sx={styles.typographyHoraP}>
@@ -66,13 +87,47 @@ const Confirmacion = () => {
           <Typography variant="h2" sx={styles.typographyH2}>
             FAM. HERNANDEZ ACEBO
           </Typography>
-            <Button variant="contained" sx={styles.button}>
-              Confirmar Asistencia
-            </Button>
-         <Lista/>
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              background: "#F4EBE2",
+              color: "#7D572E",
+            }}
+          >
+            {guests.map((guest, index) => (
+              <Lista
+                key={guest}
+                guest={guest}
+                check={isChecked[index]}
+                handleCheck={() => handleCheckboxChange(index)}
+              />
+            ))}
+          </Container>
+          <Container
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              background: "#F4EBE2",
+              color: "#7D572E",
+            }}
+          >
+            <Typography>Total de asistentes</Typography>
+            <Typography
+              sx={{
+                padding:'15px'
+              }}
+            >
+              {cantidad}
+            </Typography>
+          </Container>
+          <Button variant="contained" sx={styles.button}>
+            Confirmar Asistencia
+          </Button>
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
