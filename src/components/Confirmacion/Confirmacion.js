@@ -1,6 +1,5 @@
-// import React from 'react';
 import { Container, Button, Box, Typography } from "@mui/material";
-
+import Lista from "./Lista";
 const styles = {
   container: {
     height: "auto",
@@ -47,7 +46,7 @@ const styles = {
     backgroundColor: "#F4EBE2",
     textAlign: "center",
     fontFamily: "Cinzel",
-    fontSize: `clamp(16px, 0.8rem, 0.9rem)`,
+    fontSize: `clamp(20px, 0.8rem, 0.9rem)`,
     fontStyle: "normal",
     fontWeight: "500",
     lineHeight: "normal",
@@ -67,11 +66,10 @@ const Confirmacion = () => {
           <Typography variant="h2" sx={styles.typographyH2}>
             FAM. HERNANDEZ ACEBO
           </Typography>
-          <Box sx={{ textAlign: "center" }}>
             <Button variant="contained" sx={styles.button}>
               Confirmar Asistencia
             </Button>
-          </Box>
+         <Lista/>
         </Box>
       </Box>
     </Container>
