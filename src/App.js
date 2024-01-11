@@ -8,6 +8,7 @@ import theme from './theme';
 import Inicio from './pages/inicio';
 import NewNavbar from './components/Navbar/NewNavbar';
 import LogIn from './components/LogIn/LogIn';
+import Sobre from './components/Sobre/Sobre';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
       <Route path="/inicio" element={<Inicio />} />
       <Route path='/logIn' element={<LogIn/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/sobre' element={<Sobre/>} />
       </Routes>
     </ThemeProvider>
     </Router>

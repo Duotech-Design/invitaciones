@@ -136,16 +136,16 @@ const Itinerario = () => {
               <div style={styles.box2}></div>
             </Box> : null}
           <Box
-            sx={{
-              flex: "1",
-              display: "flex",
-              flexDirection: "column",
-              //gap: "0.2rem",
-              justifyContent: "center",
-              //alignItems: "center",
-              height: "100%",
-              backgroundImage: "url('/img/fondo-textura.png')",
-              padding: "0px 0px",
+           sx={{
+            flex: "1",
+            display: "flex",
+            flexDirection: "column",
+            //gap: "0.2rem",
+            justifyContent: "center",
+            //alignItems: "center",
+            height: "100%",
+            backgroundImage: "url('/img/fondo-textura.png')",
+            padding: "0px 0px",
             }}
           >
             <Typography
