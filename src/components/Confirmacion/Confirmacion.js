@@ -87,27 +87,18 @@ const Confirmacion = () => {
     const newCantidad = newArray.filter(elemento => elemento === true).length;
     setIsChecked(newArray);
     setCantidad(newCantidad);
+    setConfirmación(!confirmacion)
   };
 
-  const handleConfirmacion = () => {
-    setConfirmación(true)
-  }
-
-  
   return (
     <Box sx={styles.container}>
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
-          {
-            confirmacion ? 
-            <Typography variant="horaP" sx={styles.typographyHoraP}>
-            MUCHAS GRACIAS!
-          </Typography>
-          :
+          
           <Typography variant="horaP" sx={styles.typographyHoraP}>
             CONFIRMACION DE ASISTENCIA
           </Typography>
-          }
+          
           <Typography variant="h2" sx={styles.typographyH2}>
             FAM. HERNANDEZ ACEBO
           </Typography>
@@ -115,9 +106,12 @@ const Confirmacion = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              background: "#F4EBE2",
+              justifyContent:"center",
+              alignContent:"center",
+              //background: "#F4EBE2",
               color: "#7D572E",
-              borderRadius:"10px"
+              borderRadius:"10px",
+              background: `url("/img/1.1.png")`,
             }}
           >
             {guests.map((guest, index) => (
@@ -127,6 +121,7 @@ const Confirmacion = () => {
                 check={isChecked[index]}
                 handleCheck={() => handleCheckboxChange(index)}
                 confirmacion={confirmacion}
+                text={"Confirmar"}
               />
             ))}
           </Container>
@@ -140,29 +135,16 @@ const Confirmacion = () => {
               borderRadius:"10px"
             }}
           >
-            <Typography variant="horaP">Total de asistentes</Typography>
+            <Typography variant="h17">Total de asistentes</Typography>
             <Typography
               sx={{
                 padding:'10px'
               }}
-              variant="horaP"
+              variant="h17"
             >
               {cantidad}
             </Typography>
           </Container>
-          {confirmacion ?
-          <Box sx={styles.enviada}>
-            
-            <Typography sx={styles.button}>
-              CONFIRMACION ENVIADA
-            </Typography>
-            {/*<CheckIcon fontSize="medium" sx={{ color:"#7D572E", marginLeft:"5px"}}/>*/}
-          </Box>
-          :
-          <Button variant="contained" onClick={handleConfirmacion} sx={styles.button}>
-            Confirmar Asistencia
-          </Button>
-          }
         </Box>
       </Box>
     </Box>
