@@ -1,6 +1,7 @@
 import { Container, Button, Box, Typography } from "@mui/material";
 import Lista from "./Lista";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import CheckIcon from '@mui/icons-material/Check';
 
 const styles = {
   container: {
@@ -16,7 +17,8 @@ const styles = {
   box: {
     background: "#E6D4C2",
     height: "auto",
-    width: "100%",
+    //maxWidth: "1000px",
+    width:"auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -33,12 +35,21 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-around",
     height: "100%",
-    width:"80%",
+    width:"90%",
     gap: "20px",
     padding:"20px"
   },
   typographyHoraP: {
     textAlign: "center",
+  },
+  enviada: {
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    textAlign: "center",
+    backgroundColor: "#F4EBE2",
+    padding:"10px",
+    borderRadius:"10px"
   },
   typographyH2: {
     textAlign: "center",
@@ -49,10 +60,10 @@ const styles = {
     borderRadius: "50px",
     backgroundColor: "#F4EBE2",
     textAlign: "center",
-    fontFamily: "Cinzel",
-    fontSize: `clamp(20px, 0.8rem, 0.9rem)`,
+    fontFamily: "Cormorant",
+    fontSize: `clamp(15px, 2.5vw, 1.8rem)`,
     fontStyle: "normal",
-    fontWeight: "500",
+    fontWeight: "600",
     lineHeight: "normal",
     marginBottom: "10px",
     color: "#7D5730",
@@ -68,7 +79,8 @@ const guests = [
 const Confirmacion = () => {
   const [isChecked, setIsChecked] = useState(Array(guests.length).fill(true));
   const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
-  
+  const [ confirmacion, setConfirmación] = useState(null);
+
   const handleCheckboxChange = (index) => {
     const newArray = [...isChecked];
     newArray[index] = !newArray[index];
@@ -76,14 +88,26 @@ const Confirmacion = () => {
     setIsChecked(newArray);
     setCantidad(newCantidad);
   };
+
+  const handleConfirmacion = () => {
+    setConfirmación(true)
+  }
+
   
   return (
     <Box sx={styles.container}>
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
+          {
+            confirmacion ? 
+            <Typography variant="horaP" sx={styles.typographyHoraP}>
+            MUCHAS GRACIAS!
+          </Typography>
+          :
           <Typography variant="horaP" sx={styles.typographyHoraP}>
             CONFIRMACION DE ASISTENCIA
           </Typography>
+          }
           <Typography variant="h2" sx={styles.typographyH2}>
             FAM. HERNANDEZ ACEBO
           </Typography>
@@ -93,6 +117,7 @@ const Confirmacion = () => {
               flexDirection: "column",
               background: "#F4EBE2",
               color: "#7D572E",
+              borderRadius:"10px"
             }}
           >
             {guests.map((guest, index) => (
@@ -101,6 +126,7 @@ const Confirmacion = () => {
                 guest={guest}
                 check={isChecked[index]}
                 handleCheck={() => handleCheckboxChange(index)}
+                confirmacion={confirmacion}
               />
             ))}
           </Container>
@@ -111,20 +137,32 @@ const Confirmacion = () => {
               alignItems: "center",
               background: "#F4EBE2",
               color: "#7D572E",
+              borderRadius:"10px"
             }}
           >
-            <Typography>Total de asistentes</Typography>
+            <Typography variant="horaP">Total de asistentes</Typography>
             <Typography
               sx={{
-                padding:'15px'
+                padding:'10px'
               }}
+              variant="horaP"
             >
               {cantidad}
             </Typography>
           </Container>
-          <Button variant="contained" sx={styles.button}>
+          {confirmacion ?
+          <Box sx={styles.enviada}>
+            
+            <Typography sx={styles.button}>
+              CONFIRMACION ENVIADA
+            </Typography>
+            {/*<CheckIcon fontSize="medium" sx={{ color:"#7D572E", marginLeft:"5px"}}/>*/}
+          </Box>
+          :
+          <Button variant="contained" onClick={handleConfirmacion} sx={styles.button}>
             Confirmar Asistencia
           </Button>
+          }
         </Box>
       </Box>
     </Box>
