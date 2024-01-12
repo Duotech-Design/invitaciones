@@ -1,6 +1,5 @@
 import { Button, Typography } from "@mui/material";
-import NativeSelectDemo from "./Select";
-import Chip from '@mui/material/Chip';
+
 const styles = {
   enviada: {
     display:"flex",
@@ -58,7 +57,7 @@ function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
         paddingBottom: "10px",
       }}
     >
-      {validacion ? (
+   
         <>
           <Typography variant="h17">{guest}</Typography>
           <Button
@@ -68,24 +67,10 @@ function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
           >
             {text}
           </Button>
+         
         </>
-      ) : (
-        <>
-          <Typography>¿Puedes asistir? {guest}</Typography>
-          <div>
-            <Chip
-              label="Sí"
-              variant="outlined"
-              sx={{ backgroundColor: "", color: "#7D5730" }}
-            />
-            <Chip
-              label="No"
-              variant="outlined"
-              sx={{ backgroundColor: "", color: "#7D5730" }}
-            />
-          </div>
-        </>
-      )}
+     
+       
     </div>
   );
 }
