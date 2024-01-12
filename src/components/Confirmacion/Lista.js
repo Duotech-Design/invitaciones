@@ -1,6 +1,6 @@
-
 import { Button, Typography } from "@mui/material";
-
+import NativeSelectDemo from "./Select";
+import Chip from '@mui/material/Chip';
 const styles = {
   enviada: {
     display:"flex",
@@ -43,7 +43,7 @@ const styles = {
 
 //const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-function Lista({ guest, check, handleCheck, confirmacion }) {
+function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
   //const [ isFollowing, setIsFollowing] = useState(false);
   const text = check ? "Cancelar" : "Confirmar";
 
@@ -52,18 +52,40 @@ function Lista({ guest, check, handleCheck, confirmacion }) {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        alignContent:"center",
+        alignContent: "center",
         alignItems: "center",
         paddingTop: "10px",
+        paddingBottom: "10px",
       }}
     >
-
-      <Typography variant="h17">{guest}</Typography>
-
-      <Button variant="contained" onClick={handleCheck} sx={!check ? styles.confirm : styles.cancel}>
-        {text}
-      </Button>
-
+      {validacion ? (
+        <>
+          <Typography variant="h17">{guest}</Typography>
+          <Button
+            variant="contained"
+            onClick={handleCheck}
+            sx={!check ? styles.confirm : styles.cancel}
+          >
+            {text}
+          </Button>
+        </>
+      ) : (
+        <>
+          <Typography>¿Puedes asistir? {guest}</Typography>
+          <div>
+            <Chip
+              label="Sí"
+              variant="outlined"
+              sx={{ backgroundColor: "", color: "#7D5730" }}
+            />
+            <Chip
+              label="No"
+              variant="outlined"
+              sx={{ backgroundColor: "", color: "#7D5730" }}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }

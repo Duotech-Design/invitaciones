@@ -78,7 +78,7 @@ const guests = [
 const Confirmacion = () => {
   const [isChecked, setIsChecked] = useState(Array(guests.length).fill(false));
   const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
-  const [ confirmacion, setConfirmación] = useState(null);
+  const [ validacion, setValidacion ] = useState(null);
 
   const handleCheckboxChange = (index) => {
     const newArray = [...isChecked];
@@ -86,7 +86,6 @@ const Confirmacion = () => {
     const newCantidad = newArray.filter(elemento => elemento === true).length;
     setIsChecked(newArray);
     setCantidad(newCantidad);
-    setConfirmación(!confirmacion)
   };
 
   return (
@@ -112,16 +111,20 @@ const Confirmacion = () => {
               background: `url("/img/1.1.png")`,
             }}
           >
+            
             {guests.map((guest, index) => (
               <Lista
                 key={guest}
                 guest={guest}
                 check={isChecked[index]}
                 handleCheck={() => handleCheckboxChange(index)}
-                confirmacion={confirmacion}
-                text={"Confirmar"}
+                validacion={validacion}
+                setValidacion={setValidacion}
+
               />
             ))}
+            {
+              validacion ? 
             <div
               style={{
                 with: "100%",
@@ -146,7 +149,9 @@ const Confirmacion = () => {
               >
                 {cantidad}
               </Typography>
-            </div>
+            </div> :
+            null
+            }
           </Container>
         </Box>
       </Box>
