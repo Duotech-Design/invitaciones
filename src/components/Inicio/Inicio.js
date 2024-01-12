@@ -4,7 +4,7 @@ import theme from "../../theme";
 
 const styles = {
   container: {//cambie el container por un div
-    background: `url("/img/prueba.jpg")`,
+    background: `url("/img/1.jpg")`,
     position: "relative",
     margin: "0px 0px",
     backgroundPosition: '50% 10%',
@@ -39,7 +39,7 @@ const styles = {
     width: "64%",
     height: "auto", // Anchura del cuadro
     //backgroundColor: "#E6D4C2",
-    background: `url("/img/fondo-textura-beige.png")`,
+    background: `url("/img/1.1.png")`,
     padding: "5px",
     borderTopLeftRadius: "50px",
     borderTopRightRadius: "50px",
@@ -73,16 +73,16 @@ const styles = {
 const Inicio = () => {
   return (
     <div style={styles.container}>
-      <Typography variant="h1" component="h3" style={styles.textTop}>
+      <Typography variant="TITULO" component="h3" style={styles.textTop}>
         ANDREA & DIEGO
       </Typography>
       <Box>
       <Box style={styles.textContainer}>
         <div style={{ width: "50%" }}>
-          <Typography variant="h3">VIERNES</Typography>
-          <Typography variant="h3">21 DE ABRIL 2024</Typography>
+          <Typography variant="h3">SÁBADO</Typography>
+          <Typography variant="h3">09 de MARZO 2024</Typography>
         </div>
-        <div style={{ borderLeft: "1px solid black", width: "50%" }}>
+        <div style={{ borderLeft: "0.5px solid #7D5730", width: "50%" }}>
           <Typography variant="h3">SAN LUIS POTOSÍ,</Typography>
           <Typography variant="h3">S.L.P.</Typography>
         </div>

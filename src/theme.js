@@ -159,6 +159,12 @@ const theme = createTheme({
       fontWeight: 300,
       color: "#FFFFFF",
     },
+    titulo: {
+      fontFamily:  'Italiana',// Cambia a Zeyada
+      fontSize: `clamp(22px, 3.5vw, 2rem)`,
+      fontWeight: 400,
+      color: "#F4EBE2",
+    },
     // Define otras fuentes personalizadas según sea necesario
   },
 });

@@ -32,7 +32,7 @@ const Recepcion = () => {
       >
         <Box sx={{ flex: "1", height:'auto' }}>
           <img
-            src="/img/ADfoto4.jpg"
+            src="/img/4.jpg"
             alt="Imagen de inicio" // Propiedad alt para describir la imagen
             style={{
               height: "100%",
@@ -97,7 +97,7 @@ const Recepcion = () => {
           </div>
           <Typography variant="hora" sx={{ marginBottom: "10px" }}>
             {" "}
-            20:00 hrs.{" "}
+            19:30 hrs.{" "}
           </Typography>
           <Typography
             variant="h11"
@@ -106,7 +106,7 @@ const Recepcion = () => {
             {" "}
             AV. CONSTITUCIÓN 2560, CONSTITUYENTES 2DA SECC. 78622.
           </Typography>
-          <button style={styles.button}>¿COMO LLEGAR?</button>
+          <button style={styles.button}>VER MAPA</button>
         </Box>
       </div>
       

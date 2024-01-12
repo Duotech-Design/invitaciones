@@ -24,11 +24,11 @@ const Ceremonia = () => {
   return (
     <>
      <img
-          src="/img/ADFOTO.jpg"
+          src="/img/3.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             width: "100%",
-            height: matches ? '500px' : '300px',
+            height: matches ? '450px' : '220px',
             objectFit: 'cover',  // Puedes cambiar a 'contain' si prefieres mostrar toda la imagen
             objectPosition: "center",
           }}
@@ -45,7 +45,7 @@ const Ceremonia = () => {
     >
       <Box sx={{ flex: "1" }}>
         <img
-          src="/img/foto3AD.jpg"
+          src="/img/3.1.jpg"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={{
             height: "100%",
@@ -88,7 +88,7 @@ const Ceremonia = () => {
         </div>
         <Typography variant="hora" sx={{ marginBottom: "10px" }}>
           {" "}
-          18:30 hrs.{" "}
+          18:00 hrs.{" "}
         </Typography>
         <div
           style={{
@@ -102,7 +102,7 @@ const Ceremonia = () => {
           <Typography variant="h11" sx={{ textAlign: "center" }}> RINCÓN DE FRASCATI 100, </Typography>
           <Typography variant="h11" sx={{ marginBottom: "10px", textAlign: "center" }}> NUEVA RINCONADA DE LOS ANDRES. </Typography>
         </div>
-        <button style={styles.button}>¿COMO LLEGAR?</button>
+        <button style={styles.button}>VER MAPA</button>
       </Box>
     </div>
     

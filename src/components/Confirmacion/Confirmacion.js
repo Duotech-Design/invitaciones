@@ -1,175 +1,171 @@
-//import React from 'react';
 import { Container, Button, Box, Typography } from "@mui/material";
+import Lista from "./Lista";
+import React, { useState } from 'react';
+import CheckIcon from '@mui/icons-material/Check';
 
 const styles = {
-  button : {
-    //color: "D9D9D9",
-    width: `clamp(7rem, 8.5rem, 13rem)`,
-    height: `clamp(1.8rem, 2.5rem, 3.5rem)`,
-    borderRadius: "40px",
+  container: {
+    height: "auto",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center", // Para centrar verticalmente
+    alignItems: "center",
+    marginBottom: "15px",
+    marginTop: "15px",
+  },
+  box: {
+    background: "#E6D4C2",
+    height: "auto",
+    //maxWidth: "1000px",
+    width:"auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    color: "white",
+    marginTop: "10px",
+    marginBottom: "20px",
+    borderTopLeftRadius: "15px",
+    borderTopRightRadius: "15px",
+    borderBottomLeftRadius: "15px",
+    borderBottomRightRadius: "15px",
+  },
+  boxContent: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    height: "100%",
+    width:"90%",
+    gap: "20px",
+    padding:"20px"
+  },
+  typographyHoraP: {
+    textAlign: "center",
+  },
+  enviada: {
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    textAlign: "center",
+    backgroundColor: "#F4EBE2",
+    padding:"10px",
+    borderRadius:"10px"
+  },
+  typographyH2: {
+    textAlign: "center",
+  },
+  button: {
+    width: "auto",
+    height: "auto",
+    borderRadius: "50px",
     backgroundColor: "#F4EBE2",
     textAlign: "center",
-    fontFamily: "Cinzel",
-    fontSize:`clamp(12px, 0.8rem, 0.9rem)`,
+    fontFamily: "Cormorant",
+    fontSize: `clamp(15px, 2.5vw, 1.8rem)`,
     fontStyle: "normal",
-    fontWeight: "400px",
+    fontWeight: "600",
     lineHeight: "normal",
-    marginBottom:"10px", 
+    marginBottom: "10px",
     color: "#7D5730",
   },
-box2:{
-  height: "400px",
-  width: "100%",
-  backgroundColor: "#D9D9D9",
-  paddingLeft: "0px",
-  paddingRight: "0px",
-}}
-const Confirmacion = () => {
-  return (
-    <Container
-      sx={{
-        height: "auto",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center", // Para centrar verticalmente
-        alignItems: "center",
-        color: "white",
-        marginTop: "0",
-        marginBottom: "15px",
-        gap: "10px",
-      }}
-    >
-      <Box
-        sx={{
-          background: "#E6D4C2",
-          height: "200px",
-          width: "80%",
-          //display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          color: "white",
-          marginTop: "10px",
-          marginBottom: "20px",
+};
 
-          borderTopLeftRadius: "15px",
-          borderTopRightRadius: "15px",
-          borderBottomLeftRadius: "15px",
-          borderBottomRightRadius: "15px",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-            height: "100%",
-            gap: "10px",
-            //alignItems: "center",
-          }}
-        >
-          <Typography variant="horaP" sx={{ textAlign: "center" }}>
+const guests = [
+  "Alison Rangel",
+  "Zoy Mendoza",
+  "Escareño"
+]
+
+const Confirmacion = () => {
+  const [isChecked, setIsChecked] = useState(Array(guests.length).fill(true));
+  const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
+  const [ confirmacion, setConfirmación] = useState(null);
+
+  const handleCheckboxChange = (index) => {
+    const newArray = [...isChecked];
+    newArray[index] = !newArray[index];
+    const newCantidad = newArray.filter(elemento => elemento === true).length;
+    setIsChecked(newArray);
+    setCantidad(newCantidad);
+  };
+
+  const handleConfirmacion = () => {
+    setConfirmación(true)
+  }
+
+  
+  return (
+    <Box sx={styles.container}>
+      <Box sx={styles.box}>
+        <Box sx={styles.boxContent}>
+          {
+            confirmacion ? 
+            <Typography variant="horaP" sx={styles.typographyHoraP}>
+            MUCHAS GRACIAS!
+          </Typography>
+          :
+          <Typography variant="horaP" sx={styles.typographyHoraP}>
             CONFIRMACION DE ASISTENCIA
           </Typography>
-
-          <Typography variant="h2" sx={{ textAlign: "center" }}>
+          }
+          <Typography variant="h2" sx={styles.typographyH2}>
             FAM. HERNANDEZ ACEBO
           </Typography>
-          <Box sx={{ textAlign: "center" }}>
-            <Button
-              variant="contained"
-              sx={{ ...styles.button, textAlign: "center" }}
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              background: "#F4EBE2",
+              color: "#7D572E",
+              borderRadius:"10px"
+            }}
+          >
+            {guests.map((guest, index) => (
+              <Lista
+                key={guest}
+                guest={guest}
+                check={isChecked[index]}
+                handleCheck={() => handleCheckboxChange(index)}
+                confirmacion={confirmacion}
+              />
+            ))}
+          </Container>
+          <Container
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              background: "#F4EBE2",
+              color: "#7D572E",
+              borderRadius:"10px"
+            }}
+          >
+            <Typography variant="horaP">Total de asistentes</Typography>
+            <Typography
+              sx={{
+                padding:'10px'
+              }}
+              variant="horaP"
             >
-              Confirmar Asistencia
-            </Button>
+              {cantidad}
+            </Typography>
+          </Container>
+          {confirmacion ?
+          <Box sx={styles.enviada}>
+            
+            <Typography sx={styles.button}>
+              CONFIRMACION ENVIADA
+            </Typography>
+            {/*<CheckIcon fontSize="medium" sx={{ color:"#7D572E", marginLeft:"5px"}}/>*/}
           </Box>
+          :
+          <Button variant="contained" onClick={handleConfirmacion} sx={styles.button}>
+            Confirmar Asistencia
+          </Button>
+          }
         </Box>
       </Box>
-      <Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "30px",
-            marginBottom: "5px",
-           
-          }}
-        >
-          <div
-            style={{ borderBottom: "0.3px solid #7D5730", width: "80vw" }}
-          ></div>
-        </Box>
-        <Typography variant="horaP" sx={{ textAlign: "center" }}>
-          CÓDIGO DE VESTIMENTA
-        </Typography>
-        <div
-          style={{
-            borderBottom: "0.3px solid #7D5730",
-            width: "80vw",
-            marginTop: "5px",
-          }}
-        ></div>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "30px",
-            marginBottom: "5px",
-            flexDirection: "column",
-          }}
-        >
-          <Typography
-            variant="horaP"
-            sx={{ textAlign: "center", marginTop: "5px" }}
-          >
-            FORMAL
-          </Typography>
-          <div
-            style={{
-              width: "100%",
-              marginTop: "15px",
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center",
-            }}
-          >
-            <Typography variant="h8" sx={{ textAlign: "center" }}>
-              HOMBRES:
-            </Typography>
-
-            <Typography
-              variant="h3"
-              sx={{ textAlign: "center", marginLeft: "5px" }}
-            >
-              Traje con corbata
-            </Typography>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              marginTop: "5px",
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center",
-            }}
-          >
-            <Typography
-              variant="h8"
-              sx={{ textAlign: "center", marginTop: "5px" }}
-            >
-              MUJERES:
-            </Typography>
-
-            <Typography
-              variant="h3"
-              sx={{ textAlign: "center", marginLeft: "5px" }}
-            >
-              Vestido largo
-            </Typography>
-          </div>
-        </Box>
-      </Box>
-    </Container>
+    </Box>
   );
 };
 

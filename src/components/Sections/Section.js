@@ -2,22 +2,22 @@
 
 const styles = {
   section: {
-    background: `url("/img/FotoFooter.jpg")`,
+    background: `url("/img/8.jpg")`,
     backgroundSize: "100%",
-    backgroundRepeat: 'no-repeat',
+    //backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
     width: "100%",
-    height: "200px",
-    backgroundAttachment: "fixed",
+    height: "500px",
+    //backgroundAttachment: "fixed",
     
   },
   sectionDos: {
-    background: `url("/img/Ad.jpg")`,
+    background: `url("/img/8.1.jpg")`,
     backgroundSize: "100%",
     width: "100%",
-    height: "500px",
+    height: "700px",
     backgroundAttachment: "fixed",
-    backgroundRepeat: 'no-repeat',
+    //backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
     borderTop: '8px dashed hsla(10deg, 40%, 70%, 0.75)',
     borderBottom: '8px dashed hsla(10deg, 40%, 70%, 0.75)',

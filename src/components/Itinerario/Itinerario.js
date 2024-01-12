@@ -6,7 +6,7 @@ const styles = {
     //color: "D9D9D9",
     //height: "350px",
     //width: "100%",
-    background: `url("/img/ADfoto2.jpg")`,
+    background: `url("/img/5.jpg")`,
    
     //backgroundSize: "100%",
     //backgroundRepeat: 'no-repeat',
@@ -19,7 +19,7 @@ const styles = {
   box2: {
     height: "100%",
     width: "100%",
-    background: `url("/img/adFotodesliz.jpg")`,
+    background: `url("/img/5.1.jpg")`,
     //transform: 'scaleX(-1)',
     backgroundPosition: '50% 50%',
     padding:'0px 0px',
@@ -33,8 +33,8 @@ const styles = {
     //position: "relative",
     //textAlign: "center",
     margin: "0px 0px",
-    maxWidth: "30%",
-    maxHeight: "30%",
+    maxWidth: "40%",
+    maxHeight: "40%",
   },
   copas: {
     //position: "relative",
@@ -56,7 +56,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/iglesia.svg"
+          src="/img/5.2.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.iglesia}
         />
@@ -86,7 +86,7 @@ function ColorsTimeline() {
         }}
       >
         <img
-          src="/img/copasC.png"
+          src="/img/5.3.png"
           alt="Imagen de inicio" // Propiedad alt para describir la imagen
           style={styles.copas}
         />
@@ -101,7 +101,7 @@ function ColorsTimeline() {
           }}
         >
           <Typography variant="h11">RECEPCIÓN</Typography>
-          <Typography  variant="horaP">9:00 PM</Typography>
+          <Typography  variant="horaP">7:30 PM</Typography>
           <Box sx={{display:"flex", flexDirection:"column"}}>
             <Typography variant="h11"> SALÓN DE EVENTOS</Typography>
             <Typography variant="h11">TALLER 2560</Typography>
@@ -125,33 +125,27 @@ const Itinerario = () => {
           marginTop: "0",
         }}
       >
-        <div
-          style={{
-            ...styles.box,
-            backgroundPosition: matches ? "50% 50%" : "-65% -80%",
-            objectFit: matches ? "contain" : "cover", // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
-            objectPosition: matches ? "" : "center",
-            height: matches ? "350px" : "300px",
-            backgroundAttachment: matches ? "fixed" : "",
-          }}
-        ></div>
-        <Box sx={{ display: "flex", padding: "0px 0px" }}>
-          {matches ? (
-            <Box sx={{ flex: "1", padding: "0px 0px" }}>
+        <div style={{...styles.box, backgroundPosition: matches ? '50% 50%' : '-65% -80%', 
+             objectFit: matches ? '' : 'cover',  // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
+             objectPosition: matches ? '' : "center",
+             height: matches ? '350px' : "300px",
+             backgroundAttachment: matches ? "fixed": '', }}></div>
+        <Box sx={{ display: "flex", padding:'0px 0px', }}>
+          {matches ? 
+            <Box sx={{ flex: "1", padding:'0px 0px' }} >
               <div style={styles.box2}></div>
-            </Box>
-          ) : null}
+            </Box> : null}
           <Box
-            sx={{
-              flex: "1",
-              display: "flex",
-              flexDirection: "column",
-              //gap: "0.2rem",
-              justifyContent: "center",
-              //alignItems: "center",
-              height: "100%",
-              backgroundImage: "url('/img/fondo-textura.png')",
-              padding: "0px 0px",
+           sx={{
+            flex: "1",
+            display: "flex",
+            flexDirection: "column",
+            //gap: "0.2rem",
+            justifyContent: "center",
+            //alignItems: "center",
+            height: "100%",
+            backgroundImage: "url('/img/5.4.png')",
+            padding: "0px 0px",
             }}
           >
             <Typography
@@ -161,10 +155,13 @@ const Itinerario = () => {
               {" "}
               ITINERARIO{" "}
             </Typography>
+           
             <ColorsTimeline />
+           
           </Box>
         </Box>
       </div>
+
     </>
   );
 };
