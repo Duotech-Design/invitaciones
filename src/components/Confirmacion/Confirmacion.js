@@ -1,7 +1,6 @@
-import { Container, Button, Box, Typography } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import Lista from "./Lista";
 import React, { useState } from 'react';
-import CheckIcon from '@mui/icons-material/Check';
 
 const styles = {
   container: {
@@ -77,7 +76,7 @@ const guests = [
 ]
 
 const Confirmacion = () => {
-  const [isChecked, setIsChecked] = useState(Array(guests.length).fill(true));
+  const [isChecked, setIsChecked] = useState(Array(guests.length).fill(false));
   const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
   const [ confirmacion, setConfirmación] = useState(null);
 
@@ -94,11 +93,10 @@ const Confirmacion = () => {
     <Box sx={styles.container}>
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
-          
           <Typography variant="horaP" sx={styles.typographyHoraP}>
             CONFIRMACION DE ASISTENCIA
           </Typography>
-          
+
           <Typography variant="h2" sx={styles.typographyH2}>
             FAM. HERNANDEZ ACEBO
           </Typography>
@@ -106,11 +104,11 @@ const Confirmacion = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent:"center",
-              alignContent:"center",
+              justifyContent: "center",
+              alignContent: "center",
               //background: "#F4EBE2",
               color: "#7D572E",
-              borderRadius:"10px",
+              borderRadius: "10px",
               background: `url("/img/1.1.png")`,
             }}
           >
@@ -124,26 +122,31 @@ const Confirmacion = () => {
                 text={"Confirmar"}
               />
             ))}
-          </Container>
-          <Container
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              background: "#F4EBE2",
-              color: "#7D572E",
-              borderRadius:"10px"
-            }}
-          >
-            <Typography variant="h17">Total de asistentes</Typography>
-            <Typography
-              sx={{
-                padding:'10px'
+            <div
+              style={{
+                with: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+                alignContent: "center",
+                alignItems: "center",
+                color: "#7D572E",
+                borderRadius: "10px",
               }}
-              variant="h17"
             >
-              {cantidad}
-            </Typography>
+              <Typography variant="h17">Total de asistentes:</Typography>
+              <Typography
+                variant="h17"
+                sx={{
+                  width: "160px",
+                  height: "auto",
+                  borderRadius: "15px",
+                  textAlign: "center",
+                  marginBottom: "10px",
+                }}
+              >
+                {cantidad}
+              </Typography>
+            </div>
           </Container>
         </Box>
       </Box>
