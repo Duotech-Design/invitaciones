@@ -1,12 +1,14 @@
 //import React from 'react';
 import { Box, Container, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+
 
 const styles = {
   text: {
     display: "flex",
     flexDirection: "column",
     position: "absolute",
-    with: "100%",
+    width: "100%",
     top: "85%",
     left: "50%",
     transform: "translate(-50%, -50%)",
@@ -14,7 +16,7 @@ const styles = {
   },
   imagenContenedor: {
     position: "relative",
-    with: "100%",
+    //width: "100%",
     border:
       "2px solid #CBB197" /* Ajusta el color y ancho del borde según tus preferencias */,
     borderRadius: "10px",
@@ -22,6 +24,13 @@ const styles = {
 };
 
 const MesaDeRegalos = () => {
+  const navigate = useNavigate();
+  const handleLiverpool = () => {
+    navigate('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601');
+  }
+  const handlePalacio = () => {
+    navigate('https://www.elpalaciodehierro.com/buscar?eventId=380437');
+  }
   return (
     <Container
       sx={{
@@ -76,16 +85,18 @@ const MesaDeRegalos = () => {
           algo más, pueden hacerlo a través de estas sugerencias.
         </Typography>
       </div>
-      <div style={styles.imagenContenedor}>
+      <div style={styles.imagenContenedor} onClick={handleLiverpool} >
         <img src="/img/7.png" alt="logo" width="320" height="160" />
         <Box sx={styles.text}>
-          <Typography variant="h11">Num. Evento</Typography>
+          <Typography variant="h11">Número de Evento: 51201601  </Typography>
+          <Typography variant="h11">Ver mesa de regalos  </Typography>
         </Box>
       </div>
-      <div style={styles.imagenContenedor}>
+      <div style={styles.imagenContenedor}onClick={handlePalacio}>
         <img src="/img/7.1.png" alt="Imagen 1" width="320" height="160" />
         <Box sx={styles.text}>
-          <Typography variant="h11">Num. Evento</Typography>
+          <Typography variant="h11">Número de Evento: 380437</Typography>
+          <Typography variant="h11">VER MESA DE REGALOS  </Typography>
         </Box>
       </div>
       <div
