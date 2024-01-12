@@ -165,6 +165,12 @@ const theme = createTheme({
       fontWeight: 400,
       color: "#F4EBE2",
     },
+    h17: {
+      fontFamily: "Cinzel", // Cambia a Zeyada
+      fontSize: `clamp(2.5px, 3vw, 1.5rem)`,
+      fontWeight: 500,
+      color: "#7D5730",
+    },
     // Define otras fuentes personalizadas según sea necesario
   },
 });
