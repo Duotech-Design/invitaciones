@@ -23,7 +23,7 @@ const styles = {
   logoContainer: {
     position: "absolute",
     top: "20px", // Ajusta la posición vertical según tus necesidades
-    background: `url("/img/logoSinF.png")`,
+    background: `url("/img/1.2.png")`,
     height: "auto", // Ajusta la altura del logo según tus necesidades
     backgroundSize: "contain",
     backgroundRepeat:"no-repeat",
@@ -53,7 +53,7 @@ export default function LogIn() {
             justifyContent: "center",
             flexDirection: "column",
             alignContent: "center",
-            marginTop: "250px",
+            marginTop: "350px",
             alignItems: "center"
           }}
           noValidate

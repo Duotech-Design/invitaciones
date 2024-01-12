@@ -16,10 +16,14 @@ const styles = {
     // fontSize: `clamp(5px, 5vw, 3.5rem)`,
   },
   section: {
-    backgroundSize: "cover",
-    width: "120px",
+    backgroundSize: "contain",
+    width: "100px",
     height: "100px",
     borderRadius: "50px",
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center"
   },
 };
 
@@ -47,10 +51,12 @@ const NewNavbar = () => {
             src="/img/1.2.png"
             alt="iglesia"
             style={{
-              height: "100%",
-              width: "100%",
+              height: "70%",
+              width: "70%",
               color: "white",
               borderRadius: "50px",
+              objectFit:"cover",
+              
             }}
           />
         </div>
