@@ -58,7 +58,7 @@ function Lista({ guest, check, handleCheck, confirmacion }) {
       }}
     >
 
-      <Typography variant="h17">{guest}</Typography>
+      <Typography variant="h17">{guest.name}</Typography>
 
       <Button variant="contained" onClick={handleCheck} sx={check ? styles.confirm : styles.cancel}>
         {text}

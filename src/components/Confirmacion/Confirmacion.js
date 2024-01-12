@@ -70,14 +70,10 @@ const styles = {
   },
 };
 
-const guests = [
-  "Alison Rangel",
-  "Zoy Mendoza",
-  "Escareño"
-]
-
-const Confirmacion = () => {
-  const [isChecked, setIsChecked] = useState(Array(guests.length).fill(true));
+const Confirmacion = (props) => {
+  console.log('PROPS', props.invite.guest);
+  const [guests, setGuests] = useState(props.invite.guest);
+  const [isChecked, setIsChecked] = useState([true]);
   const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
   const [ confirmacion, setConfirmación] = useState(null);
 
@@ -100,7 +96,7 @@ const Confirmacion = () => {
           </Typography>
           
           <Typography variant="h2" sx={styles.typographyH2}>
-            FAM. HERNANDEZ ACEBO
+            { props.invite.name }
           </Typography>
           <Container
             sx={{
@@ -114,9 +110,9 @@ const Confirmacion = () => {
               background: `url("/img/1.1.png")`,
             }}
           >
-            {guests.map((guest, index) => (
+            {guests?.map((guest, index) => (
               <Lista
-                key={guest}
+                key={guest.name}
                 guest={guest}
                 check={isChecked[index]}
                 handleCheck={() => handleCheckboxChange(index)}
@@ -142,7 +138,7 @@ const Confirmacion = () => {
               }}
               variant="h17"
             >
-              {cantidad}
+              { props.invite.size }
             </Typography>
           </Container>
         </Box>
