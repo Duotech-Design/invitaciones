@@ -49,14 +49,13 @@ const MesaDeRegalos = () => {
         }}
       >
         <div
-          style={{ borderBottom: "0.3px solid #7D5730", width: "80vw" }}
+           style={{ borderBottom: "1px solid #7D5730", width: "50vw" }}
         ></div>
       </Box>
       <Typography variant="horaP">MESA DE REGALOS</Typography>
       <div
         style={{
-          borderBottom: "0.3px solid #7D5730",
-          width: "80vw",
+          borderBottom: "1px solid #7D5730", width: "50vw"
           //marginTop: "5px",
         }}
       ></div>

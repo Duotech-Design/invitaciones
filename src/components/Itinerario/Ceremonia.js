@@ -1,5 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Link from '@mui/material/Link';
 
 const styles = {
   button: {
@@ -102,7 +103,11 @@ const Ceremonia = () => {
           <Typography variant="h11" sx={{ textAlign: "center" }}> RINCÓN DE FRASCATI 100, </Typography>
           <Typography variant="h11" sx={{ marginBottom: "10px", textAlign: "center" }}> NUEVA RINCONADA DE LOS ANDRES. </Typography>
         </div>
-        <button style={styles.button}>VER MAPA</button>
+        <Link href="https://www.google.com.mx/maps/place/Parroquia+Mar%C3%ADa+Madre+de+la+Divina+Gracia/@22.1346992,-101.0417808,17.88z/data=!4m6!3m5!1s0x842a993a6f66b6fd:0x1068e79d07a99321!8m2!3d22.1352048!4d-101.0408903!16s%2Fg%2F11bwl3nt2s?entry=ttu">
+        <button style={styles.button}>VER MAPA
+       
+        </button>
+        </Link>
       </Box>
     </div>
     
