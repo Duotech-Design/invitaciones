@@ -1,6 +1,7 @@
 import { Typography, Box } from "@mui/material";
 //import fotoInicio from '@/public/img/fotoInicio.jpg';
 import theme from "../../theme";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const styles = {
   container: {//cambie el container por un div
@@ -19,8 +20,10 @@ const styles = {
   },
   textTop: {
     position: "absolute",
-    top: "0%", // Ajusta la posición vertical del texto "ANDREA & DIEGO"
-    width: "100%",
+    top: "5px",
+  // Ajusta la posición vertical del texto "ANDREA & DIEGO"
+    //width: "110%",
+    margin: "0 auto",
     display: "flex",
     displayDirection: "column",
     alignItems: "center",
@@ -71,11 +74,13 @@ const styles = {
 };
 
 const Inicio = () => {
+  const matches = useMediaQuery('(min-width:600px)');
   return (
     <div style={styles.container}>
-      <Typography variant="TITULO" component="h3" style={styles.textTop}>
-        ANDREA & DIEGO
-      </Typography>
+    <div style={matches ? ({ ...styles.textTop, width: "40%" }) : ({ ...styles.textTop, width: "110%" })}>
+<img src="/img/AD.svg" alt="Andrea & Diego" style={{ width: "100%" }} />
+</div>
+
       <Box>
       <Box style={styles.textContainer}>
         <div style={{ width: "50%" }}>
