@@ -9,7 +9,7 @@ const styles = {
   }
 }
 
-const Sugerencias = () => {
+const SugerenciasHotel = () => {
   return (
     <Container   sx={{
       height: "500px",
@@ -33,7 +33,7 @@ const Sugerencias = () => {
       </Typography>
       <div>
       <Typography variant="horaP" sx={{ textAlign: "center" }}>
-      PEINADO Y MAQUILLAJE
+      HOTELES
       </Typography>
       </div>
     
@@ -59,4 +59,4 @@ const Sugerencias = () => {
   );
 };
 
-export default Sugerencias;
+export default SugerenciasHotel;
