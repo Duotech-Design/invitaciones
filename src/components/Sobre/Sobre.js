@@ -14,9 +14,9 @@ function Sobre({onClick}) {
         alignItems: "center",
         width: "100%",
         height: "90vh",
-        backgroundImage: "url('/img/0.png')",
+        backgroundImage: "url('/img/0.1.svg')",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: matches ? "50% 50%" : "40% 50%",
+       backgroundPosition: matches ? "50% 50%" : "50% 50%",
         transform: matches ? "scale(1.2)" : 'scale(0.9)'
       }}
       onClick={onClick}
