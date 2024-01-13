@@ -11,7 +11,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center", // Para centrar verticalmente
-    alignItems: "center",
+    alignItems: "center", 
     marginBottom: "15px",
     marginTop: "15px",
   },
@@ -150,6 +150,7 @@ const Confirmacion = () => {
         confirmButtonColor: "#A68563",
         cancelButtonColor: "#d33",
         confirmButtonText: "Sí, Cancelare!",
+        position: 'center',
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
@@ -157,6 +158,7 @@ const Confirmacion = () => {
             text: "Muchas gracias por avisar!",
             icon: "success",
             confirmButtonColor: "#A68563",
+            position: 'center',
           });
           newArray[index] = !newArray[index];
           const newCantidad = newArray.filter(
@@ -175,6 +177,7 @@ const Confirmacion = () => {
         confirmButtonColor: "#A68563",
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, asistire!",
+        position: 'center',
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
@@ -182,6 +185,7 @@ const Confirmacion = () => {
             text: "Muchas gracias!",
             icon: "success",
             confirmButtonColor: "#A68563",
+            position: 'center',
           });
 
           newArray[index] = !newArray[index];
@@ -203,7 +207,8 @@ const Confirmacion = () => {
       showCancelButton: true,
       confirmButtonColor: "#A68563",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Confirmo"
+      confirmButtonText: "Confirmo",
+      position: 'center',
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
@@ -211,6 +216,7 @@ const Confirmacion = () => {
           text: "Muchas gracias por avisar",
           icon: "success",
           confirmButtonColor: "#A68563",
+          position: 'center',
         });
         setValidacion(true)
       }
