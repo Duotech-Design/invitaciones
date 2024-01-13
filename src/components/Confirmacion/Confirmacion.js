@@ -83,7 +83,7 @@ const styles = {
     color: "#7D5730",
   },
   confirm_2: {
-    width: "160px",
+    width: "220px",
     height: "auto",
     borderRadius: "15px",
     backgroundColor: "#F4EBE2",
@@ -261,7 +261,7 @@ const Confirmacion = () => {
                 </Typography>
                 <Typography
                   variant="h2"
-                  sx={{ height: "20px", paddingBottom: "30px" }}
+                  sx={{ paddingBottom: "30px", paddingTop: "30px" }}
                 >
                   Si cambias de opinión, favor de comunicarte con la planeadora
                 </Typography>
@@ -303,6 +303,7 @@ const Confirmacion = () => {
               </Typography>
             </div>
           </Container>
+          {validacion || isChecked.some((elemento) => elemento === true) ? null :
           <div
             style={{
               with: "100%",
@@ -317,11 +318,12 @@ const Confirmacion = () => {
             <Button
               variant="contained"
               onClick={handleNoAsistencia}
-              sx={!validacion ? styles.confirm_2 : styles.cancel_2}
+              sx={styles.confirm_2}
             >
               No podre asistir
             </Button>
           </div>
+          }
         </Box>
       </Box>
     </Box>
