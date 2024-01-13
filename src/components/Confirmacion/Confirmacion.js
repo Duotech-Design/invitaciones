@@ -136,8 +136,10 @@ const guests = [
 
 const Confirmacion = () => {
   const [isChecked, setIsChecked] = useState(Array(guests.length).fill(false));
-  const [cantidad, setCantidad] = useState(isChecked.filter(elemento => elemento === true).length);
-  const [ validacion, setValidacion ] = useState(null);
+  const [cantidad, setCantidad] = useState(
+    isChecked.filter((elemento) => elemento === true).length
+  );
+  const [validacion, setValidacion] = useState(null);
 
   const handleCheckboxChange = (index) => {
     const newArray = [...isChecked];
@@ -150,6 +152,7 @@ const Confirmacion = () => {
         confirmButtonColor: "#A68563",
         cancelButtonColor: "#d33",
         confirmButtonText: "Sí, Cancelare!",
+        position: 'center',
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
@@ -157,6 +160,7 @@ const Confirmacion = () => {
             text: "Muchas gracias por avisar!",
             icon: "success",
             confirmButtonColor: "#A68563",
+            position: 'center',
           });
           newArray[index] = !newArray[index];
           const newCantidad = newArray.filter(
@@ -175,6 +179,7 @@ const Confirmacion = () => {
         confirmButtonColor: "#A68563",
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, asistire!",
+        position: 'center',
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
@@ -182,6 +187,7 @@ const Confirmacion = () => {
             text: "Muchas gracias!",
             icon: "success",
             confirmButtonColor: "#A68563",
+            position: 'center',
           });
 
           newArray[index] = !newArray[index];
@@ -194,7 +200,7 @@ const Confirmacion = () => {
       });
     }
   };
-  
+
   const handleNoAsistencia = () => {
     Swal.fire({
       title: "¿No podrás asistir?",
@@ -203,7 +209,8 @@ const Confirmacion = () => {
       showCancelButton: true,
       confirmButtonColor: "#A68563",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Confirmo"
+      confirmButtonText: "Confirmo",
+      position: 'center',
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
@@ -211,12 +218,12 @@ const Confirmacion = () => {
           text: "Muchas gracias por avisar",
           icon: "success",
           confirmButtonColor: "#A68563",
+          position: 'center',
         });
-        setValidacion(true)
+        setValidacion(true);
       }
     });
-      
-  }
+  };
 
   return (
     <Box sx={styles.container}>
@@ -230,7 +237,7 @@ const Confirmacion = () => {
             FAM. HERNANDEZ ACEBO
           </Typography>
           <Typography variant="h2" sx={styles.typographyH2}>
-          Da clic en el botón
+            Da clic en el botón
           </Typography>
           <Container
             sx={{
@@ -244,23 +251,32 @@ const Confirmacion = () => {
               background: `url("/img/1.1.png")`,
             }}
           >
-            
-            {validacion ? 
-            <>
-            <Typography variant="h2" sx={{height:'20px', paddingTop:"30px" }}>Gracias por avisar</Typography>
-            <Typography variant="h2" sx={{height:'20px', paddingBottom:"30px" }}>Si cambias de opinión, favor de comunicarte con la planeadora</Typography> 
-            </>
-            :guests.map((guest, index) => (
-              <Lista
-                key={guest}
-                guest={guest}
-                check={isChecked[index]}
-                handleCheck={() => handleCheckboxChange(index)}
-                
+            {validacion ? (
+              <>
+                <Typography
+                  variant="h2"
+                  sx={{ height: "20px", paddingTop: "30px" }}
+                >
+                  Gracias por avisar
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{ height: "20px", paddingBottom: "30px" }}
+                >
+                  Si cambias de opinión, favor de comunicarte con la planeadora
+                </Typography>
+              </>
+            ) : (
+              guests.map((guest, index) => (
+                <Lista
+                  key={guest}
+                  guest={guest}
+                  check={isChecked[index]}
+                  handleCheck={() => handleCheckboxChange(index)}
+                />
+              ))
+            )}
 
-              />
-            ))}
-            
             <div
               style={{
                 with: "100%",
@@ -285,28 +301,27 @@ const Confirmacion = () => {
               >
                 {cantidad}
               </Typography>
-            </div> 
-          
+            </div>
           </Container>
           <div
-              style={{
-                with: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "center",
-                alignItems: "center",
-                color: "#7D572E",
-                borderRadius: "10px",
-              }}
-            >
-              <Button
-            variant="contained"
-            onClick={handleNoAsistencia}
-            sx={!validacion ? styles.confirm_2 : styles.cancel_2}
+            style={{
+              with: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+              color: "#7D572E",
+              borderRadius: "10px",
+            }}
           >
-            No podre asistir
-          </Button>
-            </div> 
+            <Button
+              variant="contained"
+              onClick={handleNoAsistencia}
+              sx={!validacion ? styles.confirm_2 : styles.cancel_2}
+            >
+              No podre asistir
+            </Button>
+          </div>
         </Box>
       </Box>
     </Box>
