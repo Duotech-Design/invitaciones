@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:3010';
+const API_URL = 'https://invitaciones-backend-production.up.railway.app';
 
 export async function fetchWedding(weddingAlias, invitationId) {
   return axios.post(`${API_URL}/api/v1/wedding`, {
