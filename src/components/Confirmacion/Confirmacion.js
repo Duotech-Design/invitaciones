@@ -37,7 +37,6 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-around",
     height: "100%",
-    width:"90%",
     gap: "20px",
     padding:"20px"
   },
