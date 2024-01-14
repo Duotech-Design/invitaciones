@@ -15,15 +15,21 @@ const styles = {
     width: "100%",
   },
   imagenContenedor: {
-    position: "relative",
-    border: "2px solid #CBB197",
+    position: "relative",  // Establecer la posición relativa
+    border: "1.2px solid #CBB197",
     borderRadius: "10px",
     width: "50%",
     margin: "auto",
-    marginBottom: "5px", // Ajusta el espacio entre la imagen y el texto
-    marginTop: "5px", // Ajusta la posición vertical de la imagen
+    marginBottom: "5px",
+    marginTop: "5px",
   },
-};
+  imagen: {
+    width: "95%",
+    height: "auto",
+    margin: "10px 0",  // Ajustar el margen vertical
+  }, // Ajusta el margen según sea necesario
+  };
+
 
 const MesaDeRegalos = () => {
   return (
@@ -72,8 +78,8 @@ const MesaDeRegalos = () => {
         </Typography>
       </div>
       <div style={styles.imagenContenedor}>
-      <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
-        <img src="/img/7.png" alt="logo" width="100%" height="auto" />
+        <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
+          <img src="/img/7.png" alt="logo" width="100%" height="auto" style={styles.imagen} />
         </Link>
         <Box sx={styles.text}>
           <Typography variant="h11">Número de Evento: 51201601</Typography>
@@ -83,16 +89,16 @@ const MesaDeRegalos = () => {
         </Box>
       </div>
       <div style={styles.imagenContenedor}>
-      <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
-  <img src="/img/7.1.png" alt="Imagen 1" width="95%" height="auto" />
-  </Link>
-  <Box sx={{ ...styles.text, marginTop: "5px", marginBottom: "5px" }}>
-    <Typography variant="h11">Número de Evento: 380437</Typography>
-    <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
-      <Typography variant="h11">VER MESA DE REGALOS</Typography>
-    </Link>
-  </Box>
-</div>
+        <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
+          <img src="/img/7.1.png" alt="Imagen 1" width="95%" height="auto" style={styles.imagen} />
+        </Link>
+        <Box sx={styles.text}>
+          <Typography variant="h11">Número de Evento: 380437</Typography>
+          <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
+            <Typography variant="h11">VER MESA DE REGALOS</Typography>
+          </Link>
+        </Box>
+      </div>
 
       <div
         style={{
