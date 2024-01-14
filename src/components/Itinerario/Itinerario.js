@@ -57,7 +57,7 @@ function ColorsTimeline() {
       >
         <img
           src="/img/5.2.png"
-          alt="Imagen de inicio" // Propiedad alt para describir la imagen
+          alt="Iglesia" // Propiedad alt para describir la imagen
           style={styles.iglesia}
         />
         <Box
@@ -87,7 +87,7 @@ function ColorsTimeline() {
       >
         <img
           src="/img/5.3.png"
-          alt="Imagen de inicio" // Propiedad alt para describir la imagen
+          alt="Copas" // Propiedad alt para describir la imagen
           style={styles.copas}
         />
         <Box

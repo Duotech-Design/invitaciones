@@ -17,6 +17,7 @@ import Vestimenta from "../Confirmacion/Vestimenta.js";
 import Sobre from "../Sobre/Sobre.js";
 import { useState } from "react";
 import ImageMasonry from "../Masonry/Masonry.js";
+import SugerenciasHotel from "../Sugerencias/SugerenciaHotel.js";
 
 
 const WeddingInvitation = () => {
@@ -38,6 +39,7 @@ const WeddingInvitation = () => {
       <Confirmacion />
       <Vestimenta/>
       <Sugerencias />
+      <SugerenciasHotel/>
       <MesaDeRegalos />
       {/*<Galeria />*/}
       {/*<SectionUno />*/}

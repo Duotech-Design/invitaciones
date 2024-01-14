@@ -1,4 +1,3 @@
-
 import { Button, Typography } from "@mui/material";
 
 const styles = {
@@ -43,27 +42,35 @@ const styles = {
 
 //const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-function Lista({ guest, check, handleCheck, confirmacion }) {
+function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
   //const [ isFollowing, setIsFollowing] = useState(false);
-  const text = check ? "Confirmar" : "Cancelar";
+  const text = check ? "Cancelar" : "Confirmar";
 
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "space-between",
-        alignContent:"center",
+        alignContent: "center",
         alignItems: "center",
         paddingTop: "10px",
+        paddingBottom: "10px",
       }}
     >
-
-      <Typography variant="h17">{guest}</Typography>
-
-      <Button variant="contained" onClick={handleCheck} sx={check ? styles.confirm : styles.cancel}>
-        {text}
-      </Button>
-
+   
+        <>
+          <Typography variant="h17">{guest}</Typography>
+          <Button
+            variant="contained"
+            onClick={handleCheck}
+            sx={!check ? styles.confirm : styles.cancel}
+          >
+            {text}
+          </Button>
+         
+        </>
+     
+       
     </div>
   );
 }
