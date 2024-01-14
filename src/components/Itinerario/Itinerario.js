@@ -17,19 +17,18 @@ const styles = {
         backgroundPosition: "center center", // Centro por defecto
       },
     
-box2: {
-height: "100%",
-width: "100%",
-background: `url("/img/5.1.jpg")`,
-//transform: 'scaleX(-1)',
-backgroundPosition: '50% 50%',
-padding:'0px 0px',
-flex: "1",
-
-backgroundAttachment: "fixed",
-
-
-},
+      box2: {
+    height: "100%",
+    width: "100%",
+    background: `url("/img/5.1.svg")`,
+   
+    backgroundPosition: '90% -90%',
+    backgroundSize: 'cover',  // Ajusta a 'cover' para ocupar el espacio sin distorsionarse
+    padding: '0px 0px',
+    flex: "1",
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
+  },
 iglesia: {
 //position: "relative",
 //textAlign: "center",
@@ -134,8 +133,8 @@ const Itinerario = () => {
               objectPosition: matches ? '' : "center",
               height: matches ? '350px' : "300px",
               backgroundAttachment: matches ? "fixed" : '',
-              backgroundSize: "cover", // Ajusta el tamaño de la imagen para cubrir el contenedor
-              backgroundRepeat: "no-repeat", // Evita que la imagen se repita
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
             }}
           ></div>
           <Box sx={{ display: "flex", padding: '0px 0px' }}>
@@ -164,7 +163,6 @@ const Itinerario = () => {
               </Typography>
   
               <ColorsTimeline />
-  
             </Box>
           </Box>
         </div>

@@ -74,7 +74,7 @@ const SugerenciasHotel = () => {
             marginBottom: "10px",
           }}
         >
-          <Typography variant="h8" sx={{ typography: "bold" }}>
+          <Typography variant="h14" sx={{ typography: "bold" }}>
             CITY EXPRESS PLUS PLAZA TANGENTE
           </Typography>
           <Typography variant="h3"> Código :ANYDI </Typography>
@@ -88,10 +88,10 @@ const SugerenciasHotel = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: "10px",
+            marginBottom: "2px",
           }}
         >
-          <Typography variant="h11" sx={{ textAlign: "center" }}> PlL. LOMAS LOTE 52,
+          <Typography variant="h11" sx={{ textAlign: "center" }}> PL. LOMAS LOTE 52,
 
 LOMAS DEL TECNOLÓGICO, </Typography>
           <Typography variant="h11" sx={{ marginBottom: "10px", textAlign: "center" }}> San Luis Potosí, S.L.P. </Typography>
