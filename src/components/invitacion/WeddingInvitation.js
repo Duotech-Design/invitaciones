@@ -21,6 +21,7 @@ import { GetWeddings } from "../Weddings/Weddings.js";
 import { fetchWedding } from "../../services/wedding.js";
 import { useParams } from 'react-router';
 import { useSearchParams } from "react-router-dom";
+import SugerenciasHotel from "../Sugerencias/SugerenciaHotel.js";
 
 const WeddingInvitation = (props) => {
   const params = useParams();

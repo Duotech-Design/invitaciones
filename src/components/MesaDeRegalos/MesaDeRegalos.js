@@ -1,7 +1,7 @@
 //import React from 'react';
 import { Box, Container, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
-
+import Link from '@mui/material/Link';
 
 const styles = {
   text: {
@@ -24,13 +24,7 @@ const styles = {
 };
 
 const MesaDeRegalos = () => {
-  const navigate = useNavigate();
-  const handleLiverpool = () => {
-    navigate('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601');
-  }
-  const handlePalacio = () => {
-    navigate('https://www.elpalaciodehierro.com/buscar?eventId=380437');
-  }
+  
   return (
     <Container
       sx={{
@@ -55,14 +49,13 @@ const MesaDeRegalos = () => {
         }}
       >
         <div
-          style={{ borderBottom: "0.3px solid #7D5730", width: "80vw" }}
+           style={{ borderBottom: "1px solid #7D5730", width: "50vw" }}
         ></div>
       </Box>
       <Typography variant="horaP">MESA DE REGALOS</Typography>
       <div
         style={{
-          borderBottom: "0.3px solid #7D5730",
-          width: "80vw",
+          borderBottom: "1px solid #7D5730", width: "50vw"
           //marginTop: "5px",
         }}
       ></div>
@@ -85,18 +78,24 @@ const MesaDeRegalos = () => {
           algo más, pueden hacerlo a través de estas sugerencias.
         </Typography>
       </div>
-      <div style={styles.imagenContenedor} onClick={handleLiverpool} >
+      <div style={styles.imagenContenedor} >
         <img src="/img/7.png" alt="logo" width="320" height="160" />
         <Box sx={styles.text}>
           <Typography variant="h11">Número de Evento: 51201601  </Typography>
+          <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
           <Typography variant="h11">Ver mesa de regalos  </Typography>
+          </Link>
+          
         </Box>
       </div>
-      <div style={styles.imagenContenedor}onClick={handlePalacio}>
+      <div style={styles.imagenContenedor}>
         <img src="/img/7.1.png" alt="Imagen 1" width="320" height="160" />
         <Box sx={styles.text}>
           <Typography variant="h11">Número de Evento: 380437</Typography>
-          <Typography variant="h11">VER MESA DE REGALOS  </Typography>
+          <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
+            <Typography variant="h11">VER MESA DE REGALOS  </Typography>
+          </Link>
+          
         </Box>
       </div>
       <div

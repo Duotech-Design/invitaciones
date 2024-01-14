@@ -29,7 +29,7 @@ const Vestimenta = () => {
           }}
         >
           <div
-            style={{ borderBottom: "0.3px solid #7D5730", width: "50vw" }}
+            style={{ borderBottom: "1px solid #7D5730", width: "50vw" }}
           ></div>
         </Box>
         <Typography variant="horaP" sx={{ textAlign: "center" }}>
@@ -37,7 +37,7 @@ const Vestimenta = () => {
         </Typography>
         <div
           style={{
-            borderBottom: "0.3px solid #7D5730",
+            borderBottom: "0.5px solid #7D5730",
             width: "50vw",
             marginTop: "5px",
           }}
