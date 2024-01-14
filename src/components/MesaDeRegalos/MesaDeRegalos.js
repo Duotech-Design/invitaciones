@@ -104,7 +104,7 @@ const MesaDeRegalos = () => {
         }}
       >
         <Typography variant="h3">SANTANDER</Typography>
-        <Typography variant="h3">ANDREA HDZ ACEBO</Typography>
+        <Typography variant="h11">ANDREA HERNÁNDEZ ACEBO</Typography>
         <Typography variant="h3">5579070128662353</Typography>
       </div>
     </Container>
