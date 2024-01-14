@@ -38,15 +38,15 @@ function test(data) {
       <Ceremonia />
       <Recepcion />
       <Itinerario />
-      <Confirmacion invite={data.invite}/>
+      <Confirmacion />
       <Vestimenta/>
-      <Sugerencias />
+      <Sugerencias /> 
       <SugerenciasHotel/>
       <MesaDeRegalos />
       {/*<Galeria />*/}
       {/*<SectionUno />*/}
       <ImageMasonry/>
       <Footer />
-    </>
+      </>
   )
 }

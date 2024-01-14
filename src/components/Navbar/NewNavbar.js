@@ -92,10 +92,10 @@ const NewNavbar = () => {
                SUGERENCIAS
              </Typography>
              <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
-               CONFIRMACION
+               CONFIRMACIÓN
              </Typography>
              <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
-               GALERIA
+               GALERÍA
              </Typography>
              <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
                MESA DE REGALOS

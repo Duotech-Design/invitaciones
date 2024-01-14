@@ -83,7 +83,7 @@ const Ceremonia = () => {
           }}
         >
           <Typography variant="h8" sx={{ typography: "bold" }}>
-            PARROQUIA MARIA MADRE
+            PARROQUIA MARÍA MADRE
           </Typography>
           <Typography variant="h8"> DE LA DIVINA GRACIA </Typography>
         </div>

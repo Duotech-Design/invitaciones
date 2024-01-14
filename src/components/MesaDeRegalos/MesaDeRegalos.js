@@ -1,6 +1,5 @@
-//import React from 'react';
+import React from 'react';
 import { Box, Container, Typography } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
 import Link from '@mui/material/Link';
 
 const styles = {
@@ -8,23 +7,25 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     position: "absolute",
-    width: "100%",
-    top: "85%",
+    bottom: "0",
     left: "50%",
-    transform: "translate(-50%, -50%)",
+    transform: "translateX(-50%)",
     zIndex: "1",
+    textAlign: "center",
+    width: "100%",
   },
   imagenContenedor: {
     position: "relative",
-    //width: "100%",
-    border:
-      "2px solid #CBB197" /* Ajusta el color y ancho del borde según tus preferencias */,
+    border: "2px solid #CBB197",
     borderRadius: "10px",
+    width: "50%",
+    margin: "auto",
+    marginBottom: "5px", // Ajusta el espacio entre la imagen y el texto
+    marginTop: "5px", // Ajusta la posición vertical de la imagen
   },
 };
 
 const MesaDeRegalos = () => {
-  
   return (
     <Container
       sx={{
@@ -32,7 +33,7 @@ const MesaDeRegalos = () => {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center", // Para centrar verticalmente
+        justifyContent: "center",
         alignItems: "center",
         color: "white",
         marginTop: "0",
@@ -45,20 +46,12 @@ const MesaDeRegalos = () => {
           display: "flex",
           justifyContent: "center",
           marginTop: "30px",
-          //marginBottom: "5px",
         }}
       >
-        <div
-           style={{ borderBottom: "1px solid #7D5730", width: "50vw" }}
-        ></div>
+        <div style={{ borderBottom: "1px solid #7D5730", width: "50vw" }}></div>
       </Box>
       <Typography variant="horaP">MESA DE REGALOS</Typography>
-      <div
-        style={{
-          borderBottom: "1px solid #7D5730", width: "50vw"
-          //marginTop: "5px",
-        }}
-      ></div>
+      <div style={{ borderBottom: "1px solid #7D5730", width: "50vw" }}></div>
       <div
         style={{
           display: "flex",
@@ -75,32 +68,31 @@ const MesaDeRegalos = () => {
           mejor regalo. Sin embargo, si desean obsequiarnos
         </Typography>
         <Typography variant="h3">
-          algo más, pueden hacerlo a través de estas sugerencias.
+          algo más, ponemos a su disposición
         </Typography>
       </div>
-      <div style={styles.imagenContenedor} >
-        <img src="/img/7.png" alt="logo" width="320" height="160" />
+      <div style={styles.imagenContenedor}>
+        <img src="/img/7.png" alt="logo" width="100%" height="auto" />
         <Box sx={styles.text}>
-          <Typography variant="h11">Número de Evento: 51201601  </Typography>
+          <Typography variant="h11">Número de Evento: 51201601</Typography>
           <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
-          <Typography variant="h11">Ver mesa de regalos  </Typography>
+            <Typography variant="h11">VER MESA DE REGALOS</Typography>
           </Link>
-          
         </Box>
       </div>
       <div style={styles.imagenContenedor}>
-        <img src="/img/7.1.png" alt="Imagen 1" width="320" height="160" />
-        <Box sx={styles.text}>
-          <Typography variant="h11">Número de Evento: 380437</Typography>
-          <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
-            <Typography variant="h11">VER MESA DE REGALOS  </Typography>
-          </Link>
-          
-        </Box>
-      </div>
+  <img src="/img/7.1.png" alt="Imagen 1" width="95%" height="auto" />
+  <Box sx={{ ...styles.text, marginTop: "5px", marginBottom: "5px" }}>
+    <Typography variant="h11">Número de Evento: 380437</Typography>
+    <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
+      <Typography variant="h11">VER MESA DE REGALOS</Typography>
+    </Link>
+  </Box>
+</div>
+
       <div
         style={{
-          padding:"20px", 
+          padding: "20px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
