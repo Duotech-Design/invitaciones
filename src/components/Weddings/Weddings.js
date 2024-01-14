@@ -16,6 +16,8 @@ import Vestimenta from "../Confirmacion/Vestimenta.js";
 import Sobre from "../Sobre/Sobre.js";
 import { useState } from "react";
 import ImageMasonry from "../Masonry/Masonry.js";
+import SugerenciasHotel from "../Sugerencias/SugerenciaHotel.js";
+
 
 const WeddingMap = {
   '65a0b97fc7f02cbbbee982c5': test,
@@ -36,9 +38,10 @@ function test(data) {
       <Ceremonia />
       <Recepcion />
       <Itinerario />
-      <Confirmacion invite={data.invite}/>
+      <Confirmacion />
       <Vestimenta/>
       <Sugerencias />
+      <SugerenciasHotel/>
       <MesaDeRegalos />
       {/*<Galeria />*/}
       {/*<SectionUno />*/}
