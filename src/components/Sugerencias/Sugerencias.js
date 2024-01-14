@@ -123,11 +123,13 @@ const Sugerencias = () => {
         {/* Círculo blanco */}
         
         <div style={isMobile ? styles.circle : styles.circleDesktop}>
+        <Link  href="https://www.instagram.com/salonmimislp/">
           <img
             src="/img/9.png"
             alt="Imagen 9"
             style={isMobile ? styles.largeLogoMobile : styles.largeLogo}
           />
+           </Link>
         </div>
       
         {/* Imágenes */}
@@ -165,11 +167,13 @@ const Sugerencias = () => {
       >
         {/* Círculo blanco */}
         <div style={isMobile ? styles.circle : styles.circleDesktop}>
+        <Link  href="https://www.instagram.com/ppdonjuan/">
           <img
             src="/img/10.png"
             alt="Imagen 10"
             style={isMobile ? styles.largeLogo10Mobile : styles.largeLogo10}
           />
+           </Link>
         </div>
 
         {/* Imágenes */}
@@ -206,11 +210,13 @@ const Sugerencias = () => {
         {/* Círculo blanco */}
         
         <div style={isMobile ? styles.circle : styles.circleDesktop}>
+        <Link sx={{flex:"1"}} href="https://www.instagram.com/alfredoescobarsalon/">
           <img
             src="/img/11.png"
             alt="Imagen 9"
             style={isMobile ? styles.largeLogo11Mobile : styles.largeLogo10}
           />
+              </Link>
         </div>
       
         {/* Imágenes */}
