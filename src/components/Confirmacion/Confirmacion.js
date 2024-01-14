@@ -228,7 +228,7 @@ const Confirmacion = (props) => {
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
           <Typography variant="horaP" sx={styles.typographyHoraP}>
-           R.S.V.P 
+           R.S.V.P.
           </Typography>
 
           <Typography variant="h2" sx={styles.typographyH2}>
