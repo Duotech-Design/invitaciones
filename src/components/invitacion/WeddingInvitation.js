@@ -36,13 +36,11 @@ const WeddingInvitation = (props) => {
     console.log(props)
     const getWedding = async () => {
       if (loadOnce) return;
-      console.log(params.weddingAlias)
-      console.log(searchParams);
+      loadOnce = true;
+
       const weddingResponse = await fetchWedding(params.weddingAlias, searchParams.get('invite'));
-      console.log(weddingResponse);
       const weddingObj = weddingResponse.data.wedding || { _id: '0' };
       setWedding(weddingResponse.data)
-      loadOnce = true;
     }
 
     getWedding()

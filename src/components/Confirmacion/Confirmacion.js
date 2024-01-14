@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import Lista from "./Lista";
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'
+import { cancelAttendance, confirmAttendance, declineAttendance } from "../../services/wedding";
 
 const styles = {
   container: {
@@ -131,14 +132,10 @@ const styles = {
 const Confirmacion = (props) => {
   console.log('PROPS', props.invite.guest);
   const [guests, setGuests] = useState(props.invite.guest);
-  const [isChecked, setIsChecked] = useState([true]);
-  const [ confirmacion, setConfirmación] = useState(null);
-  const [cantidad, setCantidad] = useState(
-    isChecked.filter((elemento) => elemento === true).length
-  );
-  const [validacion, setValidacion] = useState(null);
+  const [isChecked, setIsChecked] = useState(props.invite.guest.map((guest) => guest.confirmation.status === 'confirmed' ));
+  const [validacion, setValidacion] = useState(props.invite.guest.some((elemento) => elemento.confirmation.status === 'declined' ));
 
-  const handleCheckboxChange = (index) => {
+  const handleCheckboxChange = (guestId, index) => {
     const newArray = [...isChecked];
     if (newArray[index]) {
       Swal.fire({
@@ -150,7 +147,7 @@ const Confirmacion = (props) => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Sí, Cancelare!",
         position: 'center',
-      }).then((result) => {
+      }).then(async (result) => {
         if (result.isConfirmed) {
           Swal.fire({
             title: "Gracias!",
@@ -159,12 +156,11 @@ const Confirmacion = (props) => {
             confirmButtonColor: "#A68563",
             position: 'center',
           });
+
+          await cancelAttendance(props.invite._id, guestId);
+
           newArray[index] = !newArray[index];
-          const newCantidad = newArray.filter(
-            (elemento) => elemento === true
-          ).length;
           setIsChecked(newArray);
-          setCantidad(newCantidad);
         }
       });
     } else {
@@ -177,7 +173,7 @@ const Confirmacion = (props) => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, asistire!",
         position: 'center',
-      }).then((result) => {
+      }).then(async (result) => {
         if (result.isConfirmed) {
           Swal.fire({
             title: "Confirmado!",
@@ -187,12 +183,11 @@ const Confirmacion = (props) => {
             position: 'center',
           });
 
+          await confirmAttendance(props.invite._id, guestId);
+          console.log(isChecked)
           newArray[index] = !newArray[index];
-          const newCantidad = newArray.filter(
-            (elemento) => elemento === true
-          ).length;
+
           setIsChecked(newArray);
-          setCantidad(newCantidad);
         }
       });
     }
@@ -208,7 +203,7 @@ const Confirmacion = (props) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Confirmo",
       position: 'center',
-    }).then((result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Gracias!",
@@ -217,6 +212,9 @@ const Confirmacion = (props) => {
           confirmButtonColor: "#A68563",
           position: 'center',
         });
+
+        await declineAttendance(props.invite._id);
+
         setValidacion(true);
       }
     });
@@ -266,10 +264,10 @@ const Confirmacion = (props) => {
             ) : (
               guests.map((guest, index) => (
                 <Lista
-                  key={guest}
+                  key={guest._id}
                   guest={guest}
                   check={isChecked[index]}
-                  handleCheck={() => handleCheckboxChange(index)}
+                  handleCheck={() => handleCheckboxChange(guest._id, index)}
                 />
               ))
             )}

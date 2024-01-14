@@ -38,7 +38,7 @@ function test(data) {
       <Ceremonia />
       <Recepcion />
       <Itinerario />
-      <Confirmacion />
+      <Confirmacion invite={data.invite}/>
       <Vestimenta/>
       <Sugerencias />
       <SugerenciasHotel/>
