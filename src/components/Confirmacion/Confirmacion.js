@@ -12,7 +12,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center", // Para centrar verticalmente
-    alignItems: "center",
+    alignItems: "center", 
     marginBottom: "15px",
     marginTop: "15px",
   },
