@@ -230,7 +230,7 @@ const Confirmacion = () => {
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
           <Typography variant="horaP" sx={styles.typographyHoraP}>
-            CONFIRMACION DE ASISTENCIA
+           R.S.V.P 
           </Typography>
 
           <Typography variant="h2" sx={styles.typographyH2}>
@@ -320,7 +320,7 @@ const Confirmacion = () => {
               onClick={handleNoAsistencia}
               sx={styles.confirm_2}
             >
-              No podre asistir
+              No asistiré
             </Button>
           </div>
           }

@@ -38,8 +38,9 @@ const WeddingInvitation = () => {
       <Itinerario />
       <Confirmacion />
       <Vestimenta/>
-      <Sugerencias />
+      <Sugerencias /> 
       <SugerenciasHotel/>
+    
       <MesaDeRegalos />
       {/*<Galeria />*/}
       {/*<SectionUno />*/}

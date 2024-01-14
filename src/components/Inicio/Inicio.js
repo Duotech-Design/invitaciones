@@ -1,7 +1,60 @@
+import React, { useState, useEffect } from 'react';
 import { Typography, Box } from "@mui/material";
-//import fotoInicio from '@/public/img/fotoInicio.jpg';
 import theme from "../../theme";
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+const Countdown = ({ targetDate }) => {
+  const calculateTimeLeft = () => {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      // La fecha objetivo ha pasado
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div style={styles.numbersContainer}>
+      <div style={styles.timeUnit}>
+        <Typography variant="reloj">{timeLeft.days}</Typography>
+        <Typography variant="reloj" style={{ width: "100%" }}>Días</Typography>
+      </div>
+      <Typography variant="reloj"> : </Typography>
+      <div style={styles.timeUnit}>
+        <Typography variant="reloj">{timeLeft.hours}</Typography>
+        <Typography variant="reloj" style={{ marginLeft: "10px" }}>Horas</Typography>
+      </div>
+      <Typography variant="reloj"> : </Typography>
+      <div style={styles.timeUnit}>
+        <Typography variant="reloj">{timeLeft.minutes}</Typography>
+        <Typography variant="reloj" style={{ marginLeft: "10px" }}>Minutos</Typography>
+      </div>
+      <Typography variant="reloj"> : </Typography>
+      <div style={styles.timeUnit}>
+        <Typography variant="reloj">{timeLeft.seconds}</Typography>
+        <Typography variant="reloj" style={{ marginLeft: "10px" }}>Seg.</Typography>
+      </div>
+    </div>
+  );
+};
 
 const styles = {
   container: {//cambie el container por un div
@@ -70,11 +123,17 @@ const styles = {
     backgroundColor: "rgba(255, 255, 255, 0.2)",
     borderRadius:'50px',
     backdropFilter: "blur(1px)",
+  }, timeUnit: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    width: "70px",
   },
 };
 
 const Inicio = () => {
   const matches = useMediaQuery('(min-width:600px)');
+  const targetDate = new Date('2024-03-09T18:00:00').getTime();
   return (
     <div style={styles.container}>
     <div style={matches ? ({ ...styles.textTop, width: "40%" }) : ({ ...styles.textTop, width: "110%" })}>
@@ -92,66 +151,7 @@ const Inicio = () => {
           <Typography variant="h3">S.L.P.</Typography>
         </div>
       </Box>
-      <div style={styles.numbersContainer}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            width: "70px",
-          }}
-        >
-          <Typography variant="reloj">23 </Typography>
-
-          <Typography variant="reloj" style={{ width: "100%" }}>
-            Días
-          </Typography>
-        </div>
-        <Typography variant="reloj"> : </Typography>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginLeft: "20px",
-            flexDirection: "column",
-          }}
-        >
-          <Typography variant="reloj">30 </Typography>
-          <Typography variant="reloj" style={{ marginLeft: "10px" }}>
-            Horas
-          </Typography>
-          
-        </div>
-        <Typography variant="reloj"> : </Typography>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginLeft: "20px",
-            flexDirection: "column",
-          }}
-        >
-          <Typography variant="reloj">30 </Typography>
-          <Typography variant="reloj" style={{ marginLeft: "10px" }}>
-            Minutos
-          </Typography>
-        </div>
-        <Typography variant="reloj"> : </Typography>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginLeft: "20px",
-            flexDirection: "column",
-          }}
-        >
-          <Typography variant="reloj">30 </Typography>
-          <Typography variant="reloj" style={{ marginLeft: "10px" }}>
-            Seg.
-          </Typography>
-        </div>
-       
-      </div>
+      <Countdown targetDate={targetDate}/>
       </Box>
     </div>
   );

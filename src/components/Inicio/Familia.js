@@ -8,13 +8,13 @@ export default function IncioFamilia() {
     <Box
     sx={{
       margin: 0,
-      background: `url("/img/Texto.svg")`,
+      background: `url("/img/12.svg")`,
       backgroundSize: matches ? "100% 100%" : "contain", // Ajusta el tamaño según el media query
       backgroundPosition: matches ? "center" : "50% 10%", // Ajusta la posición según el media query
       backgroundRepeat: "no-repeat",
       objectFit: matches ? '' : 'contain',  // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
       objectPosition: matches ? '' : "center",
-      height: matches ? "550px" : "215px",
+      height: matches ? "630px" : "215px",
       display: "flex",
       width:"100%",
       flexDirection: "column",
