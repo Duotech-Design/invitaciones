@@ -83,7 +83,7 @@ const MesaDeRegalos = () => {
           <img src="/img/7.png" alt="logo" width="100%" height="auto" style={styles.imagen} />
        
         <Box sx={styles.text}>
-          <Typography variant="h11">Número de Evento: 51201601</Typography>
+          <Typography variant="h3">Núm. de Evento: 51201601</Typography>
           <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
             <Typography variant="h11">VER MESA DE REGALOS</Typography>
           </Link>
@@ -96,7 +96,7 @@ const MesaDeRegalos = () => {
           <img src="/img/7.1.png" alt="Imagen 1" width="95%" height="auto" style={styles.imagen} />
       
         <Box sx={styles.text}>
-          <Typography variant="h11">Número de Evento: 380437</Typography>
+          <Typography variant="h3">Núm. de Evento: 380437</Typography>
           <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
             <Typography variant="h11">VER MESA DE REGALOS</Typography>
           </Link>

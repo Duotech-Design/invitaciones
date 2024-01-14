@@ -115,19 +115,23 @@ const styles = {
     paddingRight: '15px',
     paddingLeft: '15px',
     transform: "translateX(-50%)",
-    width: "auto",
+    width: "60%",  // Ajusta el ancho según sea necesario
     display: "flex",
-    //alignItems: "flex-start",
+    flexDirection: "row",
+    justifyContent: "space-around",
     textColor: "#FFFFFF",
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",//lo agregue 2 enero
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
     backgroundColor: "rgba(255, 255, 255, 0.2)",
-    borderRadius:'50px',
+    borderRadius: '50px',
     backdropFilter: "blur(1px)",
-  }, timeUnit: {
+    alignItems: "center", // Agregado para centrar verticalmente los elementos
+  },
+  timeUnit: {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
     width: "70px",
+    margin: "0 5px", // Espaciado lateral entre los elementos de la cuenta regresiva
   },
 };
 
