@@ -63,7 +63,7 @@ function Lista({ guest, check, handleCheck, canConfirm, isPrimary }) {
             variant="contained"
             onClick={handleCheck}
             sx={!check ? styles.confirm : styles.cancel}
-            disabled={ !isPrimary && canConfirm}
+            disabled={ buttonIsDisabled(isPrimary, canConfirm, text) }
           >
             {text}
           </Button>
@@ -73,6 +73,12 @@ function Lista({ guest, check, handleCheck, canConfirm, isPrimary }) {
        
     </div>
   );
+}
+
+function buttonIsDisabled(isPrimary, canConfirm, text) {
+  if (canConfirm && text === "Cancelar") return false;
+
+  return !isPrimary && canConfirm;
 }
 
 export default Lista
