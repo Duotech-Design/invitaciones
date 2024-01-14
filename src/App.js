@@ -15,7 +15,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Routes>
       <Route path="/" element={<NewNavbar/>} />
-      <Route path="/invitacion" element={<WeddingInvitation />} />
+      <Route path="/w/:weddingAlias" extact={true} element={<WeddingInvitation />} />
       <Route path="/inicio" element={<Inicio />} />
       <Route path='/logIn' element={<LogIn/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
