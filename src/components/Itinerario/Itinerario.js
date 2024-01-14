@@ -72,8 +72,8 @@ height: "100%",
 <Typography variant="h11">CEREMONIA RELIGIOSA</Typography>
 <Typography variant="horaP">6:00 PM</Typography>
 <Box sx={{display:"flex", flexDirection:"column"}}>
-<Typography variant="h11"> Parroquia maria madre</Typography>
-<Typography variant="h11">de la divina gracia</Typography>
+<Typography variant="h11"> Parroquia María Madre</Typography>
+<Typography variant="h11">de la Divina Gracia</Typography>
 </Box>
 </Box>
 </Box>
