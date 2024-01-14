@@ -220,6 +220,10 @@ const Confirmacion = (props) => {
     });
   };
 
+  const canConfirmInvite = () => {
+    return !isChecked[0]; // 0 is the principal guy
+  }
+
   return (
     <Box sx={styles.container}>
       <Box sx={styles.box}>
@@ -267,6 +271,8 @@ const Confirmacion = (props) => {
                   key={guest._id}
                   guest={guest}
                   check={isChecked[index]}
+                  canConfirm={ canConfirmInvite() }
+                  isPrimary={guest.isPrimaryContact}
                   handleCheck={() => handleCheckboxChange(guest._id, index)}
                 />
               ))
@@ -294,7 +300,7 @@ const Confirmacion = (props) => {
                   marginBottom: "10px",
                 }}
               >
-                { props.invite.size }
+                { isChecked.filter((elemento) => elemento === true).length } / { props.invite.size }
               </Typography>
             </div>
           </Container>
