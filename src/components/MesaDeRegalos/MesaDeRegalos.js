@@ -77,10 +77,11 @@ const MesaDeRegalos = () => {
           algo más, ponemos a su disposición
         </Typography>
       </div>
+      <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
       <div style={styles.imagenContenedor}>
-        <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
+       
           <img src="/img/7.png" alt="logo" width="100%" height="auto" style={styles.imagen} />
-        </Link>
+       
         <Box sx={styles.text}>
           <Typography variant="h11">Número de Evento: 51201601</Typography>
           <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
@@ -88,10 +89,12 @@ const MesaDeRegalos = () => {
           </Link>
         </Box>
       </div>
+      </Link>
+      <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
       <div style={styles.imagenContenedor}>
-        <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
+       
           <img src="/img/7.1.png" alt="Imagen 1" width="95%" height="auto" style={styles.imagen} />
-        </Link>
+      
         <Box sx={styles.text}>
           <Typography variant="h11">Número de Evento: 380437</Typography>
           <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
@@ -99,7 +102,7 @@ const MesaDeRegalos = () => {
           </Link>
         </Box>
       </div>
-
+      </Link>
       <div
         style={{
           padding: "20px",
