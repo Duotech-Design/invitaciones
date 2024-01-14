@@ -14,7 +14,7 @@ export default function IncioFamilia() {
       backgroundRepeat: "no-repeat",
       objectFit: matches ? '' : 'contain',  // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
       objectPosition: matches ? '' : "center",
-      height: matches ? "550px" : "215px",
+      height: matches ? "630px" : "215px",
       display: "flex",
       width:"100%",
       flexDirection: "column",

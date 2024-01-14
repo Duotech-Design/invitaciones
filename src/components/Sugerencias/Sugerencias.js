@@ -8,13 +8,24 @@ const styles = {
     maxHeight: "45%",
   },
   circle: {
-    width: "90px",
-    height: "90px",
+    width: "100px",
+    height: "100px",
+    border:"3px solid #FFF",
     borderRadius: "50%",
     backgroundColor: "white",
     position: "relative",
-    top: "10px", // Ajusta la posición vertical según tus necesidades
+    top: "10px",
+    overflow: "hidden",
+    display: "flex",
+    justifyContent: "center",
+    alignItems:"center",
+    alignContent: "center" // Ajusta la posición vertical según tus necesidades
   },
+  largeLogo: {
+    width:"130px",
+    height:"135px"
+  }
+ 
 };
 
 const Sugerencias = () => {
@@ -57,7 +68,7 @@ const Sugerencias = () => {
           alignItems: "center",
           gap: "10px",
           width: "50vw",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
         }}
       >
         {/* Primer conjunto de círculo e imágenes */}
@@ -67,11 +78,13 @@ const Sugerencias = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "10px",
-            flex:"1"
+            flex: "1",
           }}
         >
           {/* Círculo blanco */}
-          <div style={styles.circle}></div>
+          <div style={styles.circle}>
+            <img src="/img/9.png" alt="Imagen 9" style={styles.largeLogo} />
+          </div>
 
           {/* Imágenes */}
           <div
@@ -88,7 +101,7 @@ const Sugerencias = () => {
             <img src="/img/6.1.png" alt="Whatsapp" style={styles.logo} />
           </div>
         </div>
-        <div style={{ borderLeft: "0.5px solid #7D5730", flex:"1" }}>
+        <div style={{ borderLeft: "0.5px solid #7D5730", flex: "1" }}>
           {/* Segundo conjunto de círculo e imágenes */}
           <div
             style={{
@@ -114,7 +127,7 @@ const Sugerencias = () => {
             >
               {/* Imágenes con tamaño diferente */}
               <img src="/img/6.png" alt="Instagram" style={styles.logo} />
-            <img src="/img/6.1.png" alt="Whatsapp" style={styles.logo} />
+              <img src="/img/6.1.png" alt="Whatsapp" style={styles.logo} />
             </div>
           </div>
         </div>
