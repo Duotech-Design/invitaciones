@@ -23,8 +23,14 @@ const styles = {
   },
   largeLogo: {
     width:"130px",
-    height:"135px"
-  }
+    height:"135px",
+    top:"5px"
+  },
+  largeLogo10: {
+    width: "180px", // Ajusta el ancho de la imagen 10.png
+    height: "155px", // Ajusta el alto de la imagen 10.png
+    top: "2px", // Ajusta la posición vertical según tus necesidades
+  },
  
 };
 
@@ -101,7 +107,7 @@ const Sugerencias = () => {
             <img src="/img/6.1.png" alt="Whatsapp" style={styles.logo} />
           </div>
         </div>
-        <div style={{ borderLeft: "0.5px solid #7D5730", flex: "1" }}>
+        <div style={{ borderLeft: "0.7px solid #7D5730", flex: "1" }}>
           {/* Segundo conjunto de círculo e imágenes */}
           <div
             style={{
@@ -112,7 +118,9 @@ const Sugerencias = () => {
             }}
           >
             {/* Círculo blanco */}
-            <div style={styles.circle}></div>
+            <div style={styles.circle}>
+            <img src="/img/10.png" alt="Imagen 10" style={styles.largeLogo10} />
+          </div>
 
             {/* Imágenes */}
             <div
