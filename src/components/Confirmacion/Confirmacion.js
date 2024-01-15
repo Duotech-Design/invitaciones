@@ -146,20 +146,28 @@ const Confirmacion = (props) => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Sí, Cancelare!",
         position: 'center',
+        showLoaderOnConfirm: true,
+        preConfirm: async () => {
+          const res = await cancelAttendance(props.invite._id, guestId);
+  
+          if (res.status !== 200) {
+            return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
+          }
+  
+          newArray[index] = !newArray[index];
+          setIsChecked(newArray);
+          return res.data;
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
       }).then(async (result) => {
         if (result.isConfirmed) {
           Swal.fire({
-            title: "Gracias!",
+          title: "Gracias!",
             text: "Muchas gracias por avisar!",
             icon: "success",
             confirmButtonColor: "#A68563",
             position: 'center',
           });
-
-          await cancelAttendance(props.invite._id, guestId);
-
-          newArray[index] = !newArray[index];
-          setIsChecked(newArray);
         }
       });
     } else {
@@ -172,6 +180,19 @@ const Confirmacion = (props) => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, asistire!",
         position: 'center',
+        showLoaderOnConfirm: true,
+        preConfirm: async () => {
+          const res = await confirmAttendance(props.invite._id, guestId);
+
+          if (res.status !== 200) {
+            return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
+          }
+
+          newArray[index] = !newArray[index];
+          setIsChecked(newArray);
+          return res.data;
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
       }).then(async (result) => {
         if (result.isConfirmed) {
           Swal.fire({
@@ -181,12 +202,6 @@ const Confirmacion = (props) => {
             confirmButtonColor: "#A68563",
             position: 'center',
           });
-
-          await confirmAttendance(props.invite._id, guestId);
-          console.log(isChecked)
-          newArray[index] = !newArray[index];
-
-          setIsChecked(newArray);
         }
       });
     }
@@ -202,6 +217,18 @@ const Confirmacion = (props) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Confirmo",
       position: 'center',
+      showLoaderOnConfirm: true,
+      preConfirm: async () => {
+        const res = await declineAttendance(props.invite._id);
+
+        if (res.status !== 200) {
+          return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
+        }
+
+        setValidacion(true);
+        return res.data;
+      },
+      allowOutsideClick: () => !Swal.isLoading(),
     }).then(async (result) => {
       if (result.isConfirmed) {
         Swal.fire({
@@ -211,10 +238,6 @@ const Confirmacion = (props) => {
           confirmButtonColor: "#A68563",
           position: 'center',
         });
-
-        await declineAttendance(props.invite._id);
-
-        setValidacion(true);
       }
     });
   };
