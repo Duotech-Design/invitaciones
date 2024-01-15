@@ -15,7 +15,7 @@ import Ceremonia from "../Itinerario/Ceremonia.js";
 import Recepcion from "../Itinerario/Recepcion.js";
 import Vestimenta from "../Confirmacion/Vestimenta.js";
 import Sobre from "../Sobre/Sobre.js";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImageMasonry from "../Masonry/Masonry.js";
 import { GetWeddings } from "../Weddings/Weddings.js";
 import { fetchWedding } from "../../services/wedding.js";
@@ -30,7 +30,22 @@ const WeddingInvitation = (props) => {
   const [click, setClick] = useState(false)
   const [wedding, setWedding] = useState({});
 
+  // scroll refs
+  const refs = {
+    inicio: useRef(null),
+    itinerario: useRef(null),
+    confirmacion: useRef(null),
+    sugerencias: useRef(null),
+    mesaDeRegalos: useRef(null),
+  }
+
   let loadOnce = false
+
+  const navbarHandler = (refType) => {
+    console.log('Clicl en navbar handler', refType);
+    console.log(refType[refType])
+    refs[refType]?.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   useEffect(() => {
     console.log(props)
@@ -52,7 +67,7 @@ const WeddingInvitation = (props) => {
   return (
     <Box style={weddingInvitationStyles.container}>
       {click ? 
-      GetWeddings(wedding)
+      GetWeddings(wedding, refs, navbarHandler)
     : <Sobre onClick = {handdleClick}/> }
     </Box>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Box, Container, Typography } from "@mui/material";
 import Link from '@mui/material/Link';
 
@@ -25,7 +25,7 @@ const styles = {
   },
 };
 
-const MesaDeRegalos = () => {
+const MesaDeRegalos = (props, ref) => {
   return (
     <Container
       sx={{
@@ -40,6 +40,8 @@ const MesaDeRegalos = () => {
         marginBottom: "15px",
         gap: "10px",
       }}
+
+      ref={ref}
     >
       <Box
         sx={{
@@ -107,4 +109,4 @@ const MesaDeRegalos = () => {
   );
 };
 
-export default MesaDeRegalos;
+export default forwardRef(MesaDeRegalos);

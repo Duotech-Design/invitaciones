@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import { Typography, Box } from "@mui/material";
 import theme from "../../theme";
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -131,14 +131,14 @@ const styles = {
   },
 };
 
-const Inicio = () => {
+const Inicio = (props, ref) => {
   const matches = useMediaQuery('(min-width:600px)');
   const targetDate = new Date('2024-03-09T18:00:00').getTime();
   return (
-    <div style={styles.container}>
-    <div style={matches ? ({ ...styles.textTop, width: "40%" }) : ({ ...styles.textTop, width: "100%" })}>
-<img src="/img/AD.svg" alt="Andrea & Diego" style={{ width: "100%" }} />
-</div>
+    <div ref={ref} style={styles.container}>
+      <div style={matches ? ({ ...styles.textTop, width: "40%" }) : ({ ...styles.textTop, width: "100%" })}>
+      <img src="/img/AD.svg" alt="Andrea & Diego" style={{ width: "100%" }} />
+      </div>
 
       <Box>
       <Box style={styles.textContainer}>
@@ -157,4 +157,4 @@ const Inicio = () => {
   );
 };
 
-export default Inicio;
+export default forwardRef(Inicio);

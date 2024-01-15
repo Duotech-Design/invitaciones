@@ -27,8 +27,7 @@ const styles = {
   },
 };
 
-const NewNavbar = () => {
-
+const NewNavbar = (props) => {
   const [menu, setMenu] = useState(false);
   const matches = useMediaQuery('(min-width:900px)');
   const handdleClickExpand = () => {
@@ -82,22 +81,19 @@ const NewNavbar = () => {
          <AppBar position="static" sx={NavbarStyles.nav_desk}>
          
            <Toolbar sx={NavbarStyles.toolbar_desk}>
-             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+             <Typography onClick={ (e) => props.handler('inicio') } variant="h14_2" sx={NavbarStyles.content_desk}>
                INICIO
              </Typography>
-             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+             <Typography onClick={ (e) => props.handler('itinerario') } variant="h14_2" sx={NavbarStyles.content_desk}>
                ITINERARIO
              </Typography>
-             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+             <Typography onClick={ (e) => props.handler('sugerencias') } variant="h14_2" sx={NavbarStyles.content_desk}>
                SUGERENCIAS
              </Typography>
-             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+             <Typography onClick={ (e) => props.handler('confirmacion') } variant="h14_2" sx={NavbarStyles.content_desk}>
                CONFIRMACIÓN
              </Typography>
-             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
-               GALERÍA
-             </Typography>
-             <Typography variant="h14_2" sx={NavbarStyles.content_desk}>
+             <Typography onClick={ (e) => props.handler('mesaDeRegalos') } variant="h14_2" sx={NavbarStyles.content_desk}>
                MESA DE REGALOS
              </Typography>
            </Toolbar>
@@ -109,22 +105,19 @@ const NewNavbar = () => {
       <AppBar position="static" sx={NavbarStyles.nav}>
         {menu && !matches ? (
           <Toolbar sx={NavbarStyles.toolbar}>
-            <Typography variant="h2" sx={NavbarStyles.content}>
+            <Typography onClick={ (e) => props.handler('inicio') } variant="h2" sx={NavbarStyles.content}>
               INICIO
             </Typography>
-            <Typography variant="h2" sx={NavbarStyles.content}>
+            <Typography onClick={ (e) => props.handler('itinerario') } variant="h2" sx={NavbarStyles.content}>
               ITINERARIO
             </Typography>
-            <Typography variant="h2" sx={NavbarStyles.content}>
+            <Typography onClick={ (e) => props.handler('sugerencias') } variant="h2" sx={NavbarStyles.content}>
               SUGERENCIAS
             </Typography>
-            <Typography variant="h2" sx={NavbarStyles.content}>
+            <Typography onClick={ (e) => props.handler('confirmacion') } variant="h2" sx={NavbarStyles.content}>
               CONFIRMACION
             </Typography>
-            <Typography variant="h2" sx={NavbarStyles.content}>
-              GALERIA
-            </Typography>
-            <Typography variant="h2" sx={NavbarStyles.content}>
+            <Typography onClick={ (e) => props.handler('mesaDeRegalos') } variant="h2" sx={NavbarStyles.content}>
               MESA DE REGALOS
             </Typography>
           </Toolbar>

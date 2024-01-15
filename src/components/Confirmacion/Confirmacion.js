@@ -1,7 +1,7 @@
 import { Container, Box, Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import Lista from "./Lista";
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import Swal from 'sweetalert2'
 import { cancelAttendance, confirmAttendance, declineAttendance } from "../../services/wedding";
 
@@ -128,7 +128,7 @@ const styles = {
   },
 };
 
-const Confirmacion = (props) => {
+const Confirmacion = (props, ref) => {
   console.log('PROPS', props.invite.guest);
   const [guests, setGuests] = useState(props.invite.guest);
   const [isChecked, setIsChecked] = useState(props.invite.guest.map((guest) => guest.confirmation.status === 'confirmed' ));
@@ -247,7 +247,7 @@ const Confirmacion = (props) => {
   }
 
   return (
-    <Box sx={styles.container}>
+    <Box ref={ref} sx={styles.container}>
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
           <Typography variant="horaP" sx={styles.typographyHoraP}>
@@ -353,4 +353,4 @@ const Confirmacion = (props) => {
   );
 };
 
-export default Confirmacion;
+export default forwardRef(Confirmacion);
