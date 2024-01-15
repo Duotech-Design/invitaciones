@@ -12,10 +12,11 @@ const styles = {
       box: {
         padding: '0px, 0px',
         flex: "1",
-        backgroundImage: `url("/img/5P.svg"), url("/img/5.1.svg")`,
-        backgroundSize: "cover",
+        backgroundImage: `url("/img/5.1.svg")`,
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center", // Centro por defecto
+        backgroundPosition: "center", 
+        
       },
     
    
@@ -118,30 +119,17 @@ const Itinerario = () => {
         <div
           style={{
             ...styles.box,
-            backgroundPosition: matches ? '50% 50%' : '70% -90%',
-            objectFit: matches ? '' : 'cover',
+            backgroundPosition: matches ? '60% 70%' : '70% -90%',
+            objectFit: matches ? '' : 'contain',
             objectPosition: matches ? '' : "center",
-            height: matches ? '350px' : "300px",
+            height: matches ? '620px' : "300px",
             backgroundAttachment: matches ? "fixed" : '',
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
+            //transform:  matches ? 'scale(0.9)' : "scale(0.9)", // Ce
           }}
         ></div>
-        {matches && (
-          <div
-            style={{
-              ...styles.box,
-              backgroundImage: 'url("/img/5.1.svg")',
-              backgroundPosition: '20% 90%',
-              objectFit: 'cover',
-              objectPosition: 'center',
-              height: '350px',
-              backgroundAttachment: 'fixed',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-            }}
-          ></div>
-        )}
+       
         <Box sx={{ display: "flex", padding: '0px 0px' }}>
         
           <Box

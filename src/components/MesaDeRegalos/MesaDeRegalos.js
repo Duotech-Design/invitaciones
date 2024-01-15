@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Container, Typography } from "@mui/material";
 import Link from '@mui/material/Link';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 const styles = {
   container: {
@@ -16,13 +18,14 @@ const styles = {
     gap: "10px",
   },
   divider: {
-    borderBottom: "1px solid #7D5730",
+    borderBottom: "0.3px solid #7D5730",
     width: "50vw",
+    
   },
   title: {
-    marginTop: "30px",
+    textAlign: "center",
+    fontSize: "2rem", // Tamaño de fuente para modo desktop
     marginBottom: "5px",
-    fontSize: "2rem",
   },
   subtitle: {
     borderBottom: "1px solid #7D5730",
@@ -55,17 +58,31 @@ const styles = {
     margin: "10px 0",
   },
   desktopText: {
-    fontSize: "1rem", // Tamaño de letra ajustado para ambos contenedores
+    display: "flex",
+    flexDirection: "column",
+    position: "absolute",
+    top: "165px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    zIndex: "1",
     textAlign: "center",
-    margin: "5px 0",
+    width: "100%",
+  },
+  mobileTitle: {
+    fontSize: "1rem", // Ajusta el tamaño de fuente para modo mobile
+    marginBottom: "5px",
   },
 };
 
 const MesaDeRegalos = () => {
+  const matches = useMediaQuery('(min-width:600px)');
   return (
     <Container sx={styles.container}>
       <Box sx={styles.divider} />
-      <Typography variant="horaP" sx={styles.title}>
+      <Typography variant="horaP" sx={{
+          ...styles.title,
+          '@media (max-width: 599px)': styles.mobileTitle,
+        }}>
         MESA DE REGALOS
       </Typography>
       <Box sx={styles.divider} />
@@ -73,8 +90,8 @@ const MesaDeRegalos = () => {
       <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
         <div style={styles.imagenContenedor}>
           <img src="/img/7.png" alt="logo" width="100%" height="auto" style={styles.imagen} />
-          <Box sx={{...styles.text, ...styles.desktopText}}>
-            <Typography variant="h3">Núm. de Evento: 51201601</Typography>
+          <Box sx={matches ? styles.desktopText : styles.text  }>
+            <Typography variant="h11">Núm. de Evento: 51201601</Typography>
             <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
               <Typography variant="h11">VER MESA DE REGALOS</Typography>
             </Link>
@@ -84,8 +101,8 @@ const MesaDeRegalos = () => {
       <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
         <div style={{...styles.imagenContenedor, width: '80%'}}>
           <img src="/img/7.1.png" alt="Imagen 1" width="100%" height="auto" style={styles.imagen} />
-          <Box sx={{...styles.text, ...styles.desktopText}}>
-            <Typography variant="h3">Núm. de Evento: 380437</Typography>
+          <Box sx={matches ? styles.desktopText : styles.text }>
+            <Typography variant="h11">Núm. de Evento: 380437</Typography>
             <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
               <Typography variant="h11">VER MESA DE REGALOS</Typography>
             </Link>
@@ -102,9 +119,9 @@ const MesaDeRegalos = () => {
           alignItems: "center",
         }}
       >
-        <Typography variant="h3">SANTANDER</Typography>
+        <Typography sx={{fontSize:"1.8rem"}} variant="h2">SANTANDER</Typography>
         <Typography variant="h11">ANDREA HERNÁNDEZ ACEBO</Typography>
-        <Typography variant="h3">5579070128662353</Typography>
+        <Typography sx={{fontSize:"1.8rem"}} variant="h17">5579070128662353</Typography>
       </div>
     </Container>
   );

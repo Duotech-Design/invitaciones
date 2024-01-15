@@ -22,11 +22,11 @@ const styles = {
   title: {
     textAlign: "center",
     fontSize: "2rem", // Tamaño de fuente para modo desktop
-    marginBottom: "5px",
+    marginBottom: "2px",
   },
   mobileTitle: {
     fontSize: "1rem", // Ajusta el tamaño de fuente para modo mobile
-    marginBottom: "5px",
+    marginBottom: "2px",
   },
   subtitle: {
     textAlign: "center",
@@ -69,17 +69,8 @@ const styles = {
     fontWeight: "500",
     padding: "10px 15px",
   },
-  mobileTitle: {
-    fontSize: "1rem", // Ajusta el tamaño de fuente para modo mobile
-    marginBottom: "5px",
-    "@media (min-width:600px)": {
-      display: "none", // Oculta en modo desktop
-    },
-    mobileTitle: {
-      fontSize: "1rem", // Ajusta el tamaño de fuente para modo mobile
-      marginBottom: "5px",
-    },
-  },
+    
+  
 };
 
 
