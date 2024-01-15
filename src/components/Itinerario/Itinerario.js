@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Opcio from "./Opcio";
+
 
 const styles = {
     container: {
@@ -167,7 +167,7 @@ const Itinerario = () => {
           </Box>
 
         </Box>
-        <Opcio/>
+    
       </div>
     </>
   );
