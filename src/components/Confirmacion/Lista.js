@@ -42,8 +42,7 @@ const styles = {
 
 //const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
-  //const [ isFollowing, setIsFollowing] = useState(false);
+function Lista({ guest, check, handleCheck, canConfirm, isPrimary }) {
   const text = check ? "Cancelar" : "Confirmar";
 
   return (
@@ -59,11 +58,12 @@ function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
     >
    
         <>
-          <Typography variant="h17">{guest}</Typography>
+          <Typography variant="h17">{guest.name}</Typography>
           <Button
             variant="contained"
             onClick={handleCheck}
             sx={!check ? styles.confirm : styles.cancel}
+            disabled={ buttonIsDisabled(isPrimary, canConfirm, text) }
           >
             {text}
           </Button>
@@ -73,6 +73,12 @@ function Lista({ guest, check, handleCheck, validacion, setValidacion }) {
        
     </div>
   );
+}
+
+function buttonIsDisabled(isPrimary, canConfirm, text) {
+  if (canConfirm && text === "Cancelar") return false;
+
+  return !isPrimary && canConfirm;
 }
 
 export default Lista

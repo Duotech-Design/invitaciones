@@ -39,18 +39,18 @@ const styles = {
     marginBottom:"5px"
   },
   largeLogo: {
-    width: "195px",
-    height: "198px",
+    width: "220px",
+    height: "220px",
     top: "5px",
   },
   largeLogoMobile: {
-    width: "160px", // Ajusta el tamaño para móvil según tus necesidades
-    height: "165px", // Ajusta el tamaño para móvil según tus necesidades
+    width: "195px", // Ajusta el tamaño para móvil según tus necesidades
+    height: "180px", // Ajusta el tamaño para móvil según tus necesidades
     top: "5px",
   },
   largeLogo10: {
-    width: "180px",
-    height: "155px",
+    width: "240px",
+    height: "240px",
     top: "2px",
   },
   largeLogo10Mobile: {
@@ -59,9 +59,16 @@ const styles = {
     top: "2px",
   },
   largeLogo11Mobile: {
-    width: "130px",
-    height: "115px", // Ajusta la altura para móvil según tus necesidades
+    width: "150px", // Ajusta el tamaño para móvil según tus necesidades
+    height: "180px", // Ajusta el tamaño para móvil según tus necesidades
     top: "2px",
+    marginTop:"8px"
+  },
+  largeLogo11: {
+    width: "185px",
+    height: "200px", // Ajusta la altura para móvil según tus necesidades
+    top: "1px",
+    marginTop:"6px"
   },
 };
 
@@ -123,11 +130,13 @@ const Sugerencias = () => {
         {/* Círculo blanco */}
         
         <div style={isMobile ? styles.circle : styles.circleDesktop}>
+        <Link  href="https://www.instagram.com/salonmimislp/">
           <img
-            src="/img/9.png"
+            src="/img/Mi.svg"
             alt="Imagen 9"
             style={isMobile ? styles.largeLogoMobile : styles.largeLogo}
           />
+           </Link>
         </div>
       
         {/* Imágenes */}
@@ -165,11 +174,13 @@ const Sugerencias = () => {
       >
         {/* Círculo blanco */}
         <div style={isMobile ? styles.circle : styles.circleDesktop}>
+        <Link  href="https://www.instagram.com/ppdonjuan/">
           <img
             src="/img/10.png"
             alt="Imagen 10"
             style={isMobile ? styles.largeLogo10Mobile : styles.largeLogo10}
           />
+           </Link>
         </div>
 
         {/* Imágenes */}
@@ -206,11 +217,13 @@ const Sugerencias = () => {
         {/* Círculo blanco */}
         
         <div style={isMobile ? styles.circle : styles.circleDesktop}>
+        <Link sx={{flex:"1"}} href="https://www.instagram.com/alfredoescobarsalon/">
           <img
-            src="/img/11.png"
+            src="/img/Alf.svg"
             alt="Imagen 9"
-            style={isMobile ? styles.largeLogo11Mobile : styles.largeLogo10}
+            style={isMobile ? styles.largeLogo11Mobile : styles.largeLogo11}
           />
+              </Link>
         </div>
       
         {/* Imágenes */}

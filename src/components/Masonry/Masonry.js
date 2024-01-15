@@ -39,7 +39,7 @@ function ImageMasonry() {
           textShadow: "2px 2px 4px rgba(0, 0, 0, 1)",
         }}
       >
-        Gracias
+    
       </Typography>
     </Box>
   );

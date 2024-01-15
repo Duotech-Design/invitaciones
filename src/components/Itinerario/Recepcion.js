@@ -1,6 +1,8 @@
 import { Typography, Box } from "@mui/material";
 import Link from '@mui/material/Link';
 
+import 'animate.css';
+
 const styles = {
   button: {
     width: "auto",
@@ -15,10 +17,14 @@ const styles = {
     fontStyle: "normal",
     fontWeight: "500",
     padding:"10px 15px 10px 15px",
-  },
+    '&:hover': {
+      animation: 'headShake 1s',
+    },
+},
 };
 
 const Recepcion = () => {
+
   return (
     <>
       <div
@@ -108,8 +114,10 @@ const Recepcion = () => {
             AV. CONSTITUCIÓN 2560, CONSTITUYENTES 2da secc. 78622.
           </Typography>
           <Link href="https://www.google.com.mx/maps/place/TALLER+2560/@22.1287662,-100.9645226,17z/data=!3m1!4b1!4m6!3m5!1s0x842aa26b3dbf9457:0x21eb5f451e3fb474!8m2!3d22.1287662!4d-100.9619423!16s%2Fg%2F11g7p3r9f2?entry=ttu">
-          <button style={styles.button}>VER MAPA</button>
-          </Link>
+        <button className="animate__animated animate__headShake" style={styles.button}>
+          VER MAPA
+        </button>
+      </Link>
         </Box>
       </div>
       

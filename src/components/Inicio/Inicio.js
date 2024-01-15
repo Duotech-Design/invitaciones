@@ -115,19 +115,23 @@ const styles = {
     paddingRight: '15px',
     paddingLeft: '15px',
     transform: "translateX(-50%)",
-    width: "auto",
+    width: "60%",  // Ajusta el ancho según sea necesario
     display: "flex",
-    //alignItems: "flex-start",
+    flexDirection: "row",
+    justifyContent: "space-around",
     textColor: "#FFFFFF",
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",//lo agregue 2 enero
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
     backgroundColor: "rgba(255, 255, 255, 0.2)",
-    borderRadius:'50px',
+    borderRadius: '50px',
     backdropFilter: "blur(1px)",
-  }, timeUnit: {
+    alignItems: "center", // Agregado para centrar verticalmente los elementos
+  },
+  timeUnit: {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
     width: "70px",
+    margin: "0 5px", // Espaciado lateral entre los elementos de la cuenta regresiva
   },
 };
 
@@ -136,7 +140,7 @@ const Inicio = () => {
   const targetDate = new Date('2024-03-09T18:00:00').getTime();
   return (
     <div style={styles.container}>
-    <div style={matches ? ({ ...styles.textTop, width: "40%" }) : ({ ...styles.textTop, width: "110%" })}>
+    <div style={matches ? ({ ...styles.textTop, width: "40%" }) : ({ ...styles.textTop, width: "100%" })}>
 <img src="/img/AD.svg" alt="Andrea & Diego" style={{ width: "100%" }} />
 </div>
 

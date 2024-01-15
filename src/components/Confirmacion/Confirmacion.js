@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import Lista from "./Lista";
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'
+import { cancelAttendance, confirmAttendance, declineAttendance } from "../../services/wedding";
 
 const styles = {
   container: {
@@ -11,7 +12,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center", // Para centrar verticalmente
-    alignItems: "center",
+    alignItems: "center", 
     marginBottom: "15px",
     marginTop: "15px",
   },
@@ -36,7 +37,6 @@ const styles = {
     flexDirection: "column",
     justifyContent: "space-around",
     height: "100%",
-    width:"90%",
     gap: "20px",
     padding:"20px"
   },
@@ -128,20 +128,13 @@ const styles = {
   },
 };
 
-const guests = [
-  "Alison Rangel",
-  "Zoy Mendoza",
-  "Escareño"
-]
+const Confirmacion = (props) => {
+  console.log('PROPS', props.invite.guest);
+  const [guests, setGuests] = useState(props.invite.guest);
+  const [isChecked, setIsChecked] = useState(props.invite.guest.map((guest) => guest.confirmation.status === 'confirmed' ));
+  const [validacion, setValidacion] = useState(props.invite.guest.some((elemento) => elemento.confirmation.status === 'declined' ));
 
-const Confirmacion = () => {
-  const [isChecked, setIsChecked] = useState(Array(guests.length).fill(false));
-  const [cantidad, setCantidad] = useState(
-    isChecked.filter((elemento) => elemento === true).length
-  );
-  const [validacion, setValidacion] = useState(null);
-
-  const handleCheckboxChange = (index) => {
+  const handleCheckboxChange = (guestId, index) => {
     const newArray = [...isChecked];
     if (newArray[index]) {
       Swal.fire({
@@ -153,7 +146,7 @@ const Confirmacion = () => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Sí, Cancelare!",
         position: 'center',
-      }).then((result) => {
+      }).then(async (result) => {
         if (result.isConfirmed) {
           Swal.fire({
             title: "Gracias!",
@@ -162,12 +155,11 @@ const Confirmacion = () => {
             confirmButtonColor: "#A68563",
             position: 'center',
           });
+
+          await cancelAttendance(props.invite._id, guestId);
+
           newArray[index] = !newArray[index];
-          const newCantidad = newArray.filter(
-            (elemento) => elemento === true
-          ).length;
           setIsChecked(newArray);
-          setCantidad(newCantidad);
         }
       });
     } else {
@@ -180,7 +172,7 @@ const Confirmacion = () => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, asistire!",
         position: 'center',
-      }).then((result) => {
+      }).then(async (result) => {
         if (result.isConfirmed) {
           Swal.fire({
             title: "Confirmado!",
@@ -190,12 +182,11 @@ const Confirmacion = () => {
             position: 'center',
           });
 
+          await confirmAttendance(props.invite._id, guestId);
+          console.log(isChecked)
           newArray[index] = !newArray[index];
-          const newCantidad = newArray.filter(
-            (elemento) => elemento === true
-          ).length;
+
           setIsChecked(newArray);
-          setCantidad(newCantidad);
         }
       });
     }
@@ -211,7 +202,7 @@ const Confirmacion = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Confirmo",
       position: 'center',
-    }).then((result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Gracias!",
@@ -220,24 +211,31 @@ const Confirmacion = () => {
           confirmButtonColor: "#A68563",
           position: 'center',
         });
+
+        await declineAttendance(props.invite._id);
+
         setValidacion(true);
       }
     });
   };
+
+  const canConfirmInvite = () => {
+    return !isChecked[0]; // 0 is the principal guy
+  }
 
   return (
     <Box sx={styles.container}>
       <Box sx={styles.box}>
         <Box sx={styles.boxContent}>
           <Typography variant="horaP" sx={styles.typographyHoraP}>
-           R.S.V.P 
+           R.S.V.P.
           </Typography>
 
-          <Typography variant="h2" sx={styles.typographyH2}>
-            FAM. HERNANDEZ ACEBO
+          <Typography variant="h3" sx={styles.typographyH2}>
+            { props.invite.name }
           </Typography>
-          <Typography variant="h2" sx={styles.typographyH2}>
-            Da clic en el botón
+          <Typography variant="h9" sx={styles.typographyH2}>
+            Da click en el botón
           </Typography>
           <Container
             sx={{
@@ -269,10 +267,12 @@ const Confirmacion = () => {
             ) : (
               guests.map((guest, index) => (
                 <Lista
-                  key={guest}
+                  key={guest._id}
                   guest={guest}
                   check={isChecked[index]}
-                  handleCheck={() => handleCheckboxChange(index)}
+                  canConfirm={ canConfirmInvite() }
+                  isPrimary={guest.isPrimaryContact}
+                  handleCheck={() => handleCheckboxChange(guest._id, index)}
                 />
               ))
             )}
@@ -299,7 +299,7 @@ const Confirmacion = () => {
                   marginBottom: "10px",
                 }}
               >
-                {cantidad}
+                { isChecked.filter((elemento) => elemento === true).length } / { props.invite.size }
               </Typography>
             </div>
           </Container>
