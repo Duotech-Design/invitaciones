@@ -21,7 +21,7 @@ export default function Dashboard() {
     >
       <Paper
         elevation={3}
-        sx={{display:"flex", justifyContent: "center", alignContent: "center", flexDirection:"column", alignItems:"center", width:"80%"}}
+        sx={{display:"flex", justifyContent: "center", alignContent: "center", flexDirection:"column", alignItems:"center", width:"100%"}}
       >
         <Container sx={{ padding:"20px" }}>
         <h1> Registro de invitados </h1>

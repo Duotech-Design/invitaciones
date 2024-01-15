@@ -2,48 +2,39 @@ import { Box, Typography } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { forwardRef } from "react";
 
+
 const styles = {
-  box: {
-    //color: "D9D9D9",
-    //height: "350px",
-    //width: "100%",
-    background: `url("/img/5.jpg")`,
-
-    //backgroundSize: "100%",
-    //backgroundRepeat: 'no-repeat',
-    padding: '0px, 0px',
-    flex: "1",
-
-    //objectFit: 'cover',
-    backgroundAttachment: "fixed",
-  },
-  box2: {
-    height: "100%",
-    width: "100%",
-    background: `url("/img/5.1.jpg")`,
-    //transform: 'scaleX(-1)',
-    backgroundPosition: '50% 50%',
-    padding: '0px 0px',
-    flex: "1",
-
-    backgroundAttachment: "fixed",
-
-
-  },
-  iglesia: {
-    //position: "relative",
-    //textAlign: "center",
-    margin: "0px 0px",
-    maxWidth: "40%",
-    maxHeight: "40%",
-  },
-  copas: {
-    //position: "relative",
-    //textAlign: "center",
-    margin: "0px 0px",
-    maxWidth: "40%",
-    maxHeight: "40%",
-  },
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%', // Ajusta según tus necesidades
+      },
+      box: {
+        padding: '0px, 0px',
+        flex: "1",
+        backgroundImage: `url("/img/5.1.svg")`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center", 
+        
+      },
+    
+   
+iglesia: {
+//position: "relative",
+//textAlign: "center",
+margin: "0px 0px",
+maxWidth: "40%",
+maxHeight: "40%",
+},
+copas: {
+//position: "relative",
+//textAlign: "center",
+margin: "0px 0px",
+maxWidth: "40%",
+maxHeight: "40%",
+},
 }
 
 function ColorsTimeline() {
@@ -115,7 +106,7 @@ function ColorsTimeline() {
 }
 const Itinerario = (props, ref) => {
   const matches = useMediaQuery('(min-width:600px)');
-  //console.log(matches, "media query")
+
   return (
     <div ref={ref}>
       <div
@@ -126,26 +117,28 @@ const Itinerario = (props, ref) => {
           marginTop: "0",
         }}
       >
-        <div style={{
-          ...styles.box, backgroundPosition: matches ? '50% 50%' : '-65% -80%',
-          objectFit: matches ? '' : 'cover', // Puedes cambiar a 'cover' si prefieres cubrir el contenedor
-          objectPosition: matches ? '' : "center",
-          height: matches ? '350px' : "300px",
-          backgroundAttachment: matches ? "fixed" : '',
-        }}></div>
-        <Box sx={{ display: "flex", padding: '0px 0px', }}>
-          {matches ?
-            <Box sx={{ flex: "1", padding: '0px 0px' }} >
-              <div style={styles.box2}></div>
-            </Box> : null}
+        <div
+          style={{
+            ...styles.box,
+            backgroundPosition: matches ? '60% 70%' : '70% -90%',
+            objectFit: matches ? '' : 'contain',
+            objectPosition: matches ? '' : "center",
+            height: matches ? '620px' : "300px",
+            backgroundAttachment: matches ? "fixed" : '',
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            //transform:  matches ? 'scale(0.9)' : "scale(0.9)", // Ce
+          }}
+        ></div>
+       
+        <Box sx={{ display: "flex", padding: '0px 0px' }}>
+        
           <Box
             sx={{
               flex: "1",
               display: "flex",
               flexDirection: "column",
-              //gap: "0.2rem",
               justifyContent: "center",
-              //alignItems: "center",
               height: "100%",
               backgroundImage: "url('/img/5.4.png')",
               padding: "0px 0px",
@@ -160,14 +153,13 @@ const Itinerario = (props, ref) => {
             </Typography>
 
             <ColorsTimeline />
-
           </Box>
-        </Box>
-      </div>
 
+        </Box>
+    
+      </div>
     </div>
   );
 };
 
 export default forwardRef(Itinerario);
-
