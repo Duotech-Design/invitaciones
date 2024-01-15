@@ -25,7 +25,7 @@ import SugerenciasHotel from "../Sugerencias/SugerenciaHotel.js";
 
 const WeddingInvitation = (props) => {
   const params = useParams();
-  console.log(params);
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [click, setClick] = useState(false)
   const [wedding, setWedding] = useState({});
@@ -42,13 +42,10 @@ const WeddingInvitation = (props) => {
   let loadOnce = false
 
   const navbarHandler = (refType) => {
-    console.log('Clicl en navbar handler', refType);
-    console.log(refType[refType])
     refs[refType]?.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
   useEffect(() => {
-    console.log(props)
     const getWedding = async () => {
       if (loadOnce) return;
       loadOnce = true;

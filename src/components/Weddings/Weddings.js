@@ -15,15 +15,14 @@ import SugerenciasHotel from "../Sugerencias/SugerenciaHotel.js";
 
 const WeddingMap = {
   '65a0b97fc7f02cbbbee982c5': test,
+  '65a1f541f10a9d50430ce58b': test,
 }
 
 export function GetWeddings(weddingData, refs, navbarHandler) {
-  console.log('REFS', refs, navbarHandler)
   return WeddingMap[weddingData.wedding._id](weddingData, refs, navbarHandler) || <div>Wedding not found</div>;
 }
 
 function test(data, refs, navbarHandler) {
-  console.log('REFS on TEST', refs);
   return (
     <>
       <NewNavbar handler={navbarHandler}/>

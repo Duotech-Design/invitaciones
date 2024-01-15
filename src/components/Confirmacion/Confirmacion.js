@@ -129,7 +129,6 @@ const styles = {
 };
 
 const Confirmacion = (props, ref) => {
-  console.log('PROPS', props.invite.guest);
   const [guests, setGuests] = useState(props.invite.guest);
   const [isChecked, setIsChecked] = useState(props.invite.guest.map((guest) => guest.confirmation.status === 'confirmed' ));
   const [validacion, setValidacion] = useState(props.invite.guest.some((elemento) => elemento.confirmation.status === 'declined' ));

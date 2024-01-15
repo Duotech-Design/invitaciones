@@ -75,7 +75,6 @@ const styles = {
 
 const Sugerencias = (props, ref) => {
   const isMobile = useMediaQuery("(max-width: 600px)");
-  console.log(isMobile)
 
   return (
     <Box
