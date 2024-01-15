@@ -231,11 +231,11 @@ const Confirmacion = (props) => {
            R.S.V.P.
           </Typography>
 
-          <Typography variant="h2" sx={styles.typographyH2}>
+          <Typography variant="h3" sx={styles.typographyH2}>
             { props.invite.name }
           </Typography>
-          <Typography variant="h2" sx={styles.typographyH2}>
-            Da clic en el botón
+          <Typography variant="h9" sx={styles.typographyH2}>
+            Da click en el botón
           </Typography>
           <Container
             sx={{
