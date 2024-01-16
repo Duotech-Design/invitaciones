@@ -145,17 +145,17 @@ const Inicio = (props, ref) => {
       </div>
 
       <Box>
-      <Box style={styles.textContainer}>
-        <div style={{ width: "50%" }}>
-          <Typography variant="h3">SÁBADO</Typography>
-          <Typography variant="h3">09 de MARZO 2024</Typography>
-        </div>
-        <div style={{ borderLeft: "0.5px solid #7D5730", width: "50%" }}>
-          <Typography variant="h3">SAN LUIS POTOSÍ,</Typography>
-          <Typography variant="h3">S.L.P.</Typography>
-        </div>
-      </Box>
-      <Countdown targetDate={targetDate}/>
+        <Box style={styles.textContainer}>
+          <div style={{ width: "50%" }}>
+            <Typography variant="h3">SÁBADO</Typography>
+            <Typography variant="h3">09 de MARZO 2024</Typography>
+          </div>
+          <div style={{ borderLeft: "0.5px solid #7D5730", width: "50%" }}>
+            <Typography variant="h3">SAN LUIS POTOSÍ,</Typography>
+            <Typography variant="h3">S.L.P.</Typography>
+          </div>
+        </Box>
+        <Countdown targetDate={targetDate} />
       </Box>
     </div>
   );

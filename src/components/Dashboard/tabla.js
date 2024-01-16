@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-
 import React, { useMemo, useState, useEffect, useCallback, useReducer, useRef } from 'react';
-import './index.css'
+import { Box, Typography } from "@mui/material";
+import './index.css';
 import {
   Column,
   Table,
@@ -13,15 +13,17 @@ import {
   flexRender,
   RowData,
 } from '@tanstack/react-table';
-import { makeData } from './makeData';
+import Paper from '@mui/material/Paper';
 
 const DefaultColumn = {
-  cell: ({ getValue, row: { index }, column: { id }, table }) => {
+  cell: ({ getValue, row: { index }, column: { id, editable }, table }) => {
     const initialValue = getValue();
     const [value, setValue] = useState(initialValue);
 
     const onBlur = () => {
-      table.options.meta?.updateData(index, id, value);
+      if (editable) {
+        table.options.meta?.updateData(index, id, value);
+      }
     };
 
     useEffect(() => {
@@ -29,15 +31,40 @@ const DefaultColumn = {
     }, [initialValue]);
 
     return (
-      <input
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        onBlur={onBlur}
-        style={{border: '0px solid rgb(229, 231, 235)', backgroundColor: 'transparent', textAlign: 'center', fontSize: '16px'}}
-      />
+      <>
+        {editable ? (
+          <input
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onBlur={onBlur}
+            style={{
+              border: '0px solid rgb(229, 231, 235)',
+              backgroundColor: 'transparent',
+              textAlign: 'center',
+              fontSize: '16px',
+              color: '#4a331c',
+              minWidth:"180px"
+            }}
+          />
+        ) : (
+          <Typography
+          style={{
+            border: '0px solid rgb(229, 231, 235)',
+            backgroundColor: 'transparent',
+            textAlign: 'center',
+            fontSize: '16px',
+            color: '#4a331c',
+            minWidth:"180px"
+          }}
+          >
+            {value}
+          </Typography>
+        )}
+      </>
     );
   },
 };
+
 
 function useSkipper() {
   const shouldSkipRef = useRef(true);
@@ -54,73 +81,91 @@ function useSkipper() {
   return [shouldSkip, skip];
 }
 
-function TablaPrincipal() {
-  const rerender = useReducer(() => ({}), {})[1];
-
-  const columns = useMemo(
-    () => [
-      {
-        header: 'Nombre',
-        footer: (props) => props.column.id,
-        columns: [
-          {
-            accessorKey: 'nombre',
-            footer: (props) => props.column.id,
-          },
-        ],
-      },
-      {
-        header: 'Pases',
-        footer: (props) => props.column.id,
-        columns: [
-          {
-            accessorKey: 'pases',
-            header: () => 'Pases',
-            footer: (props) => props.column.id,
-          },
-        ],
-      },
-      {
-        header: 'Número de Mesa',
-        footer: (props) => props.column.id,
-        columns: [
-          {
-            accessorKey: 'numero_mesa',
-            header: () => 'Número de Mesa',
-            footer: (props) => props.column.id,
-          },
-        ],
-      },
-      {
-        header: 'WhatsApp',
-        footer: (props) => props.column.id,
-        columns: [
-          {
-            accessorKey: 'whatsapp',
-            header: () => 'WhatsApp',
-            footer: (props) => props.column.id,
-          },
-        ],
-      },
-      {
-        header: 'Envío de Invitaciones',
-        footer: (props) => props.column.id,
-        columns: [
-          {
-            accessorKey: 'envioInvitaciones',
-            header: () => 'Envío de Invitaciones',
-            footer: (props) => props.column.id,
-          },
-        ],
-      },
-    ],
-    []
-  );
-
-  const [data, setData] = useState(() => makeData(1000));
-  const refreshData = () => setData(() => makeData(1000));
-
+function TablaPrincipal({datos, objetoStatus, suma}) {
+  const [data, setData] = useState(datos);
   const [autoResetPageIndex, skipAutoResetPageIndex] = useSkipper();
+
+  const columns = useMemo(() => [
+    {
+      header: 'Invitado',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'nombre',
+          header: () => '',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+    {
+      header: 'Apellio',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'apellido',
+          header: () => '',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+    {
+      header: 'Lugares',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'size',
+          header: () => '/',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+    {
+      header: 'WhatsApp',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'whatsapp',
+          header: () => '',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+    {
+      header: 'Envio',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'notificaciones',
+          header: () => '',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+    {
+      header: 'Confirmación',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'confirmacion',
+          header: () => '',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+    {
+      header: 'Link',
+      footer: (props) => props.column.id,
+      columns: [
+        {
+          accessorKey: 'link',
+          header: () => '',
+          footer: (props) => props.column.id,
+        },
+      ],
+    },
+  ], []);
+
+  const [rerender] = useReducer(() => ({}), {});
 
   const table = useReactTable({
     data: data,
@@ -134,139 +179,155 @@ function TablaPrincipal() {
       updateData: (rowIndex, columnId, value) => {
         skipAutoResetPageIndex();
         setData((old) =>
-          old.map((row, index) => {
-            if (index === rowIndex) {
-              return {
-                ...old[rowIndex],
-                [columnId]: value,
-              };
-            }
-            return row;
-          })
+          old.map((row, index) => (index === rowIndex ? { ...old[rowIndex], [columnId]: value } : row))
         );
       },
     },
     debugTable: true,
   });
 
+  const refreshData = () => setData(datos);
+
   return (
-    <div className="p-2">
-      <div className="h-2" />
-      <table>
-        <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <th key={header.id} colSpan={header.colSpan}>
-                    {header.isPlaceholder ? null : (
-                      <div>
-                        {flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                        {header.column.getCanFilter() ? (
-                          <div>
-                            <Filter column={header.column} table={table} />
-                          </div>
-                        ) : null}
-                      </div>
-                    )}
-                  </th>
-                );
-              })}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => {
-            return (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell) => {
-                  return (
+    <div style={{ width: "100%", display: "flex", justifyContent: "center"}}>
+      <div>
+       
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+         <h1 style={{color: '#7D5730'}}> Registro de invitados </h1>
+            <Box>
+            <Box sx={{ display: "flex"}}>
+              <Typography variant="h17">{"Total de Lista:"}</Typography>
+              <Box sx={{ marginLeft: 2 }}>
+                <Typography variant="h17">{data.length}</Typography>
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex"}}>
+              <Typography variant="h17">{"Confirmados:"}</Typography>
+              <Box sx={{ marginLeft: 2 }}>
+                <Typography variant="h17">{objetoStatus.totalConfirmados}</Typography>
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex"}}>
+              <Typography variant="h17">{"Total lugares:"}</Typography>
+              <Box sx={{ marginLeft: 2 }}>
+                <Typography variant="h17">{suma}</Typography>
+              </Box>
+            </Box>
+            </Box>
+          </Box>
+        <Paper
+          sx={{ padding: "10px", backgroundColor: "#FDFBF7", color: "#4a331c" }}
+        >
+          <table style={{minWidth:'90vw'}}>
+            <thead>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <th key={header.id} colSpan={header.colSpan}>
+                      {header.isPlaceholder ? null : (
+                        <div>
+                          {flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                          {header.column.getCanFilter() ? (
+                            <div>
+                              <Filter column={header.column} table={table} />
+                            </div>
+                          ) : null}
+                        </div>
+                      )}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
                     <td key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
                       )}
                     </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <div className="h-2" />
-      <div className="flex items-center gap-2">
-        <button
-          className="border rounded p-1"
-          onClick={() => table.setPageIndex(0)}
-          disabled={!table.getCanPreviousPage()}
-        >
-          {'<<'}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          {'<'}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          {'>'}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-          disabled={!table.getCanNextPage()}
-        >
-          {'>>'}
-        </button>
-        <span className="flex items-center gap-1">
-          <div>Page</div>
-          <strong>
-            {table.getState().pagination.pageIndex + 1} of{' '}
-            {table.getPageCount()}
-          </strong>
-        </span>
-        <span className="flex items-center gap-1">
-          | Go to page:
-          <input
-            type="number"
-            defaultValue={table.getState().pagination.pageIndex + 1}
-            onChange={(e) => {
-              const page = e.target.value
-                ? Number(e.target.value) - 1
-                : 0;
-              table.setPageIndex(page);
-            }}
-            className="border p-1 rounded w-16"
-          />
-        </span>
-        <select
-          value={table.getState().pagination.pageSize}
-          onChange={(e) => {
-            table.setPageSize(Number(e.target.value));
-          }}
-        >
-          {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>{table.getRowModel().rows.length} Rows</div>
-      <div>
-        <button onClick={() => rerender()}>Force Rerender</button>
-      </div>
-      <div>
-        <button onClick={() => refreshData()}>Refresh Data</button>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <div className="flex items-center gap-2">
+            <button
+              className="border rounded p-1"
+              onClick={() => table.setPageIndex(0)}
+              disabled={!table.getCanPreviousPage()}
+            >
+              {"<<"}
+            </button>
+            <button
+              className="border rounded p-1"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+            >
+              {"<"}
+            </button>
+            <button
+              className="border rounded p-1"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+            >
+              {">"}
+            </button>
+            <button
+              className="border rounded p-1"
+              onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+              disabled={!table.getCanNextPage()}
+            >
+              {">>"}
+            </button>
+            <span className="flex items-center gap-1">
+              <div>Page</div>
+              <strong>
+                {table.getState().pagination.pageIndex + 1} of{" "}
+                {table.getPageCount()}
+              </strong>
+            </span>
+            <span className="flex items-center gap-1">
+              | Go to page:
+              <input
+                type="number"
+                defaultValue={table.getState().pagination.pageIndex + 1}
+                onChange={(e) => {
+                  const page = e.target.value ? Number(e.target.value) - 1 : 0;
+                  table.setPageIndex(page);
+                }}
+                className="border p-1 rounded w-16"
+              />
+            </span>
+            <select
+              value={table.getState().pagination.pageSize}
+              onChange={(e) => {
+                table.setPageSize(Number(e.target.value));
+              }}
+              style={{ color: "#4a331c" }}
+            >
+              {[10, 20, 30, 40, 50].map((pageSize) => (
+                <option key={pageSize} value={pageSize}>
+                  Show {pageSize}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>{table.getRowModel().rows.length} Rows</div>
+
+          <div>
+            <button style={{ color: "#4a331c" }} onClick={() => refreshData()}>
+              Refresh Data
+            </button>
+          </div>
+        </Paper>
       </div>
     </div>
   );
@@ -275,7 +336,7 @@ function TablaPrincipal() {
 function Filter({ column, table }) {
   const columnFilterValue = column.getFilterValue();
 
-  if (column.id === 'pases' || column.id === 'envioInvitaciones') {
+  if (column.id === 'notificaciones' || column.id === 'size' || column.id === 'link' || column.id === 'whatsapp' ) {
     return null; // No renderizar input de búsqueda para estas columnas
   }
 
@@ -290,7 +351,4 @@ function Filter({ column, table }) {
   );
 }
 
-
-
 export default TablaPrincipal;
-
