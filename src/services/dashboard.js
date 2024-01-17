@@ -5,7 +5,7 @@ const API_URL = 'https://invitaciones-backend-production.up.railway.app';
 const API_LOCAL = 'http://localhost:3001';
 
 export async function fetchAllInvite() {
-  return axios.get(`${API_LOCAL}/api/v1/invite`,{
+  return axios.get(`${API_URL}/api/v1/invite`,{
     withCredentials: true,
   });
 }
