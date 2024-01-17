@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Box, Container, Typography } from "@mui/material";
 import Link from '@mui/material/Link';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -74,10 +74,10 @@ const styles = {
   },
 };
 
-const MesaDeRegalos = () => {
+const MesaDeRegalos = (props, ref) => {
   const matches = useMediaQuery('(min-width:600px)');
   return (
-    <Container sx={styles.container}>
+    <Container sx={styles.container} ref={ref}>
       <Box sx={styles.divider} />
       <Typography variant="horaP" sx={{
           ...styles.title,
@@ -92,9 +92,9 @@ const MesaDeRegalos = () => {
           <img src="/img/7.png" alt="logo" width="100%" height="auto" style={styles.imagen} />
           <Box sx={matches ? styles.desktopText : styles.text  }>
             <Typography variant="h11">Núm. de Evento: 51201601</Typography>
-            <Link href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51201601">
+            
               <Typography variant="h11">VER MESA DE REGALOS</Typography>
-            </Link>
+
           </Box>
         </div>
       </Link>
@@ -103,9 +103,8 @@ const MesaDeRegalos = () => {
           <img src="/img/7.1.png" alt="Imagen 1" width="100%" height="auto" style={styles.imagen} />
           <Box sx={matches ? styles.desktopText : styles.text }>
             <Typography variant="h11">Núm. de Evento: 380437</Typography>
-            <Link href="https://www.elpalaciodehierro.com/buscar?eventId=380437">
+          
               <Typography variant="h11">VER MESA DE REGALOS</Typography>
-            </Link>
           </Box>
         </div>
       </Link>
@@ -127,4 +126,4 @@ const MesaDeRegalos = () => {
   );
 };
 
-export default MesaDeRegalos;
+export default forwardRef(MesaDeRegalos);

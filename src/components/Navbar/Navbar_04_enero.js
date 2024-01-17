@@ -36,7 +36,7 @@ const NewNavbar = () => {
   const handdleClickExpand = () => {
     setMenu(false);
   };
-  console.log(menu);
+
   return (
     <>
       <Box

@@ -8,7 +8,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   useEffect(() => {
     async function checkAccess() {
       const userHasAccess = await hasAccess('wedding-alias', 'invitation-id');
-      console.log('userHasAccess', userHasAccess);
+
       if (userHasAccess) {
         setIsAuthenticated(userHasAccess);
       }

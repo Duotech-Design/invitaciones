@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import Link from "@mui/material/Link";
+import { forwardRef } from "react";
 
 const styles = {
   logo: {
@@ -72,9 +73,8 @@ const styles = {
   },
 };
 
-const Sugerencias = () => {
+const Sugerencias = (props, ref) => {
   const isMobile = useMediaQuery("(max-width: 600px)");
-  console.log(isMobile)
 
   return (
     <Box
@@ -92,6 +92,8 @@ const Sugerencias = () => {
         marginBottom: "15px",
         gap: "10px",
       }}
+
+      ref={ref}
     >
       {/*
       por esta parte no se movera? por el box?
@@ -253,4 +255,4 @@ const Sugerencias = () => {
   );
 };
 
-export default Sugerencias;
+export default forwardRef(Sugerencias);
