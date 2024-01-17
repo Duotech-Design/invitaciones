@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useMemo, useState, useEffect, useCallback, useReducer, useRef } from 'react';
 import { Box, Typography } from "@mui/material";
+import Button from '@mui/material/Button';
 import './index.css';
 import {
   Column,
@@ -43,7 +44,7 @@ const DefaultColumn = {
               textAlign: 'center',
               fontSize: '16px',
               color: '#4a331c',
-              minWidth:"180px"
+              //minWidth:"180px"
             }}
           />
         ) : (
@@ -54,7 +55,7 @@ const DefaultColumn = {
             textAlign: 'center',
             fontSize: '16px',
             color: '#4a331c',
-            minWidth:"180px"
+            //minWidth:"180px"
           }}
           >
             {value}
@@ -81,7 +82,7 @@ function useSkipper() {
   return [shouldSkip, skip];
 }
 
-function TablaPrincipal({datos, objetoStatus, suma}) {
+function TablaPrincipal({datos, objetoStatus, suma, setLoadOnce}) {
   const [data, setData] = useState(datos);
   const [autoResetPageIndex, skipAutoResetPageIndex] = useSkipper();
 
@@ -165,8 +166,7 @@ function TablaPrincipal({datos, objetoStatus, suma}) {
     },
   ], []);
 
-  const [rerender] = useReducer(() => ({}), {});
-
+  
   const table = useReactTable({
     data: data,
     columns: columns,
@@ -186,7 +186,11 @@ function TablaPrincipal({datos, objetoStatus, suma}) {
     debugTable: true,
   });
 
-  const refreshData = () => setData(datos);
+  const refreshData = () => {
+    setLoadOnce(false);
+    setData(datos);
+    
+  };
 
   return (
     <div style={{ width: "100%", display: "flex", justifyContent: "center"}}>
@@ -196,21 +200,27 @@ function TablaPrincipal({datos, objetoStatus, suma}) {
          <h1 style={{color: '#7D5730'}}> Registro de invitados </h1>
             <Box>
             <Box sx={{ display: "flex"}}>
-              <Typography variant="h17">{"Total de Lista:"}</Typography>
+              <Typography variant="h17">{"Invitados principales:"}</Typography>
               <Box sx={{ marginLeft: 2 }}>
                 <Typography variant="h17">{data.length}</Typography>
               </Box>
             </Box>
             <Box sx={{ display: "flex"}}>
-              <Typography variant="h17">{"Confirmados:"}</Typography>
+              <Typography variant="h17">{"Invitados principales confirmados:"}</Typography>
               <Box sx={{ marginLeft: 2 }}>
-                <Typography variant="h17">{objetoStatus.totalConfirmados}</Typography>
+                <Typography variant="h17">{objetoStatus.principalConfirmados}</Typography>
               </Box>
             </Box>
             <Box sx={{ display: "flex"}}>
               <Typography variant="h17">{"Total lugares:"}</Typography>
               <Box sx={{ marginLeft: 2 }}>
                 <Typography variant="h17">{suma}</Typography>
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex"}}>
+              <Typography variant="h17">{"Lugares confirmados:"}</Typography>
+              <Box sx={{ marginLeft: 2 }}>
+                <Typography variant="h17">{objetoStatus.totalConfirmados}</Typography>
               </Box>
             </Box>
             </Box>
@@ -323,9 +333,9 @@ function TablaPrincipal({datos, objetoStatus, suma}) {
           <div>{table.getRowModel().rows.length} Rows</div>
 
           <div>
-            <button style={{ color: "#4a331c" }} onClick={() => refreshData()}>
+            <Button  variant="contained" sx={{ color: "#4a331c",border:"1px solid #4a331c" }} onClick={() => refreshData()}>
               Refresh Data
-            </button>
+            </Button>
           </div>
         </Paper>
       </div>

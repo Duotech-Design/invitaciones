@@ -6,7 +6,9 @@ import TablaPrincipal from "./tabla";
 import { useState, useEffect } from 'react';
 import { fetchAllInvite } from "../../services/dashboard";
 import useAuth from "../../utils/auth";
-
+import { useNavigate } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
 const formatData = (datos) => {
   let newData = [];
   if (datos && Array.isArray(datos)) {
@@ -49,8 +51,11 @@ export default function Dashboard() {
   const [ objetoStatus, setObjetoStatus ] = useState({
     totalConfirmados:0,
     totalPendientes:0,
+    principalConfirmados:0,
   });
   const [ suma, setSuma ] = useState(null);
+  const navigate = useNavigate();
+  
   useAuth();
   useEffect(() => {
     const getWedding = async () => {
@@ -58,6 +63,7 @@ export default function Dashboard() {
       try {
         setLoadOnce(true);
         const weddingResponse = await fetchAllInvite();
+        if (weddingResponse.status === 401) return navigate('/login');
         if (weddingResponse.data) {
           const temporal = weddingResponse.data;
           let suma = 0;
@@ -69,16 +75,17 @@ export default function Dashboard() {
             .filter(
               (guest) => guest.confirmation.status === "confirmed"
             ).length;
-
-            const totalPendientes = temporal
+          const principalConfirmados = temporal
+            .filter((obj) => obj.guest[0].confirmation.status === "confirmed").length;
+          
+          const totalPendientes = temporal
             .flatMap((obj) => obj.guest)
-            .filter(
-              (guest) => guest.confirmation.status === "pending"
-            ).length;
-            setSuma(suma);
-            setObjetoStatus({
+            .filter((guest) => guest.confirmation.status === "pending").length;
+          setSuma(suma);
+          setObjetoStatus({
             totalConfirmados,
-            totalPendientes
+            totalPendientes,
+            principalConfirmados
           });
           setDataInvite(formatData(weddingResponse.data));
         }
@@ -91,14 +98,21 @@ export default function Dashboard() {
     getWedding();
   }, [loadOnce]);
 
-  console.log("Data invite",dataInvite[0]);
 
+  const handleLogout = () => {
+    localStorage.removeItem('usuarioLogeado');
+    //setIsLoggedIn(false);
+    //handleClose();
+    navigate('/login');
+  };
   return (
     <Box
       sx={{
         display: "flex",
         flexWrap: "wrap",
         width:"100%",
+        paddingLeft:"0px",
+        paddingRigth:"0px",
         "& > :not(style)": {
           m: 1,
           width: "100%",
@@ -108,11 +122,27 @@ export default function Dashboard() {
     >
       <Paper
         elevation={3}
-        sx={{display:"flex", flexDirection:"column", alignItems:"center", width:"100%"}}
+        sx={{display:"flex", flexDirection:"column", alignItems:"center", width:"100%", paddingLeft:"0px",
+        paddingRigth:"0px",}}
       >
-        <Container sx={{width:"100%", height:'auto', padding:'10px' }}>
+        <div style={{width:"100%", display:"flex", justifyContent:"flex-start", alignItems:"center", }} onClick={handleLogout}>
+          <Button sx={{width:"10%", display:"flex", justifyContent:"center", alignItems:"center", border:"2px solid #4a331c", color:"#4a331c", borderRadius:"10px", padding:"0px"}}>
+          <CloseIcon/><h3>Salir</h3>
+          </Button>
+       
+        </div>
+        
+
+        <Container sx={{width:"100%", height:'auto', paddingLeft:"0px",
+          paddingRigth:"0px" }}>
+            
         {
-          dataInvite && <TablaPrincipal datos={dataInvite} objetoStatus={objetoStatus} suma={suma}/>
+           
+          dataInvite &&
+        
+       
+          <TablaPrincipal datos={dataInvite} objetoStatus={objetoStatus} suma={suma} setLoadOnce={setLoadOnce}/>
+         
         }
         
         </Container>
