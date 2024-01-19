@@ -44,7 +44,7 @@ export default function LogIn() {
     e.preventDefault();
     try {
       console.log('hola')
-      const response = await axios.post('https://invitaciones-backend-production.up.railway.app/login', {
+      const response = await axios.post('https://api.andreaydiego.website/login', {
         email,
         password,
       }, {

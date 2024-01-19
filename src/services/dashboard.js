@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'https://invitaciones-backend-production.up.railway.app';
+const API_URL = 'https://api.andreaydiego.website';
 
 const API_LOCAL = 'http://localhost:3001';
 
