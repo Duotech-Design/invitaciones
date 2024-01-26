@@ -8,7 +8,7 @@ export default function IncioFamilia() {
     <Box
     sx={{
       margin: 0,
-      background: `url("/img/12.svg")`,
+      background: `url("/img/122.svg")`,
       backgroundSize: matches ? "100% 100%" : "contain", // Ajusta el tamaño según el media query
       backgroundPosition: matches ? "center" : "50% 10%", // Ajusta la posición según el media query
       backgroundRepeat: "no-repeat",
