@@ -118,9 +118,9 @@ const MesaDeRegalos = (props, ref) => {
           alignItems: "center",
         }}
       >
-        <Typography sx={{fontSize:"1.8rem"}} variant="h2">SANTANDER</Typography>
-        <Typography variant="h11">ANDREA HERNÁNDEZ ACEBO</Typography>
-        <Typography sx={{fontSize:"1.8rem"}} variant="h17">5579070128662353</Typography>
+        <Typography sx={{fontSize:"1.8rem"}} variant="h2">BANCO</Typography>
+        <Typography variant="h11">ANDREA </Typography>
+        <Typography sx={{fontSize:"1.8rem"}} variant="h17">9999999999999999</Typography>
       </div>
     </Container>
   );
