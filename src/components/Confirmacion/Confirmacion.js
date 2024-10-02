@@ -147,19 +147,19 @@ const Confirmacion = (props, ref) => {
         position: 'center',
         showLoaderOnConfirm: true,
         preConfirm: async () => {
-          const res = await cancelAttendance(props.invite._id, guestId);
+          //const res = await cancelAttendance(props.invite._id, guestId);
   
-          if (res.status !== 200) {
-            return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
-          }
+          // if (true) {
+          //   return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
+          // }
   
-          newArray[index] = !newArray[index];
-          setIsChecked(newArray);
-          return res.data;
+          // newArray[index] = !newArray[index];
+          // setIsChecked(newArray);
+          // return res.data;
         },
         allowOutsideClick: () => !Swal.isLoading(),
       }).then(async (result) => {
-        if (result.isConfirmed) {
+        if (false) {
           Swal.fire({
           title: "Gracias!",
             text: "Muchas gracias por avisar!",
@@ -181,19 +181,19 @@ const Confirmacion = (props, ref) => {
         position: 'center',
         showLoaderOnConfirm: true,
         preConfirm: async () => {
-          const res = await confirmAttendance(props.invite._id, guestId);
+          // const res = await confirmAttendance(props.invite._id, guestId);
 
-          if (res.status !== 200) {
-            return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
-          }
+          // if (res.status !== 200) {
+          //   return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
+          // }
 
-          newArray[index] = !newArray[index];
-          setIsChecked(newArray);
-          return res.data;
+          // newArray[index] = !newArray[index];
+          // setIsChecked(newArray);
+          // return res.data;
         },
         allowOutsideClick: () => !Swal.isLoading(),
       }).then(async (result) => {
-        if (result.isConfirmed) {
+        if (true) {
           Swal.fire({
             title: "Confirmado!",
             text: "Muchas gracias!",
@@ -218,18 +218,18 @@ const Confirmacion = (props, ref) => {
       position: 'center',
       showLoaderOnConfirm: true,
       preConfirm: async () => {
-        const res = await declineAttendance(props.invite._id);
+        // const res = await declineAttendance(props.invite._id);
 
-        if (res.status !== 200) {
-          return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
-        }
+        // if (res.status !== 200) {
+        //   return Swal.showValidationMessage(`Hubo un error al intentar confirmar la asistencia, intentalo más tarde.`);
+        // }
 
-        setValidacion(true);
-        return res.data;
+        // setValidacion(true);
+        // return res.data;
       },
       allowOutsideClick: () => !Swal.isLoading(),
     }).then(async (result) => {
-      if (result.isConfirmed) {
+      if (true) {
         Swal.fire({
           title: "Gracias!",
           text: "Muchas gracias por avisar",
